@@ -28,6 +28,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: rgba(255,255,255,255);
+  /* Add the background image */
+  /* background-image: url("https://static.vecteezy.com/system/resources/previews/014/002/298/original/islamic-geometric-pattern-art-illustration-free-vector.jpg"); */
+  background-attachment: fixed; /* Keep the background fixed when scrolling */
+  background-size: cover; /* Make the background image cover the whole viewport */
+  background-position: center; /* Center the image */
 }
 
 h1 {
