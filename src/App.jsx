@@ -11,7 +11,7 @@ import About from "./components/About"
 
 function App() {
   return (
-    <Router>
+    <Router basename="/icsgv/">
       <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
