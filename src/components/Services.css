@@ -1,0 +1,115 @@
+/* Prevent horizontal scrolling on the page */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents sideways scrolling */
+}
+
+/* Container */
+.services-container {
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  /* padding: 2rem 1rem; */
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-image: url("https://icsgv.com/wp-content/uploads/2023/08/16-sacred-symbols-MR9YMTg.png");
+  background-size: contain;
+  background-position: bottom right; /* Dynamically position at the bottom-right corner */
+  background-repeat: repeat; /* Prevent the image from repeating */
+  background-color: #f5f5f5;
+}
+
+/* Section */
+.services-section {
+  margin-bottom: 3rem;
+}
+
+.services-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #f9d084; /* Golden color for titles */
+  font-family: "Georgia", serif;
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+  gap: 1rem; /* Adds space between cards */
+  text-align: center;
+  align-items: center;
+}
+
+/* Cards */
+.servicescards {
+  position: relative;
+  background-color: #374561;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #f9d084; /* Golden text */
+  font-family: "Georgia", serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden; /* Ensures hover content doesn't spill outside */
+}
+
+.servicescards:hover {
+  transform: scale(1.05); /* Slightly enlarges the card */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect */
+.servicescards .hover-content {
+  position: absolute;
+  inset: 0; /* Covers the entire card */
+  background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+  color: #f9d084; /* Golden text for hover */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+.servicescards:hover .hover-content {
+  opacity: 1; /* Fully visible on hover */
+}
+
+/* Centered Paragraph */
+.servicescards p {
+  color: #374561;
+  font-size: 1.5rem;
+  font-family: "Georgia", serif;
+  text-align: center;
+  margin-top: 1rem;
+  border: 1px solid #374561;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 1.5rem 1rem; /* Smaller padding on smaller screens */
+  }
+
+  .services-title {
+    font-size: 1.75rem; /* Slightly smaller font */
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .servicescards {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+}

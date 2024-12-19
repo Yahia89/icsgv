@@ -66,11 +66,18 @@ function Header() {
             </a>
             <ul className={`submenu ${activeMenu === 1 ? "show" : ""}`}>
               <li className="submenu-item">
-                <a
-                  href="https://icsgv.com/banquet-hall/"
-                  className="submenu-link"
-                >
-                  Banquet Hall
+                <NavLink to="/services" className="submenu-link">
+                  ICSGV Services
+                </NavLink>
+              </li>
+              <li className="submenu-item">
+                <a href="https://icsgv.com/library/" className="submenu-link">
+                  Library
+                </a>
+              </li>
+              <li className="submenu-item">
+                <a href="https://icsgv.com/clinic/" className="submenu-link">
+                  Clinic
                 </a>
               </li>
               <li className="submenu-item">
@@ -83,10 +90,26 @@ function Header() {
               </li>
               <li className="submenu-item">
                 <a
+                  href="https://icsgv.com/banquet-hall/"
+                  className="submenu-link"
+                >
+                  Banquet Hall
+                </a>
+              </li>
+              <li className="submenu-item">
+                <a
                   href="https://icsgv.com/funeral-services/"
                   className="submenu-link"
                 >
                   Funeral Services
+                </a>
+              </li>
+              <li className="submenu-item">
+                <a
+                  href="https://icsgv.com/hajj-umrah/"
+                  className="submenu-link"
+                >
+                  Hajj & Umrah
                 </a>
               </li>
             </ul>
@@ -102,27 +125,37 @@ function Header() {
             </a>
             <ul className={`submenu ${activeMenu === 2 ? "show" : ""}`}>
               <li className="submenu-item">
-                <a
-                  href="https://icsgv.com/sunday-school/"
-                  className="submenu-link"
-                >
-                  Sunday School
+                <a href="https://www.qubais.org/" className="submenu-link">
+                  Quba Fulltime Islamic School
+                </a>
+              </li>
+              <li className="submenu-item">
+                <a href="https://www.littleangels.la/" className="submenu-link">
+                  Little Angels Preschool
                 </a>
               </li>
               <li className="submenu-item">
                 <a
-                  href="https://icsgv.com/youth-programs/"
+                  href="https://icsgv.com/weekend-islamic-school/"
                   className="submenu-link"
                 >
-                  Youth Programs
+                  Weekend Islamic School
                 </a>
               </li>
               <li className="submenu-item">
                 <a
-                  href="https://icsgv.com/arabic-language-program/"
+                  href="https://icsgv.com/quran-institute/"
                   className="submenu-link"
                 >
-                  Arabic Language Program
+                  Quran Institute
+                </a>
+              </li>
+              <li className="submenu-item">
+                <a
+                  href="https://icsgv.com/youth-group/"
+                  className="submenu-link"
+                >
+                  Youth Group
                 </a>
               </li>
             </ul>
@@ -152,12 +185,27 @@ function Header() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <a href="https://icsgv.com/download/" className="nav-link">
+            <NavLink
+              to="/resources"
+              className="nav-link"
+              activeClassName="active"
+            >
               Resources
-            </a>
+            </NavLink>
           </li>
         </ul>
-        <button className="button button-donate">Donate</button>
+        <button
+          className="button button-donate"
+          onClick={() =>
+            window.open(
+              "https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5",
+              "_blank"
+            )
+          }
+        >
+          Donate
+        </button>
+
         <button className="button button-volunteer">Volunteer</button>
       </nav>
       <button

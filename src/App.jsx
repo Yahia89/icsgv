@@ -8,6 +8,8 @@ import Home from "./components/Home";
 import EventsPage from "./components/EventsPage";
 import PrayerTimes from "./components/PrayerTimes"
 import About from "./components/About"
+import Resources from "./components/Resources";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/events" element={<EventsPage />} />
         <Route path="/prayertimes" element={<PrayerTimes />} />
         <Route path="/prayertimes" element={<PrayerTimes />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </Router>

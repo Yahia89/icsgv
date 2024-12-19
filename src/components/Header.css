@@ -25,8 +25,8 @@
 }
 
 .logo {
-  max-width: 150px;
-  height: auto;
+  max-width: 100%;
+  height: 130px;
 }
 
 .nav-menu {
@@ -77,7 +77,7 @@
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -50%;
   background-color: rgba(
     31,
     31,
@@ -85,13 +85,15 @@
     0.8
   ); /* Semi-transparent dark background */
   list-style: none;
-  padding: 10px 0;
+  padding: 5px 0;
   border-radius: 4px;
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   backdrop-filter: blur(10px); /* Adds the blur effect */
   -webkit-backdrop-filter: blur(10px); /* For better cross-browser support */
+  min-width: 10em;
+  margin: 5px;
 }
 .submenu-link {
   color: white;
@@ -196,7 +198,6 @@
     width: 100%;
     position: absolute;
     top: 100%;
-    left: 0;
     margin: 1px 0px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     text-align: justify;
@@ -212,6 +213,8 @@
   .nav-list {
     flex-direction: column;
     gap: 10px;
+    padding: 10px;
+    text-align: center;
   }
 
   /* Display the menu toggle button */
@@ -219,7 +222,6 @@
     display: block;
   }
 }
-
 
 svg {
   font-family: "Aref Ruqaa Ink", sans-serif;
