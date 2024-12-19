@@ -175,9 +175,9 @@ function Header() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <a href="https://icsgv.com/live-streaming/" className="nav-link">
+            <NavLink to="/stream" className="nav-link">
               Live Stream
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="/about" className="nav-link" activeClassName="active">

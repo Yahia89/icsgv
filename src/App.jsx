@@ -10,6 +10,7 @@ import PrayerTimes from "./components/PrayerTimes"
 import About from "./components/About"
 import Resources from "./components/Resources";
 import Services from "./components/Services";
+import LiveStream from "./components/LiveStream";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/prayertimes" element={<PrayerTimes />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/stream" element={<LiveStream />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </Router>
