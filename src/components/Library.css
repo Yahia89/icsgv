@@ -1,0 +1,37 @@
+.library {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    color: #919494;
+  }
+  
+  .library > div {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .library img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .library {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .library > div {
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .library img {
+      margin: 0 auto;
+    }
+  }
+  

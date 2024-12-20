@@ -71,22 +71,19 @@ function Header() {
                 </NavLink>
               </li>
               <li className="submenu-item">
-                <a href="https://icsgv.com/library/" className="submenu-link">
+                <NavLink to="/library" className="submenu-link">
                   Library
-                </a>
+                </NavLink>
               </li>
               <li className="submenu-item">
-                <a href="https://icsgv.com/clinic/" className="submenu-link">
+                <NavLink to="/clinic" className="submenu-link">
                   Clinic
-                </a>
+                </NavLink>
               </li>
               <li className="submenu-item">
-                <a
-                  href="https://icsgv.com/matrimonial/"
-                  className="submenu-link"
-                >
+                <NavLink to="/matrimonial" className="submenu-link">
                   Matrimonial
-                </a>
+                </NavLink>
               </li>
               <li className="submenu-item">
                 <a

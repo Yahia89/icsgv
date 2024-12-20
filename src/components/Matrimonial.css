@@ -1,0 +1,57 @@
+.matrimonial-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.matrimonial-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.matrimonial-text {
+  flex: 1;
+  max-width: 600px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.matrimonial-text a {
+  color: #6db1ff;
+  text-decoration: none;
+}
+
+.matrimonial-text a:hover {
+  text-decoration: underline;
+}
+
+.matrimonial-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.matrimonial-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .matrimonial-section {
+    flex-direction: column;
+  }
+
+  .matrimonial-image img {
+    width: 100%;
+  }
+
+  .matrimonial-text {
+    text-align: center;
+  }
+}
