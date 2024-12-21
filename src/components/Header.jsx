@@ -102,12 +102,12 @@ function Header() {
                 </a>
               </li>
               <li className="submenu-item">
-                <a
-                  href="https://icsgv.com/hajj-umrah/"
+                <NavLink
+                  to="/tripstomecca"
                   className="submenu-link"
                 >
                   Hajj & Umrah
-                </a>
+                </NavLink>
               </li>
             </ul>
           </li>
