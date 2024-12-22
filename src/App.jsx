@@ -15,6 +15,8 @@ import Clinic from "./components/Clinic";
 import Matrimonial from "./components/Matrimonial";
 import Footer from "./components/Footer";
 import HajjUmrahCommittee from "./components/HajjUmrahCommittee";
+import BanquetHall from "./components/BanquetHall";
+import Funeral from "./components/Funeral";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
         <Route path="/library" element={<Library />} />
         <Route path="/clinic" element={<Clinic />} />
         <Route path="/matrimonial" element={<Matrimonial />} />
+        <Route path="/banquet" element={<BanquetHall />} />
+        <Route path="/funeral-services" element={<Funeral />} />
         <Route path="/tripstomecca" element={<HajjUmrahCommittee />} />
       </Routes>
       <Footer />
