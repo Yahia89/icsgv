@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./LiveStream.css"; // Import the CSS file
 
 const LiveStream = () => {
   const [isLive, setIsLive] = useState(false);
@@ -30,38 +31,34 @@ const LiveStream = () => {
   }, []);
 
   return (
-    <div className="main">
+    <div className="live-stream-container">
       <div className="wrapper">
-        <svg>
+        <svg className="logo">
           <text x="50%" y="50%" dy=".35em" textAnchor="middle">
             مسجد قباء
           </text>
         </svg>
-        <h5 className="Assalamualaikum">Assalamualaikum</h5>
+        <h5 className="assalamualaikum">Assalamualaikum</h5>
         <h1 className="welcome">
           Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
         </h1>
-        <div>
+        <div className="live-status">
           {isLive ? (
             <div>
-              <p style={{ color: "green", fontWeight: "bold" }}>
-                We are live now!
-              </p>
+              <p className="live-text">We are live now!</p>
               {/* Embed the live video */}
-              <iframe
-                width="560"
-                height="315"
-                src={`https://www.youtube.com/embed/${videoId}`}
-                title="YouTube Live Stream"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              <div className="video-container">
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title="YouTube Live Stream"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           ) : (
-            <p style={{ color: "red", fontWeight: "bold" }}>
-              Currently offline
-            </p>
+            <p className="offline-text">Currently offline</p>
           )}
         </div>
       </div>
