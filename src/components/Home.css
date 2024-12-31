@@ -1,0 +1,395 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* General Styling for the About Section */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* background-image: url('/Users/yahiaalhejoj/icsgv/src/assets/islamic-geometric-patterns-islamic-art-arabesque-islamic-architecture-png-favpng-xi06wiFv0egkhV3bzsT9H1e5g.png'); */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: 600px 800px ; */
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    background-image: url("https://icsgv.com/wp-content/uploads/2023/08/16-sacred-symbols-MR9YMTh.png");
+  }
+  
+  /* Left Column */
+  .left-column {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: all 0.3s ease-in-out;
+    /* background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%); */
+  }
+  
+  /* .left-column:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    } */
+  
+  .heading h6 {
+    font-size: 1.2rem;
+    color: #0077b6;
+    margin-bottom: 1rem;
+  }
+  
+  .heading h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  /* Right Column */
+  .right-column {
+    flex: 1;
+    /* padding: 2rem; */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: all 0.3s ease-in-out;
+    background-image: url("https://icsgv.com/wp-content/uploads/2023/08/16-sacred-symbols-MR9YMTg.png");
+    background-size: contain;
+  }
+  
+  /* .right-column:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    } */
+  
+  .right-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* margin-bottom: 1.5rem; */
+  }
+  
+  .info-section {
+    text-align: center;
+  }
+  
+  .info-section h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0077b6;
+    /* margin-bottom: 1rem; */
+  }
+  
+  .info-section h6 {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      background-image: url("https://icsgv.com/wp-content/uploads/2023/08/16-sacred-symbols-MR9YMTh.png");
+      background-size: contain;
+      background-repeat: repeat;
+    }
+  
+    .left-column,
+    .right-column {
+      width: 100%;
+      /* margin-bottom: 2rem; */
+    }
+  }
+  
+  .main {
+    border-radius: 10px;
+    margin: 10px;
+  }
+  
+  .welcome {
+    font-family: "Caveat", cursive;
+    color: #000;
+  }
+  
+  .Assalamualaikum {
+    font-family: "Caveat", cursive;
+    color: #000;
+  }
+  p {
+    color: #000;
+  }
+  
+  /* General Layout for the Services Card */
+  .services-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .services-card-background {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(0, 0%, 96%);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+  }
+  
+  .services-card-content {
+    width: 40%;
+    /* z-index: 2; Ensure this is above the background */
+    /* display: flex; */
+    flex-direction: column;
+    gap: 20px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  }
+  
+  .services-card-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: #f5f5f5;
+    clip-path: ellipse(75% 100% at 100% 50%);
+  }
+  
+  .services-card-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/014/002/298/original/islamic-geometric-pattern-art-illustration-free-vector.jpg");
+    background-size: cover;
+    background-position: center;
+    clip-path: ellipse(100% 100% at 100% 50%);
+  }
+  
+  .service-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url("/Users/yahiaalhejoj/icsgv/src/assets/islamic-geometric-patterns-islamic-art-arabesque-islamic-architecture-png-favpng-xi06wiFv0egkhV3bzsT9H1e5g.png");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+    transform: translate(25%, 25%);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  .service-card {
+    position: relative;
+    /* background-color: #ffffff; */
+    padding: 15px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 2; /* Ensure cards stay above the background */
+  }
+  
+  .service-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .service-card-title a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .service-card-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .service-card h3,
+  .service-card p {
+    position: relative;
+    z-index: 1; /* Ensures text stays above the pattern */
+  }
+  
+  .services-card-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 30px;
+  }
+  
+  .services-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive adjustments for smaller/phone screens */
+  @media (max-width: 768px) {
+    .services-card {
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: none; /* Remove shadow on small screens for a cleaner look */
+    }
+  
+    .services-card-background::after {
+      padding: 15px;
+      background-image: unset;
+    }
+  
+    .services-card-title {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+  
+    .services-card-heading {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .services-card-grid {
+      grid-template-columns: 1fr; /* Single-column layout */
+      gap: 15px;
+      text-align: left;
+      width: 100%;
+    }
+  
+    .service-card {
+      padding: 15px;
+      width: 100%; /* Ensure the card takes the full width of the container */
+      background-color: #ffffff; /* White background for contrast */
+      border: 1px solid #e0e0e0; /* Optional border for better definition */
+      transform: none; /* Disable transform effect */
+      box-shadow: none; /* Remove any shadow */
+      clip-path: none; /* Remove clip-path if applied elsewhere */
+    }
+  
+    .service-card:hover {
+      transform: none; /* No hover movement */
+      box-shadow: none; /* No additional shadow */
+    }
+  
+    .services-card-content {
+      width: 90%;
+      z-index: 2;
+      flex-direction: column;
+    }
+  
+    .services-card-content h6,
+    .services-card-content h2 {
+      width: 100%;
+      z-index: 2;
+      flex-direction: column;
+      left: 15px;
+      position: relative;
+    }
+  
+    #root {
+      max-width: unset;
+      margin: unset;
+      padding: unset;
+      text-align: center;
+    }
+  
+    .services-card-grid a {
+      position: relative;
+      left: 1px;
+      bottom: 3px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .service-card {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Match the initial state of the animation */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out,
+      opacity 0.6s ease-out;
+  }
+  
+  .service-card.visible {
+    opacity: 1;
+    transform: translateY(0); /* Match the final state of the animation */
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  p {
+    font-weight: bold;
+  }
+  
+  @keyframes flip {
+    0% {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .number-flip {
+    display: inline-block;
+    animation: flip 1s ease-in-out;
+    animation-delay: var(--delay);
+    animation-fill-mode: both; /* Ensures the end state is retained */
+  }
+  
+  .prayer-times-heading {
+    color: #333;
+  }

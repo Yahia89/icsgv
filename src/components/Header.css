@@ -1,0 +1,261 @@
+/* Base styles */
+.custom-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0px;  */
+    background-image: linear-gradient(
+      45deg,
+      rgba(139, 170, 170, 0.8) 0%,
+      rgba(174, 139, 156, 0.8) 100%
+    );
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Adds the blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for a subtle floating effect */
+    margin: 5px 5px;
+  }
+  
+  .logo-container {
+    flex: 0 0 auto;
+  }
+  
+  .logo {
+    max-width: 100%;
+    height: 130px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    border-radius: 10 px;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    /* gap: 15px; Reduced gap between nav items */
+  }
+  
+  .nav-item {
+    position: relative;
+    margin: 0 10px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    /* padding: 8px 12px; */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #f39c12;
+  }
+  
+  /* Hover effect for submenu */
+  .has-submenu {
+    position: relative;
+  }
+  
+  .has-submenu:hover .submenu,
+  .submenu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Submenu hidden by default, fade-in/out animation with blur effect */
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    background-color: rgba(
+      31,
+      31,
+      31,
+      0.8
+    ); /* Semi-transparent dark background */
+    list-style: none;
+    padding: 5px 0;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(10px); /* Adds the blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For better cross-browser support */
+    min-width: 10em;
+    margin: 5px;
+  }
+  .submenu-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  .submenu-item {
+    margin: 0;
+  }
+  
+  .submenu-link:hover {
+    background-color: #333;
+  }
+  
+  /* Menu toggle for smaller screens */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin: 5px 0;
+  }
+  
+  /* Common button styles */
+  .button {
+    padding: 8px 15px; /* Reduced padding */
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 5px;
+  }
+  
+  /* Donate button styles */
+  .button-donate {
+    background-color: #a99c38;
+    color: white;
+  }
+  
+  .button-donate:hover {
+    background-color: #d88210;
+    transform: translateY(-2px);
+  }
+  
+  /* Volunteer button styles */
+  .button-volunteer {
+    background-color: #727272;
+    color: white;
+  }
+  
+  .button-volunteer:hover {
+    background-color: #5e6f5c;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    /* Submenu - initially hidden */
+    .submenu {
+      display: none;
+      position: static; /* Stack submenu items */
+      opacity: 0;
+      transform: translateY(-10px);
+      background-image: linear-gradient(
+        45deg,
+        rgba(139, 170, 170, 0.8) 0%,
+        rgba(174, 139, 156, 0.8) 100%
+      );
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      margin: 5px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  
+    /* Active submenu - shown on click */
+    .has-submenu.active .submenu {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    /* Nav menu styles */
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background-image: linear-gradient(
+        45deg,
+        rgba(139, 170, 170, 0.8) 0%,
+        rgba(174, 139, 156, 0.8) 100%
+      );
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      margin: 1px 0px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      text-align: justify;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+      transform: translateY(0);
+      opacity: 1;
+    }
+  
+    /* Style the list for smaller screens */
+    .nav-list {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    /* Display the menu toggle button */
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  svg {
+    font-family: "Aref Ruqaa Ink", sans-serif;
+    width: 100%;
+    height: 100%;
+  }
+  svg text {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #365fa0;
+    font-size: 85px;
+  }
+  @keyframes stroke {
+    0% {
+      fill: rgba(72, 138, 204, 0);
+      stroke: rgba(54, 95, 160, 1);
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+      stroke-width: 2;
+    }
+    70% {
+      fill: rgba(72, 138, 204, 0);
+      stroke: rgba(54, 95, 160, 1);
+    }
+    80% {
+      fill: rgba(72, 138, 204, 0);
+      stroke: rgba(54, 95, 160, 1);
+      stroke-width: 3;
+    }
+    100% {
+      fill: rgba(72, 138, 204, 1);
+      stroke: rgba(54, 95, 160, 0);
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+      stroke-width: 0;
+    }
+  }
