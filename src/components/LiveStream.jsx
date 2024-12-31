@@ -32,7 +32,7 @@ const LiveStream = () => {
 
   return (
     <div className="live-stream-container">
-      <div className="wrapper">
+      <div className="wrapper2">
         <svg className="logo">
           <text x="50%" y="50%" dy=".35em" textAnchor="middle">
             مسجد قباء
