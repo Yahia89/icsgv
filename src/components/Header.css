@@ -60,6 +60,19 @@
   color: #f39c12;
 }
 
+.submenu-link.active {
+  color: #f39c12; /* Keep the gold color */
+  font-weight: 600; /* Slightly lighter bold for better readability */
+  background-color: rgba(0, 0, 0, 0.2); /* Subtle dark overlay, transparent */
+  border-left: 3px solid #f39c12; /* Gold border on the left */
+  padding-left: 17px; /* Adjust padding to accommodate the border */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.submenu-link.active:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 /* Hover effect for submenu */
 .has-submenu {
   position: relative;
@@ -166,11 +179,12 @@
     position: static; /* Stack submenu items */
     opacity: 0;
     transform: translateY(-10px);
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
       45deg,
       rgba(139, 170, 170, 0.8) 0%,
       rgba(174, 139, 156, 0.8) 100%
-    );
+    ); */
+    background-color: unset;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     margin: 5px;
@@ -182,6 +196,42 @@
     display: block;
     opacity: 1;
     transform: translateY(0);
+    animation: expandMenu 0.5s ease forwards;
+  }
+
+  /* Staggered slide-down effect for submenu items */
+  .submenu-item {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideDown 0.5s ease forwards;
+  }
+
+  .submenu-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .submenu-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .submenu-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .submenu-item:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .submenu-item:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+
+  .submenu-item:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+
+  .submenu-item:nth-child(7) {
+    animation-delay: 0.7s;
   }
 
   /* Nav menu styles */
@@ -223,6 +273,28 @@
   }
 }
 
+/* Slide down animation */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Expand menu animation */
+@keyframes expandMenu {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 500px; /* Adjust this value based on your content */
+  }
+}
+
 svg {
   font-family: "Aref Ruqaa Ink", sans-serif;
   width: 100%;
@@ -258,4 +330,16 @@ svg text {
     stroke-dasharray: 50% 0;
     stroke-width: 0;
   }
+}
+
+.menu-indicator {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center; /* This is the key! */
+  vertical-align: middle;
+}
+
+.has-submenu:hover .menu-indicator,
+.has-submenu.active .menu-indicator {
+  transform: rotate(-90deg); /* Or rotate(180deg); */
 }

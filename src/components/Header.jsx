@@ -59,34 +59,64 @@ function Header() {
             className={`nav-item has-submenu ${
               activeMenu === 1 ? "active" : ""
             }`}
-            onClick={() => toggleSubmenu(1)}
+            onMouseEnter={() => setActiveMenu(1)} // Show submenu on hover
+            onMouseLeave={() => setActiveMenu(null)} // Hide submenu on leave
+            onClick={() => toggleSubmenu(1)} // Toggle submenu on click for smaller screens
           >
             <a href="#" className="nav-link">
-              Services <span className="menu-indicator">❖</span>
+              Services{" "}
+              <span class="menu-indicator">
+                <img
+                  src="src/assets/arrow_back_ios_new_24dp_F9DB78_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="arrow"
+                  width={"14px"}
+                  height={"14px"}
+                />
+              </span>
             </a>
             <ul className={`submenu ${activeMenu === 1 ? "show" : ""}`}>
               <li className="submenu-item">
-                <NavLink to="/services" className="submenu-link">
+                <NavLink
+                  to="/services"
+                  className="submenu-link"
+                  activeClassName="active"
+                >
                   ICSGV Services
                 </NavLink>
               </li>
               <li className="submenu-item">
-                <NavLink to="/library" className="submenu-link">
+                <NavLink
+                  to="/library"
+                  className="submenu-link"
+                  activeClassName="active"
+                >
                   Library
                 </NavLink>
               </li>
               <li className="submenu-item">
-                <NavLink to="/clinic" className="submenu-link">
+                <NavLink
+                  to="/clinic"
+                  className="submenu-link"
+                  activeClassName="active"
+                >
                   Clinic
                 </NavLink>
               </li>
               <li className="submenu-item">
-                <NavLink to="/matrimonial" className="submenu-link">
+                <NavLink
+                  to="/matrimonial"
+                  className="submenu-link"
+                  activeClassName="active"
+                >
                   Matrimonial
                 </NavLink>
               </li>
               <li className="submenu-item">
-                <NavLink to="/banquet" className="submenu-link">
+                <NavLink
+                  to="/banquet"
+                  className="submenu-link"
+                  activeClassName="active"
+                >
                   Banquet Hall
                 </NavLink>
               </li>
@@ -94,12 +124,17 @@ function Header() {
                 <NavLink
                   to="/funeral-services"
                   className="submenu-link"
+                  activeClassName="active"
                 >
                   Funeral Services
                 </NavLink>
               </li>
               <li className="submenu-item">
-                <NavLink to="/tripstomecca" className="submenu-link">
+                <NavLink
+                  to="/tripstomecca"
+                  className="submenu-link"
+                  activeClassName="active"
+                >
                   Hajj & Umrah
                 </NavLink>
               </li>
@@ -109,19 +144,37 @@ function Header() {
             className={`nav-item has-submenu ${
               activeMenu === 2 ? "active" : ""
             }`}
-            onClick={() => toggleSubmenu(2)}
+            onMouseEnter={() => setActiveMenu(2)} // Show submenu on hover
+            onMouseLeave={() => setActiveMenu(null)} // Hide submenu on leave
+            onClick={() => toggleSubmenu(2)} // Toggle submenu on click for smaller screens
           >
             <a href="#" className="nav-link">
-              Education <span className="menu-indicator">❖</span>
+              Education{" "}
+              <span class="menu-indicator">
+                <img
+                  src="src/assets/arrow_back_ios_new_24dp_F9DB78_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt="arrow"
+                  width={"14px"}
+                  height={"14px"}
+                />
+              </span>
             </a>
             <ul className={`submenu ${activeMenu === 2 ? "show" : ""}`}>
               <li className="submenu-item">
-                <a href="https://www.qubais.org/" className="submenu-link">
+                <a
+                  href="https://www.qubais.org/"
+                  className="submenu-link"
+                  activeClassName="active"
+                >
                   Quba Fulltime Islamic School
                 </a>
               </li>
               <li className="submenu-item">
-                <a href="https://www.littleangels.la/" className="submenu-link">
+                <a
+                  href="https://www.littleangels.la/"
+                  className="submenu-link"
+                  activeClassName="active"
+                >
                   Little Angels Preschool
                 </a>
               </li>
@@ -129,6 +182,7 @@ function Header() {
                 <a
                   href="https://icsgv.com/weekend-islamic-school/"
                   className="submenu-link"
+                  activeClassName="active"
                 >
                   Weekend Islamic School
                 </a>
@@ -137,6 +191,7 @@ function Header() {
                 <a
                   href="https://icsgv.com/quran-institute/"
                   className="submenu-link"
+                  activeClassName="active"
                 >
                   Quran Institute
                 </a>
@@ -145,6 +200,7 @@ function Header() {
                 <a
                   href="https://icsgv.com/youth-group/"
                   className="submenu-link"
+                  activeClassName="active"
                 >
                   Youth Group
                 </a>
@@ -166,7 +222,7 @@ function Header() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/stream" className="nav-link">
+            <NavLink to="/stream" className="nav-link" activeClassName="active">
               Live Stream
             </NavLink>
           </li>
