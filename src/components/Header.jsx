@@ -66,12 +66,13 @@ function Header() {
             <a href="#" className="nav-link">
               Services{" "}
               <span class="menu-indicator">
-                <img
+                {/* <img
                   src="dist/assets/arrow_back_ios_new_24dp_F9DB78_FILL0_wght400_GRAD0_opsz24.svg"
                   alt="arrow"
                   width={"14px"}
                   height={"14px"}
-                />
+                /> */}
+                ◀︎
               </span>
             </a>
             <ul className={`submenu ${activeMenu === 1 ? "show" : ""}`}>
@@ -151,12 +152,13 @@ function Header() {
             <a href="#" className="nav-link">
               Education{" "}
               <span class="menu-indicator">
-                <img
+                {/* <img
                   src="dist/assets/arrow_back_ios_new_24dp_F9DB78_FILL0_wght400_GRAD0_opsz24.svg"
                   alt="arrow"
                   width={"14px"}
                   height={"14px"}
-                />
+                /> */}
+                ◀︎
               </span>
             </a>
             <ul className={`submenu ${activeMenu === 2 ? "show" : ""}`}>
