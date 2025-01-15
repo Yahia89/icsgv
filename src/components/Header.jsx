@@ -40,7 +40,7 @@ function Header() {
   return (
     <header className="custom-header">
       <div className="logo-container">
-        <a href="/">
+        <a href="https://yahia89.github.io/icsgv/">
           <img
             src="https://icsgv.com/wp-content/uploads/2023/08/logo-icsgv.png"
             alt="Logo"
@@ -67,7 +67,7 @@ function Header() {
               Services{" "}
               <span class="menu-indicator">
                 <img
-                  src="src/assets/arrow_back_ios_new_24dp_F9DB78_FILL0_wght400_GRAD0_opsz24.svg"
+                  src="dist/assets/arrow_back_ios_new_24dp_F9DB78_FILL0_wght400_GRAD0_opsz24.svg"
                   alt="arrow"
                   width={"14px"}
                   height={"14px"}
@@ -152,7 +152,7 @@ function Header() {
               Education{" "}
               <span class="menu-indicator">
                 <img
-                  src="src/assets/arrow_back_ios_new_24dp_F9DB78_FILL0_wght400_GRAD0_opsz24.svg"
+                  src="dist/assets/arrow_back_ios_new_24dp_F9DB78_FILL0_wght400_GRAD0_opsz24.svg"
                   alt="arrow"
                   width={"14px"}
                   height={"14px"}
