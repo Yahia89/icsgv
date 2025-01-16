@@ -177,20 +177,19 @@
   .submenu {
     display: none;
     position: static; /* Stack submenu items */
-    opacity: 0;
+    /* opacity: 0; */
     transform: translateY(-10px);
     /* background-image: linear-gradient(
       45deg,
       rgba(139, 170, 170, 0.8) 0%,
       rgba(174, 139, 156, 0.8) 100%
     ); */
-    background-color: unset;
+    background-color: #727272;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     margin: 5px;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
-
   /* Active submenu - shown on click */
   .has-submenu.active .submenu {
     display: block;
@@ -265,6 +264,15 @@
     gap: 10px;
     padding: 10px;
     text-align: center;
+  }
+
+  .nav-link {
+    width: 100%; /* Occupy full width of container */
+    padding: 20px; /* Even larger padding on small screens */
+    margin: 5px 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Prevents text from wrapping */
   }
 
   /* Display the menu toggle button */

@@ -5,7 +5,7 @@ import "../components/Header.css";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
-  const [activeMenu, setActiveMenu] = useState(null); // Tracks which submenu is open
+  const [activeSubmenus, setActiveSubmenus] = useState([]); // Tracks which submenu is open
   const location = useLocation(); // Get the current route
 
   const toggleMenu = () => {
@@ -13,12 +13,25 @@ function Header() {
   };
 
   const toggleSubmenu = (index) => {
-    setActiveMenu((prevIndex) => (prevIndex === index ? null : index));
+    const newActiveSubmenus = [...activeSubmenus];
+    // Check if submenu is already open
+    const isAlreadyOpen = newActiveSubmenus.includes(index);
+
+    if (isAlreadyOpen) {
+      // Remove index from activeSubmenus if clicked again
+      const updatedActiveSubmenus = newActiveSubmenus.filter(
+        (i) => i !== index
+      );
+      setActiveSubmenus(updatedActiveSubmenus);
+    } else {
+      // Add index to activeSubmenus if not already open
+      setActiveSubmenus([...newActiveSubmenus, index]);
+    }
   };
 
   const closeMenu = () => {
     setMenuActive(false);
-    setActiveMenu(null);
+    setActiveSubmenus([]); // Reset activeSubmenus on close
   };
 
   // Close menu when clicking outside
@@ -57,13 +70,13 @@ function Header() {
           </li>
           <li
             className={`nav-item has-submenu ${
-              activeMenu === 1 ? "active" : ""
+              activeSubmenus.includes(1) ? "active" : ""
             }`}
-            onMouseEnter={() => setActiveMenu(1)} // Show submenu on hover
-            onMouseLeave={() => setActiveMenu(null)} // Hide submenu on leave
-            onClick={() => toggleSubmenu(1)} // Toggle submenu on click for smaller screens
+            onMouseEnter={() => {}} // No hover needed with this approach
+            onMouseLeave={() => {}} // No hover needed with this approach
+            onClick={() => toggleSubmenu(1)} // Toggle submenu on click
           >
-            <a href="#" className="nav-link">
+            <a className="nav-link">
               Services{" "}
               <span class="menu-indicator">
                 {/* <img
@@ -75,7 +88,9 @@ function Header() {
                 ◀︎
               </span>
             </a>
-            <ul className={`submenu ${activeMenu === 1 ? "show" : ""}`}>
+            <ul
+              className={`submenu ${activeSubmenus.includes(1) ? "show" : ""}`}
+            >
               <li className="submenu-item">
                 <NavLink
                   to="/services"
@@ -143,11 +158,11 @@ function Header() {
           </li>
           <li
             className={`nav-item has-submenu ${
-              activeMenu === 2 ? "active" : ""
+              activeSubmenus.includes(2) ? "active" : ""
             }`}
-            onMouseEnter={() => setActiveMenu(2)} // Show submenu on hover
-            onMouseLeave={() => setActiveMenu(null)} // Hide submenu on leave
-            onClick={() => toggleSubmenu(2)} // Toggle submenu on click for smaller screens
+            onMouseEnter={() => {}} // No hover needed with this approach
+            onMouseLeave={() => {}} // No hover needed with this approach
+            onClick={() => toggleSubmenu(2)} // Toggle submenu on click
           >
             <a href="#" className="nav-link">
               Education{" "}
@@ -161,7 +176,9 @@ function Header() {
                 ◀︎
               </span>
             </a>
-            <ul className={`submenu ${activeMenu === 2 ? "show" : ""}`}>
+            <ul
+              className={`submenu ${activeSubmenus.includes(2) ? "show" : ""}`}
+            >
               <li className="submenu-item">
                 <a
                   href="https://www.qubais.org/"
