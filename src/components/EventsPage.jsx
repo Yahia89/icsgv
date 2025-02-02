@@ -105,37 +105,31 @@ const EventsPage = () => {
                         className="event-description"
                         style={{ color: "#000" }}
                       >
-                        Guest Speakers: Sh. Yusha Evans, Sh. Ahmed Billoo,
-                        Hossein Behizad, and Hootan Afzali CrushRoar Activity
-                        Snacks & Food will be provided by Dennys (Halal)
-                        Families are welcome
+                        EMPOWERING TEENS
+
+
+Tackling Bullying and Navigating Mental Health Challenges
+
+by Sadia Raja, M.A. Ed. APCC
+
+
+Friday, January 24, 2025
+
+Strategies for Addressing Bullying
+
+
+Friday, February 7, 2025
+
+Common Mistakes in Handling Youth Issues
+
+
+Program Starts after Isha Prayer at 8 PM
                       </p>
                       <h3 className="event-title" style={{ color: "#0078D4" }}>
-                        ICSGV Qiyam
+                       
                       </h3>
-                      <button
-                        className="event-button"
-                        style={{
-                          backgroundColor: "#0078D4",
-                          color: "#fff",
-                          padding: "10px 20px",
-                          fontSize: "16px",
-                          border: "none",
-                          borderRadius: "5px",
-                          cursor: "pointer",
-                        }}
-                        onClick={() =>
-                          window.open(
-                            "https://zkqwdtgbb.cc.rs6.net/tn.jsp?f=001hnfTbaKh7u_V6-fApDQhdcl3djTsOpirjKj_D7NCHlOTU8JMAfHinNfYDs8LklgomXVW8sdOLJcPdpG2LtAKm4SQi8w6h3bUCVtogxENeYgnARI3H1zJHfFNTvlpGTnAskqMzMwbdAoT-hCIJCySxFPCxRBYfyBQzE7yTW_dE9w=&c=7qklSMyeBwu59oE9R55NlxpavG-AToz7uzy6zanAnX7prf_yJCJ5wg==&ch=G5qCy2td2Y1SIn8hNlXYDwAkttzTibw3MxtWD2ivj4u5M-dL8EIS0Q==",
-                            "_blank"
-                          )
-                        }
-                      >
-                        RSVP
-                      </button>
-
                       <img
-                        src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Ffiles.constantcontact.com%2F9514b36a901%2Ffd3c3eee-ee93-4ffb-a9bf-76e3476af200.jpg&t=1735015727&ymreqid=8c3c2c0b-b2fa-a289-1c0d-310001017c00&sig=cKHnNIAOwl6cFcKbMLg51w--~D"
+                        src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Ffiles.constantcontact.com%2F9514b36a901%2Ffa8e6ea7-58a3-4c06-ac76-e6bd07441a86.png&t=1738479154&ymreqid=8c3c2c0b-b2fa-a289-1cb5-5d0007012800&sig=lbiKq.M8gzH8lJ99fXFaSw--~D"
                         alt="Event Image"
                         className="event-image"
                         style={{ maxWidth: "100%", height: "auto" }}
