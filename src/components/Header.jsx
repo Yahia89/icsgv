@@ -5,20 +5,22 @@ import "../components/Header.css";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState(null); // Change to single active submenu
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
   const location = useLocation();
 
   const toggleMenu = () => {
     setMenuActive((prev) => !prev);
   };
 
-  const toggleSubmenu = (index) => {
+  const toggleSubmenu = (e, index) => {
+    // Prevent the click from bubbling up from child elements
+    e.stopPropagation();
     setActiveSubmenu(activeSubmenu === index ? null : index);
   };
 
   const closeMenu = () => {
     setMenuActive(false);
-    setActiveSubmenu(null); // Reset active submenu
+    setActiveSubmenu(null);
   };
 
   // Close menu when clicking outside
@@ -59,15 +61,16 @@ function Header() {
             className={`nav-item has-submenu ${
               activeSubmenu === 1 ? "active" : ""
             }`}
-            onClick={() => toggleSubmenu(1)}
+            onClick={(e) => toggleSubmenu(e, 1)}
           >
             <a className="nav-link">
               Services{" "}
-              <span class="menu-indicator">
-                ◀︎
-              </span>
+              <span className="menu-indicator">◀︎</span>
             </a>
-            <ul className={`submenu ${activeSubmenu === 1 ? "show" : ""}`}>
+            <ul
+              className={`submenu ${activeSubmenu === 1 ? "show" : ""}`}
+              onClick={(e) => e.stopPropagation()}
+            >
               <li className="submenu-item">
                 <NavLink
                   to="/services"
@@ -137,15 +140,16 @@ function Header() {
             className={`nav-item has-submenu ${
               activeSubmenu === 2 ? "active" : ""
             }`}
-            onClick={() => toggleSubmenu(2)}
+            onClick={(e) => toggleSubmenu(e, 2)}
           >
             <a className="nav-link">
               Education{" "}
-              <span class="menu-indicator">
-                ◀︎
-              </span>
+              <span className="menu-indicator">◀︎</span>
             </a>
-            <ul className={`submenu ${activeSubmenu === 2 ? "show" : ""}`}>
+            <ul
+              className={`submenu ${activeSubmenu === 2 ? "show" : ""}`}
+              onClick={(e) => e.stopPropagation()}
+            >
               <li className="submenu-item">
                 <a
                   href="https://www.qubais.org/"
