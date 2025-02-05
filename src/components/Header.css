@@ -268,7 +268,7 @@
 
   .nav-link {
     width: 100%; /* Occupy full width of container */
-    padding: 20px; /* Even larger padding on small screens */
+    /* padding: 20px;  */
     margin: 5px 0;
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     transition: color 0.3s ease;
