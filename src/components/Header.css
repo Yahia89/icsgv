@@ -266,6 +266,14 @@
     text-align: center;
   }
 
+  .a {
+    padding: 20px;
+  }
+
+  .nav-item {
+    padding: 0;
+  }
+
   .nav-link {
     width: 100%; /* Occupy full width of container */
     /* padding: 20px;  */
