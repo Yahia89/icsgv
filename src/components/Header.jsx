@@ -5,33 +5,20 @@ import "../components/Header.css";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
-  const [activeSubmenus, setActiveSubmenus] = useState([]); // Tracks which submenu is open
-  const location = useLocation(); // Get the current route
+  const [activeSubmenu, setActiveSubmenu] = useState(null); // Change to single active submenu
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuActive((prev) => !prev);
   };
 
   const toggleSubmenu = (index) => {
-    const newActiveSubmenus = [...activeSubmenus];
-    // Check if submenu is already open
-    const isAlreadyOpen = newActiveSubmenus.includes(index);
-
-    if (isAlreadyOpen) {
-      // Remove index from activeSubmenus if clicked again
-      const updatedActiveSubmenus = newActiveSubmenus.filter(
-        (i) => i !== index
-      );
-      setActiveSubmenus(updatedActiveSubmenus);
-    } else {
-      // Add index to activeSubmenus if not already open
-      setActiveSubmenus([...newActiveSubmenus, index]);
-    }
+    setActiveSubmenu(activeSubmenu === index ? null : index);
   };
 
   const closeMenu = () => {
     setMenuActive(false);
-    setActiveSubmenus([]); // Reset activeSubmenus on close
+    setActiveSubmenu(null); // Reset active submenu
   };
 
   // Close menu when clicking outside
@@ -70,27 +57,17 @@ function Header() {
           </li>
           <li
             className={`nav-item has-submenu ${
-              activeSubmenus.includes(1) ? "active" : ""
+              activeSubmenu === 1 ? "active" : ""
             }`}
-            onMouseEnter={() => {}} // No hover needed with this approach
-            onMouseLeave={() => {}} // No hover needed with this approach
-            onClick={() => toggleSubmenu(1)} // Toggle submenu on click
+            onClick={() => toggleSubmenu(1)}
           >
             <a className="nav-link">
               Services{" "}
               <span class="menu-indicator">
-                {/* <img
-                  src="dist/assets/arrow_back_ios_new_24dp_F9DB78_FILL0_wght400_GRAD0_opsz24.svg"
-                  alt="arrow"
-                  width={"14px"}
-                  height={"14px"}
-                /> */}
                 ◀︎
               </span>
             </a>
-            <ul
-              className={`submenu ${activeSubmenus.includes(1) ? "show" : ""}`}
-            >
+            <ul className={`submenu ${activeSubmenu === 1 ? "show" : ""}`}>
               <li className="submenu-item">
                 <NavLink
                   to="/services"
@@ -158,27 +135,17 @@ function Header() {
           </li>
           <li
             className={`nav-item has-submenu ${
-              activeSubmenus.includes(2) ? "active" : ""
+              activeSubmenu === 2 ? "active" : ""
             }`}
-            onMouseEnter={() => {}} // No hover needed with this approach
-            onMouseLeave={() => {}} // No hover needed with this approach
-            onClick={() => toggleSubmenu(2)} // Toggle submenu on click
+            onClick={() => toggleSubmenu(2)}
           >
-            <a href="#" className="nav-link">
+            <a className="nav-link">
               Education{" "}
               <span class="menu-indicator">
-                {/* <img
-                  src="dist/assets/arrow_back_ios_new_24dp_F9DB78_FILL0_wght400_GRAD0_opsz24.svg"
-                  alt="arrow"
-                  width={"14px"}
-                  height={"14px"}
-                /> */}
                 ◀︎
               </span>
             </a>
-            <ul
-              className={`submenu ${activeSubmenus.includes(2) ? "show" : ""}`}
-            >
+            <ul className={`submenu ${activeSubmenu === 2 ? "show" : ""}`}>
               <li className="submenu-item">
                 <a
                   href="https://www.qubais.org/"
