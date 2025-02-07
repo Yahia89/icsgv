@@ -20,7 +20,7 @@ import Funeral from "./components/Funeral";
 
 function App() {
   return (
-    <Router basename="/icsgv/">
+    <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
