@@ -1,26 +1,45 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const PrayerTimes = () => {
+  const [isIframeLoaded, setIsIframeLoaded] = useState(false);
+
   useEffect(() => {
-    const handleMessage = (e) => {
-      if (
-        e.data &&
-        e.data.type === "contentHeight" &&
-        e.data.page === "prayers"
-      ) {
-        const targetFrame = document.getElementById("prayers-frame");
-        if (targetFrame) {
-          targetFrame.style.height = e.data.height + "px";
-        }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsIframeLoaded(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const prayerSection = document.querySelector('.prayer-times-heading');
+    if (prayerSection) {
+      observer.observe(prayerSection);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleMessage = (e) => {
+    if (
+      e.data &&
+      e.data.type === "contentHeight" &&
+      e.data.page === "prayers"
+    ) {
+      const targetFrame = document.getElementById("prayers-frame");
+      if (targetFrame) {
+        targetFrame.style.height = e.data.height + "px";
       }
-    };
+    }
+  };
 
+  useEffect(() => {
     window.addEventListener("message", handleMessage);
-
-    // Cleanup the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("message", handleMessage);
-    };
+    return () => window.removeEventListener("message", handleMessage);
   }, []);
 
   return (
@@ -61,17 +80,30 @@ const PrayerTimes = () => {
           }}
         >
           <div style={{ width: "100%", maxWidth: "1200px" }}>
-            <iframe
-              id="prayers-frame"
-              src="https://themasjidapp.org/296/prayers"
-              style={{
-                width: "100%",
+            {isIframeLoaded ? (
+              <iframe
+                id="prayers-frame"
+                src="https://themasjidapp.org/296/prayers"
+                style={{
+                  width: "100%",
+                  height: "502px",
+                  boxSizing: "content-box",
+                }}
+                frameBorder="0"
+                scrolling="no"
+                loading="lazy"
+              ></iframe>
+            ) : (
+              <div style={{
                 height: "502px",
-                boxSizing: "content-box",
-              }}
-              frameBorder="0"
-              scrolling="no"
-            ></iframe>
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "#f5f5f5"
+              }}>
+                Loading Prayer Times...
+              </div>
+            )}
           </div>
         </section>
       </div>

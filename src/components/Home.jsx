@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
-import PrayerTimes from "./PrayerTimes";
+
+// Lazy load PrayerTimes component
+const PrayerTimes = lazy(() => import("./PrayerTimes"));
 
 function Home() {
   useEffect(() => {
@@ -110,7 +112,18 @@ function Home() {
           <button>Know More About Us</button>
         </Link>
         <h1 class="prayer-times-heading">Prayer Times</h1>
-        <PrayerTimes />
+        <Suspense fallback={
+          <div style={{ 
+            textAlign: 'center', 
+            padding: '20px',
+            color: '#666' 
+          }}>
+            Loading Prayer Times...
+          </div>
+        }>
+          <PrayerTimes />
+        </Suspense>
+
         <section class="services-card">
           <div class="services-card-background">
             <div class="services-card-content">
