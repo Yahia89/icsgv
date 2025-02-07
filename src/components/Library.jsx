@@ -1,8 +1,15 @@
+// Library.jsx
 import "./Library.css";
+import SEO from './SEO';
 
 const Library = () => {
   return (
     <div className="main">
+      <SEO 
+        title="ICSGV | Library" 
+        description="Discover our extensive library featuring over 6000 books and media in multiple languages."
+        preloadImage="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/shutterstock_1608535966-min.jpg?raw=true"
+      />
       <div className="wrapper">
         <svg>
           <text x="50%" y="50%" dy=".35em" textAnchor="middle">

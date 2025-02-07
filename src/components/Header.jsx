@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-
+import SEO from './SEO';
 import "../components/Header.css";
 
 function Header() {
@@ -40,16 +40,23 @@ function Header() {
   }, [location]);
 
   return (
-    <header className="custom-header">
-      <div className="logo-container">
-        <a href="https://yahia89.github.io/icsgv/">
-          <img
-            src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv.png?raw=true"
-            alt="Logo"
-            className="logo"
-          />
-        </a>
-      </div>
+    <>
+      <SEO
+        title="ICSGV | Islamic Center of San Gabriel Valley"
+        description="Islamic Center of San Gabriel Valley - A comprehensive Islamic center serving the community"
+        preloadImage="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv-min.png?raw=true"
+      />
+      <header className="custom-header">
+        <div className="logo-container">
+          <NavLink to="/">
+            <img
+              src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv-min.png?raw=true"
+              alt="ICSGV Logo"
+              className="logo"
+              loading="eager"
+            />
+          </NavLink>
+        </div>
       <nav className={`nav-menu ${menuActive ? "active" : ""}`}>
         <ul className="nav-list">
           <li className="nav-item">
@@ -246,6 +253,7 @@ function Header() {
         <span className="menu-icon"></span>
       </button>
     </header>
+    </>
   );
 }
 

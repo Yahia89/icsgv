@@ -1,4 +1,5 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -19,11 +20,12 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/prayertimes" element={<PrayerTimes />} />
         <Route path="/resources" element={<Resources />} />
@@ -37,8 +39,9 @@ function App() {
         <Route path="/funeral-services" element={<Funeral />} />
         <Route path="/tripstomecca" element={<HajjUmrahCommittee />} />
       </Routes>
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+    </HelmetProvider>
   );
 }
 
