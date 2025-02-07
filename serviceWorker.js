@@ -3,29 +3,9 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/assets/',
-  '/src/assets/'
+  '/src/assets/',
+  'https://raw.githubusercontent.com/Yahia89/icsgv/refs/heads/icsgv/src/assets/16-sacred-symbols-MR9YMTh.png'
 ];
-
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
-  );
-});
-
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cache => {
-          if (cache !== CACHE_NAME) {
-            return caches.delete(cache);
-          }
-        })
-      );
-    })
-  );
-});
 
 self.addEventListener('fetch', event => {
   event.respondWith(
@@ -34,18 +14,30 @@ self.addEventListener('fetch', event => {
         if (response) {
           return response;
         }
-        return fetch(event.request)
-          .then(response => {
-            if (!response || response.status !== 200) {
-              return response;
-            }
+        return fetch(event.request, {
+          credentials: 'same-origin',
+          mode: 'cors'
+        })
+        .then(response => {
+          if (!response || response.status !== 200) {
+            return response;
+          }
+          // If this is an image request, cache it dynamically.
+          if (event.request.destination === 'image') {
             const responseToCache = response.clone();
             caches.open(CACHE_NAME)
               .then(cache => {
                 cache.put(event.request, responseToCache);
               });
-            return response;
-          });
+          }
+          return response;
+        });
+      })
+      .catch(() => {
+        return new Response('Network error occurred', {
+          status: 408,
+          headers: new Headers({ 'Content-Type': 'text/plain' })
+        });
       })
   );
 });
