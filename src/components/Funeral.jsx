@@ -57,7 +57,7 @@ const Funeral = () => {
             <li>Transporting the deceased to the grave site for burial</li>
           </ul>
           <div className="funeral-video">
-            <video controls autoPlay loop muted>
+            <video controls autoPlay loop muted playsInline>
               <source
                 src="https://github.com/Yahia89/icsgv/raw/refs/heads/icsgv/src/assets/ICSGV-Video-Without-Music.mp4"
                 type="video/mp4"

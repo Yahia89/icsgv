@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation, Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import "../components/Header.css";
 
@@ -13,8 +13,8 @@ function Header() {
   };
 
   const toggleSubmenu = (e, index) => {
-    // Prevent the click from bubbling up from child elements
-    e.stopPropagation();
+    e.preventDefault(); // Prevent default link behavior
+    e.stopPropagation(); // Prevent event bubbling
     setActiveSubmenu(activeSubmenu === index ? null : index);
   };
 
@@ -42,13 +42,13 @@ function Header() {
   return (
     <header className="custom-header">
       <div className="logo-container">
-        <Link href="https://yahia89.github.io/icsgv/">
+        <a href="https://yahia89.github.io/icsgv/">
           <img
             src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv.png?raw=true"
             alt="Logo"
             className="logo"
           />
-        </Link>
+        </a>
       </div>
       <nav className={`nav-menu ${menuActive ? "active" : ""}`}>
         <ul className="nav-list">
@@ -57,15 +57,13 @@ function Header() {
               Home
             </NavLink>
           </li>
-          <li
-            className={`nav-item has-submenu ${
-              activeSubmenu === 1 ? "active" : ""
-            }`}
-            onClick={(e) => toggleSubmenu(e, 1)}
-          >
-            <a className="nav-link">
-              Services{" "}
-              <span className="menu-indicator">◀︎</span>
+          <li className={`nav-item has-submenu ${activeSubmenu === 1 ? "active" : ""}`}>
+            <a
+              href="#"
+              className="nav-link"
+              onClick={(e) => toggleSubmenu(e, 1)}
+            >
+              Services <span className="menu-indicator">◀︎</span>
             </a>
             <ul
               className={`submenu ${activeSubmenu === 1 ? "show" : ""}`}
@@ -136,15 +134,13 @@ function Header() {
               </li>
             </ul>
           </li>
-          <li
-            className={`nav-item has-submenu ${
-              activeSubmenu === 2 ? "active" : ""
-            }`}
-            onClick={(e) => toggleSubmenu(e, 2)}
-          >
-            <a className="nav-link">
-              Education{" "}
-              <span className="menu-indicator">◀︎</span>
+          <li className={`nav-item has-submenu ${activeSubmenu === 2 ? "active" : ""}`}>
+            <a
+              href="#"
+              className="nav-link"
+              onClick={(e) => toggleSubmenu(e, 2)}
+            >
+              Education <span className="menu-indicator">◀︎</span>
             </a>
             <ul
               className={`submenu ${activeSubmenu === 2 ? "show" : ""}`}
@@ -154,7 +150,6 @@ function Header() {
                 <a
                   href="https://www.qubais.org/"
                   className="submenu-link"
-                  activeClassName="active"
                 >
                   Quba Fulltime Islamic School
                 </a>
@@ -163,7 +158,6 @@ function Header() {
                 <a
                   href="https://www.littleangels.la/"
                   className="submenu-link"
-                  activeClassName="active"
                 >
                   Little Angels Preschool
                 </a>
@@ -172,7 +166,6 @@ function Header() {
                 <a
                   href="https://icsgv.com/weekend-islamic-school/"
                   className="submenu-link"
-                  activeClassName="active"
                 >
                   Weekend Islamic School
                 </a>
@@ -181,7 +174,6 @@ function Header() {
                 <a
                   href="https://icsgv.com/quran-institute/"
                   className="submenu-link"
-                  activeClassName="active"
                 >
                   Quran Institute
                 </a>
@@ -190,7 +182,6 @@ function Header() {
                 <a
                   href="https://icsgv.com/youth-group/"
                   className="submenu-link"
-                  activeClassName="active"
                 >
                   Youth Group
                 </a>
