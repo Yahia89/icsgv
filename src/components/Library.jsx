@@ -8,7 +8,9 @@ const Library = () => {
       <SEO 
         title="ICSGV | Library" 
         description="Discover our extensive library featuring over 6000 books and media in multiple languages."
+        imageType="image/webp"
         preloadImage="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/shutterstock_1608535966-min.jpg?raw=true"
+        priority="high"
       />
       <div className="wrapper">
         <svg>
