@@ -1,6 +1,6 @@
 .main {
   background-color: #f5f5f5;
-  background-image: url("https://icsgv.com/wp-content/uploads/2023/08/16-sacred-symbols-MR9YMTh.png");
+  background-image: url("https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/16-sacred-symbols-MR9YMTh.png?raw=true");
   background-repeat: no-repeat;
   background-position: center left;
 }
@@ -103,7 +103,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  background-image: url("https://icsgv.com/wp-content/uploads/2023/08/16-sacred-symbols-MR9YMTh.png");
+  background-image: url("https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/16-sacred-symbols-MR9YMTh.png?raw=true");
 }
 
 .history-section    .image-container-1 img,
