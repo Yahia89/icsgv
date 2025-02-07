@@ -44,7 +44,7 @@ function Header() {
       <div className="logo-container">
         <a href="https://yahia89.github.io/icsgv/">
           <img
-            src="https://icsgv.com/wp-content/uploads/2023/08/logo-icsgv.png"
+            src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv.png?raw=true"
             alt="Logo"
             className="logo"
           />

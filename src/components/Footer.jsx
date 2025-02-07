@@ -7,7 +7,7 @@ const Footer = () => {
             <div class="footer-logo">
               <a href="/">
                 <img
-                  src="https://icsgv.com/wp-content/uploads/2023/08/logo-icsgv.png"
+                  src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv.png?raw=true"
                   alt="ICSGV Logo"
                 />
               </a>

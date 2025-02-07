@@ -85,22 +85,22 @@ const About = () => {
     {
       name: "Naseem Khan",
       role: "Facility Staff",
-      imageUrl: "https://icsgv.com/wp-content/uploads/2023/08/blank-man.jpg",
+      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/blank-man.jpg?raw=true",
     },
     {
       name: "Abdul Ghaffar",
       role: "Facility Staff",
-      imageUrl: "https://icsgv.com/wp-content/uploads/2023/08/blank-man.jpg",
+      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/blank-man.jpg?raw=true",
     },
     {
       name: "Miguel Escobedo",
       role: "Facility Staff",
-      imageUrl: "https://icsgv.com/wp-content/uploads/2023/08/blank-man.jpg",
+      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/blank-man.jpg?raw=true",
     },
     {
       name: "Egles Camey",
       role: "Facility Staff",
-      imageUrl: "https://icsgv.com/wp-content/uploads/2023/08/blank-man.jpg",
+      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/blank-man.jpg?raw=true",
     },
   ];
 
