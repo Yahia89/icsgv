@@ -1,4 +1,6 @@
 import "./Library.css";
+import shutterstockImage from '../assets/shutterstock_1608535966.jpg';
+
 
 const Library = () => {
   return (
@@ -36,7 +38,7 @@ const Library = () => {
           </div>
           <div style={{ flex: 1 }}>
             <img
-              src="src/assets/shutterstock_1608535966.jpg"
+              src={shutterstockImage}
               alt="Library"
               style={{
                 maxWidth: "100%",
