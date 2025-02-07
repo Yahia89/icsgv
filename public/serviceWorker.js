@@ -1,3 +1,11 @@
+const CACHE_NAME = 'icsgv-cache-v1';
+const urlsToCache = [
+  '/icsgv/',
+  '/icsgv/index.html',
+  '/icsgv/assets/',
+  '/icsgv/src/assets/'
+];
+
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
