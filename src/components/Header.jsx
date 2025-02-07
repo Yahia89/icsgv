@@ -45,6 +45,7 @@ function Header() {
         title="ICSGV | Islamic Center of San Gabriel Valley"
         description="Islamic Center of San Gabriel Valley - A comprehensive Islamic center serving the community"
         preloadImage="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv-min.png?raw=true"
+        priority="high"
       />
       <header className="custom-header">
         <div className="logo-container">
@@ -54,6 +55,7 @@ function Header() {
               alt="ICSGV Logo"
               className="logo"
               loading="eager"
+              fetchpriority="high"
             />
           </NavLink>
         </div>

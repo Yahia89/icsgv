@@ -1,10 +1,31 @@
 const CACHE_NAME = 'icsgv-cache-v1';
 const urlsToCache = [
-  '/icsgv/',
-  '/icsgv/index.html',
-  '/icsgv/assets/',
-  '/icsgv/src/assets/'
+  '/',
+  '/index.html',
+  '/assets/',
+  '/src/assets/'
 ];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cache => {
+          if (cache !== CACHE_NAME) {
+            return caches.delete(cache);
+          }
+        })
+      );
+    })
+  );
+});
 
 self.addEventListener('fetch', event => {
   event.respondWith(
@@ -13,32 +34,18 @@ self.addEventListener('fetch', event => {
         if (response) {
           return response;
         }
-        return fetch(event.request, {
-          credentials: 'same-origin',
-          mode: 'cors'
-        })
-        .then(response => {
-          if (!response || response.status !== 200) {
-            return response;
-          }
-          const responseToCache = response.clone();
-          caches.open(CACHE_NAME)
-            .then(cache => {
-              if (event.request.url.startsWith('http')) {
+        return fetch(event.request)
+          .then(response => {
+            if (!response || response.status !== 200) {
+              return response;
+            }
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME)
+              .then(cache => {
                 cache.put(event.request, responseToCache);
-              }
-            });
-          return response;
-        })
-        .catch(() => {
-          // Return a fallback response if network request fails
-          return new Response('Network error occurred', {
-            status: 408,
-            headers: new Headers({
-              'Content-Type': 'text/plain'
-            })
+              });
+            return response;
           });
-        });
       })
   );
 });

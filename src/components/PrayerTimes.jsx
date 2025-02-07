@@ -4,6 +4,12 @@ const PrayerTimes = () => {
   const [isIframeLoaded, setIsIframeLoaded] = useState(false);
 
   useEffect(() => {
+    // If accessed directly (not through Home), load immediately
+    if (window.location.pathname === '/prayertimes') {
+      setIsIframeLoaded(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -19,6 +25,9 @@ const PrayerTimes = () => {
     const prayerSection = document.querySelector('.prayer-times-heading');
     if (prayerSection) {
       observer.observe(prayerSection);
+    } else {
+      // If prayer-times-heading not found, we're on the direct route
+      setIsIframeLoaded(true);
     }
 
     return () => observer.disconnect();
