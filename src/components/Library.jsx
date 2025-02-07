@@ -36,7 +36,7 @@ const Library = () => {
           </div>
           <div style={{ flex: 1 }}>
             <img
-              src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/shutterstock_1608535966.jpg?raw=true"
+              src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/shutterstock_1608535966-min.jpg?raw=true"
               alt="Library"
               style={{
                 maxWidth: "100%",
