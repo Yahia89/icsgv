@@ -6,7 +6,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-image: url("https://icsgv.com/wp-content/uploads/2023/08/16-sacred-symbols-MR9YMTg.png");
+  background-image: url("https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/16-sacred-symbols-MR9YMTg.png?raw=true");
   background-size: contain;
   background-position: bottom right; /* Dynamically position at the bottom-right corner */
   background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -23,7 +23,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
-  background-image: url("https://icsgv.com/wp-content/uploads/2023/08/16-sacred-symbols-MR9YMTg.png");
+  background-image: url("https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/16-sacred-symbols-MR9YMTg.png?raw=true");
   background-size: contain;
   background-position: right bottom; /* Dynamically position at the bottom-right corner */
   background-repeat: no-repeat; /* Prevent the image from repeating */
