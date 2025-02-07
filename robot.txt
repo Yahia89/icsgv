@@ -1,0 +1,9 @@
+# Robots.txt for Islamic Center of San Gabriel Valley (ICSGV)
+# This file follows best practices to ensure that search engines can crawl all pages.
+# For more information, see:
+# https://developer.chrome.com/docs/lighthouse/seo/invalid-robots-txt/
+
+User-agent: *
+Disallow:
+
+Sitemap: https://icsgv.com/sitemap.xml
