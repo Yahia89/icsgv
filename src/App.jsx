@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -25,7 +23,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<EventsPage />} />
-        <Route path="/prayertimes" element={<PrayerTimes />} />
         <Route path="/prayertimes" element={<PrayerTimes />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/services" element={<Services />} />
