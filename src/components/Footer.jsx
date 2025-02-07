@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
@@ -5,36 +6,31 @@ const Footer = () => {
         <footer class="footer">
           <div class="footer-content">
             <div class="footer-logo">
-              <a href="/">
+              <Link to="/">
                 <img
                   src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv.png?raw=true"
                   alt="ICSGV Logo"
                 />
-              </a>
+              </Link>
             </div>
             <div class="footer-links">
               <div class="footer-links-column">
                 <h5>Quick Links</h5>
                 <ul>
                   <li>
-                    <a href="/">Home</a>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <a href="/upcoming-events/">Events</a>
+                    <Link to="/events">Events</Link>
                   </li>
                   <li>
-                    <a
-                      href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5"
-                      target="_blank"
-                    >
-                      Donate
-                    </a>
+          <Link to="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5">Donate</Link>
                   </li>
                   <li>
-                    <a href="/contacts/">Contact Us</a>
+                    <Link to="/contacts">Contact Us</Link>
                   </li>
                   <li>
-                    <a href="/download/">Resources</a>
+                    <Link to="/resources">Resources</Link>
                   </li>
                 </ul>
               </div>
@@ -42,22 +38,22 @@ const Footer = () => {
                 <h5>Our Services</h5>
                 <ul>
                   <li>
-                    <a href="/services/">ICSGV</a>
+                    <Link to="/services">All services</Link>
                   </li>
                   <li>
-                    <a href="/hajj-umrah/">Hajj & Umrah</a>
+                    <Link to="/tripstomecca">Hajj & Umrah</Link>
                   </li>
                   <li>
-                    <a href="/clinic/">Free Clinic</a>
+                    <Link to="/clinic">Free Clinic</Link>
                   </li>
                   <li>
-                    <a href="/library/">Library</a>
+                    <Link to="/library">Library</Link>
                   </li>
                   <li>
-                    <a href="/matrimonial/">Matrimonial</a>
+                    <Link to="/matrimonial">Matrimonial</Link>
                   </li>
                   <li>
-                    <a href="/banquet-hall/">Banquet Hall</a>
+                    <Link to="/banquet">Banquet Hall</Link>
                   </li>
                 </ul>
               </div>

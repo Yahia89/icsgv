@@ -175,7 +175,7 @@ function Home() {
               <h2 className="services-card-heading">Our Services</h2>
 
               <div className="services-card-grid">
-                <a href="https://icsgv.com/matrimonial-services/">
+                <Link to="/matrimonial">
                   <div className="service-card">
                     <h3 className="service-card-title">Matrimonial Services</h3>
                     <p className="service-card-description">
@@ -183,8 +183,8 @@ function Home() {
                       partners for marriage.
                     </p>
                   </div>
-                </a>
-                <a href="https://icsgv.com/hajj-umrah/">
+                </Link>
+                <Link to="/tripstomecca">
                   <div className="service-card">
                     <h3 className="service-card-title">Hajj & Umrah</h3>
                     <p className="service-card-description">
@@ -192,8 +192,8 @@ function Home() {
                       for the Muslim community.
                     </p>
                   </div>
-                </a>
-                <a href="https://icsgv.com/mortuary-services/">
+                </Link>
+                <Link to="/funeral-services">
                   <div className="service-card">
                     <h3 className="service-card-title">Mortuary Services</h3>
                     <p className="service-card-description">
@@ -201,8 +201,8 @@ function Home() {
                       dignity and respect.
                     </p>
                   </div>
-                </a>
-                <a href="https://icsgv.com/banquet-hall/">
+                </Link>
+                <Link to="/banquet">
                   <div className="service-card">
                     <h3 className="service-card-title">Banquet Hall</h3>
                     <p className="service-card-description">
@@ -210,8 +210,8 @@ function Home() {
                       celebrations.
                     </p>
                   </div>
-                </a>
-                <a href="https://icsgv.com/clinic/">
+                </Link>
+                <Link to="/clinic">
                   <div className="service-card">
                     <h3 className="service-card-title">Clinic</h3>
                     <p className="service-card-description">
@@ -219,7 +219,7 @@ function Home() {
                       community.
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

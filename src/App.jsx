@@ -15,10 +15,12 @@ import Footer from "./components/Footer";
 import HajjUmrahCommittee from "./components/HajjUmrahCommittee";
 import BanquetHall from "./components/BanquetHall";
 import Funeral from "./components/Funeral";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

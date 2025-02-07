@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, Link } from "react-router-dom";
 
 import "../components/Header.css";
 
@@ -42,13 +42,13 @@ function Header() {
   return (
     <header className="custom-header">
       <div className="logo-container">
-        <a href="https://yahia89.github.io/icsgv/">
+        <Link href="https://yahia89.github.io/icsgv/">
           <img
             src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv.png?raw=true"
             alt="Logo"
             className="logo"
           />
-        </a>
+        </Link>
       </div>
       <nav className={`nav-menu ${menuActive ? "active" : ""}`}>
         <ul className="nav-list">
