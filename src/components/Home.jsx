@@ -80,7 +80,7 @@ function Home() {
           </div>
           <div class="right-column">
             <img
-              src="https://icsgv.com/wp-content/uploads/2023/08/Colleen_photo-5.jpg"
+              src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Colleen_photo-5.jpg?raw=true"
               alt="ICSGV Image"
               width="382"
               height="510"

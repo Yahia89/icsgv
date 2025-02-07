@@ -18,7 +18,7 @@ const Funeral = () => {
       <div className="funeral-container">
         <div className="funeral-left">
           <img
-            src="https://icsgv.com/wp-content/uploads/2023/08/Mortuary-Flyer-768x994-1.jpg"
+            src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Mortuary-Flyer-768x994-1.jpg?raw=true"
             alt="Funeral Services Flyer"
             className="funeral-image"
           />
@@ -26,7 +26,10 @@ const Funeral = () => {
         <div className="funeral-right" style={{ textAlign: "left", color: "#000" }}>
           <h2 className="funeral-title">Need our services now?</h2>
           <p className="funeral-contact">
-            Please contact Kal Radwan at (626) 899-0034
+            Please contact Kal Radwan at{" "}
+            <a href="tel:+16268990034" style={{ color: "#0066cc", textDecoration: "underline" }}>
+              (626) 899-0034
+            </a>
           </p>
           <p className="funeral-info">
             <strong>
@@ -56,7 +59,7 @@ const Funeral = () => {
           <div className="funeral-video">
             <video controls autoPlay loop muted>
               <source
-                src="https://icsgv.com/wp-content/uploads/2023/08/ICSGV-Video-Without-Music.mp4"
+                src="https://github.com/Yahia89/icsgv/raw/refs/heads/icsgv/src/assets/ICSGV-Video-Without-Music.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.

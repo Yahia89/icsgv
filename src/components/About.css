@@ -74,7 +74,7 @@
 
 .image-container {
   border: 10px solid #ffffff; /* Thicker border for better visibility */
-  border-radius: 100px;
+  /* border-radius: 100px; */
   width: 160px;
   height: 160px;
 }
@@ -82,7 +82,6 @@
 .image-container img {
   width: 160px;
   height: 160px;
-  border-radius: 100px;
   object-fit: cover;
   object-position: center right;
 }
@@ -99,4 +98,61 @@
   color: #666;
   text-align: center;
   margin: 0;
+}
+.history-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-image: url("https://icsgv.com/wp-content/uploads/2023/08/16-sacred-symbols-MR9YMTh.png");
+}
+
+.history-section    .image-container-1 img,
+.image-container-2 img,
+.image-container-3 img,
+.image-container-4  img {
+  width: 100%;
+  height: auto;
+  border-radius: 0; /* Remove unnecessary cropping */
+  object-fit: contain; /* Ensures the full image is visible */
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .history-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reverse {
+    flex-direction: column-reverse;
+  }
+  
+
+
+    .image-container-1,
+    .image-container-2,
+    .image-container-3,
+    .image-container-4 {
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+  
 }

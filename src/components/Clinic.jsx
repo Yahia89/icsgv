@@ -34,7 +34,7 @@ const Clinic = () => {
             </div>
             <div className="clinic-image">
               <img
-                src="https://icsgv.com/wp-content/uploads/2023/08/7xm675131-1536x1024.jpg"
+                src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/7xm675131-scaled.jpg?raw=true"
                 alt="Mental Health Seminar"
               />
             </div>
@@ -44,7 +44,7 @@ const Clinic = () => {
           <div className="clinic-section">
             <div className="clinic-image">
               <img
-                src="https://icsgv.com/wp-content/uploads/2023/08/7xm280875-e1693202410121-1536x1469.jpg"
+                src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/7xm280875-e1693202410121.jpg?raw=true"
                 alt="Medical Clinic"
               />
             </div>

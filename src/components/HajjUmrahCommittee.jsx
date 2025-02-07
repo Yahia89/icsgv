@@ -20,7 +20,7 @@ const HajjUmrahCommittee = () => {
         <div className="member-container">
           <div className="member">
             <div className="member-image">
-              <img src={maherImage} alt="Maher Subeh" />
+              <img src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/CE215988-2FF6-4D85-ABDE-F07BF9EEF5AA_4_5005_c.jpeg?raw=true" alt="Maher Subeh" />
             </div>
             <h3 className="member-name">Maher Subeh</h3>
             <p className="member-phone">626-224-7050</p>

@@ -5,16 +5,16 @@ const BanquetHall = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
-    "https://icsgv.com/wp-content/uploads/2023/08/IMG_0256-copy.jpg",
-    "https://icsgv.com/wp-content/uploads/2023/08/IMG_0254-copy.jpg",
-    "https://icsgv.com/wp-content/uploads/2023/08/IMG_0326-copy.jpg",
-    "https://icsgv.com/wp-content/uploads/2023/08/IMG_3693-copy.jpg",
-    "https://icsgv.com/wp-content/uploads/2023/08/IMG_1393-copy.jpg",
-    "https://icsgv.com/wp-content/uploads/2023/08/IMG_1389-copy.jpg",
-    "https://icsgv.com/wp-content/uploads/2023/08/IMG_0328-copy.jpg",
-    "https://icsgv.com/wp-content/uploads/2023/08/IMG_3691-copy.jpg",
-    "https://icsgv.com/wp-content/uploads/2023/08/IMG_0253-copy-1.jpg",
-    "https://icsgv.com/wp-content/uploads/2023/08/IMG_3701-copy.jpg",
+    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_0253-copy-1.jpg?raw=true",
+    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_0254-copy.jpg?raw=true",
+    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_0256-copy.jpg?raw=true",
+    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_0326-copy.jpg?raw=true",
+    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_0328-copy.jpg?raw=true",
+    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_1389-copy.jpg?raw=true",
+    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_1393-copy.jpg?raw=true",
+    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_3691-copy.jpg?raw=true",
+    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_3693-copy.jpg?raw=true",
+    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_3701-copy.jpg?raw=true",
   ];
 
   return (
@@ -53,7 +53,7 @@ const BanquetHall = () => {
           </div>
           <div className="banquet-image">
             <img
-              src="https://icsgv.com/wp-content/uploads/2023/08/7xm957170-scaled.jpg"
+              src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/7xm957170-scaled.jpg?raw=true"
               alt="Banquet Hall"
             />
           </div>

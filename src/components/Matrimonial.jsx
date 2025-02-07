@@ -54,7 +54,7 @@ const Matrimonial = () => {
             </div>
             <div className="matrimonial-image">
               <img
-                src="https://icsgv.com/wp-content/uploads/2023/09/shutterstock_1944702031-1536x1022.jpg"
+                src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/shutterstock_1944702031.jpg?raw=true"
                 alt="Matrimonial Service"
               />
             </div>
