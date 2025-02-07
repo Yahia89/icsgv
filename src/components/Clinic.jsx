@@ -44,6 +44,9 @@ const Clinic = () => {
                 <img
                   src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/7xm675131-scaled.jpg?raw=true"
                   alt="Mental Health Seminar"
+                  width="800"
+                  height="450"
+                  loading="eager"
                 />
               </div>
             </div>
@@ -54,6 +57,9 @@ const Clinic = () => {
                 <img
                   src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/7xm280875-e1693202410121.jpg?raw=true"
                   alt="Medical Clinic"
+                  width="800"
+                  height="450"
+                  loading="lazy"
                 />
               </div>
               <div className="clinic-text">
