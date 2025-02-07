@@ -1,17 +1,3 @@
-const CACHE_NAME = 'icsgv-cache-v1';
-const urlsToCache = [
-  '/index.html',
-  '/src/assets/',
-  // Add other important assets here
-];
-
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
-  );
-});
-
 self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
@@ -21,7 +7,8 @@ self.addEventListener('fetch', event => {
         }
         return fetch(event.request)
           .then(response => {
-            if (!response || response.status !== 200 || response.type !== 'basic') {
+            // Cache all successful responses, including opaque ones
+            if (!response || response.status !== 200) {
               return response;
             }
             const responseToCache = response.clone();
