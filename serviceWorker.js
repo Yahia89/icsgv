@@ -3,7 +3,6 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/assets/',
-  '/src/assets/',
   'https://raw.githubusercontent.com/Yahia89/icsgv/refs/heads/icsgv/src/assets/16-sacred-symbols-MR9YMTh.png'
 ];
 
