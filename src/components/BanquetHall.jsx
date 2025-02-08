@@ -1,24 +1,44 @@
 import React, { useState } from "react";
 import "./BanquetHall.css";
+import SEO from './SEO';
+
+// Import images
+import mainBanquetImage from "../assets/7xm957170-scaled.jpg";
+import gallery1 from "../assets/IMG_0253-copy-1.jpg";
+import gallery2 from "../assets/IMG_0254-copy.jpg";
+import gallery3 from "../assets/IMG_0256-copy.jpg";
+import gallery4 from "../assets/IMG_0326-copy.jpg";
+import gallery5 from "../assets/IMG_0328-copy.jpg";
+import gallery6 from "../assets/IMG_1389-copy.jpg";
+import gallery7 from "../assets/IMG_1393-copy.jpg";
+import gallery8 from "../assets/IMG_3691-copy.jpg";
+import gallery9 from "../assets/IMG_3693-copy.jpg";
+import gallery10 from "../assets/IMG_3701-copy.jpg";
 
 const BanquetHall = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const galleryImages = [
-    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_0253-copy-1.jpg?raw=true",
-    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_0254-copy.jpg?raw=true",
-    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_0256-copy.jpg?raw=true",
-    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_0326-copy.jpg?raw=true",
-    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_0328-copy.jpg?raw=true",
-    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_1389-copy.jpg?raw=true",
-    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_1393-copy.jpg?raw=true",
-    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_3691-copy.jpg?raw=true",
-    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_3693-copy.jpg?raw=true",
-    "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/IMG_3701-copy.jpg?raw=true",
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery8,
+    gallery9,
+    gallery10
   ];
 
   return (
-    <div class="main">
+    <div className="main">
+      <SEO 
+        title="ICSGV | Banquet Hall"
+        description="Our banquet hall accommodates up to 235 people, perfect for weddings, ceremonies, and special events."
+        preloadImage={mainBanquetImage}
+        priority="high"
+      />
       <div class="wrapper">
         <svg>
           <text x="50%" y="50%" dy=".35em" text-anchor="middle">
@@ -53,7 +73,7 @@ const BanquetHall = () => {
           </div>
           <div className="banquet-image">
             <img
-              src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/7xm957170-scaled.jpg?raw=true"
+              src={mainBanquetImage}
               alt="Banquet Hall"
             />
           </div>

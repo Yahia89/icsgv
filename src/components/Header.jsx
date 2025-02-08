@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import SEO from './SEO';
 import "../components/Header.css";
+import headerLogo from "../assets/logo-icsgv.png";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
@@ -44,15 +45,15 @@ function Header() {
       <SEO
         title="ICSGV | Islamic Center of San Gabriel Valley"
         description="Islamic Center of San Gabriel Valley - A comprehensive Islamic center serving the community"
-        preloadImage="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv-min.png?raw=true"
+        preloadImage={headerLogo}
         priority="high"
       />
       <header className="custom-header">
         <div className="logo-container">
           <NavLink to="/">
             <img
-              src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv-min.png?raw=true"
-              alt="ICSGV Logo"
+              src={headerLogo}
+              alt="ICSGV"
               className="logo"
               loading="eager"
               fetchpriority="high"

@@ -1,6 +1,6 @@
 .main {
   background-color: #f5f5f5;
-  background-image: url("https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/16-sacred-symbols-MR9YMTh.png?raw=true");
+  background-image: url("../assets/16-sacred-symbols-MR9YMTh.png");
   background-repeat: no-repeat;
   background-position: center left;
 }
@@ -103,7 +103,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  background-image: url("https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/16-sacred-symbols-MR9YMTh.png?raw=true");
+  background-image: url("../assets/16-sacred-symbols-MR9YMTh.png");
 }
 
 .history-section    .image-container-1 img,

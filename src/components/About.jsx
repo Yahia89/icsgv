@@ -1,5 +1,25 @@
 import React, {useEffect} from "react";
 import "./About.css"; // Ensure to create corresponding CSS file
+import SEO from './SEO';
+// Import images
+import azizImage from "../assets/Aziz_Elattar.png";
+import abdulSattarImage from "../assets/Abdul_Sattar.png";
+import salahImage from "../assets/Salah_Qasqas.png";
+import mouayyedImage from "../assets/Mouayyed_Abulashin.png";
+import aminImage from "../assets/Amin_Almuhajab.png";
+import hajiImage from "../assets/Haji_Shahabuddin.png";
+import junaidImage from "../assets/Junaid_Farooqui.png";
+import imranImage from "../assets/Imran_Parekh.png";
+import nabilImage from "../assets/Nabil_Diab.png";
+import khalidImage from "../assets/Khalid_Hassan.png";
+import imamImage from "../assets/MicrosoftTeams-image-11.png";
+import asadImage from "../assets/Asad.png";
+import blankImage from "../assets/blank-man.jpg";
+import buildingImage from "../assets/Colleen_photo-5.jpg";
+import fatherDaughterImage from "../assets/happy-muslim-girl-and-her-father-reading-koran-at-D5K4CE2.jpg";
+import quranImage from "../assets/the-quran-the-central-religious-text-of-islam-PRGDY3Qa.jpg";
+import masjidImage from "../assets/Jean-Marshall-Photography-13.jpg";
+import mosqueimage from "../assets/Colleen_photo-5.jpg";
 
 const About = () => {
     useEffect(() => {
@@ -10,29 +30,27 @@ const About = () => {
     {
       name: "Aziz Uattar",
       role: "President",
-      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Aziz_Elattar.png?raw=true",
+      imageUrl: azizImage,
     },
     {
       name: "Abdul-Sattar Siddiq",
       role: "Secretary",
-      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Abdul_Sattar.png?raw=true",
+      imageUrl: abdulSattarImage,
     },
     {
       name: "Salah Qasqas",
       role: "Treasurer",
-      imageUrl:
-        "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Mouayyed_Abulashin.png?raw=true",
+      imageUrl: salahImage,
     },
     {
       name: "Mouayyed Abulshin",
       role: "Vice President",
-      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Salah_Qasqas.png?raw=true",
+      imageUrl: mouayyedImage,
     },
     {
       name: "Amin Almuhajab",
       role: "Co-Secretary",
-      imageUrl:
-        "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Amin_Almuhajab.png?raw=true",
+      imageUrl: aminImage,
     },
   ];
 
@@ -40,30 +58,27 @@ const About = () => {
     {
       name: "Haji Shahabuddin",
       role: "Trustee",
-      imageUrl:
-        "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Haji_Shahabuddin.png?raw=true",
+      imageUrl: hajiImage,
     },
     {
       name: "Junaid Farooqui",
       role: "Trustee",
-      imageUrl:
-        "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Junaid_Farooqui.png?raw=true",
+      imageUrl: junaidImage,
     },
     {
       name: "Imran Parekh",
       role: "Trustee",
-      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Imran_Parekh.png?raw=true",
+      imageUrl: imranImage,
     },
     {
       name: "Nabil Diab",
       role: "Trustee",
-      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Nabil_Diab.png?raw=true",
+      imageUrl: nabilImage,
     },
     {
       name: "Khalid Hassan",
       role: "Trustee",
-      imageUrl:
-        "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Khalid_Hassan.png?raw=true",
+      imageUrl: khalidImage,
     },
   ];
 
@@ -71,13 +86,12 @@ const About = () => {
     {
       name: "Imam Hassan",
       role: "Masjid Imam",
-      imageUrl:
-        "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/MicrosoftTeams-image-11.png?raw=true",
+      imageUrl: imamImage,
     },
     {
       name: "Muhammad Asad",
       role: "Administrator",
-      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Asad.png?raw=true",
+      imageUrl: asadImage,
     },
   ];
 
@@ -85,22 +99,22 @@ const About = () => {
     {
       name: "Naseem Khan",
       role: "Facility Staff",
-      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/blank-man.jpg?raw=true",
+      imageUrl: blankImage,
     },
     {
       name: "Abdul Ghaffar",
       role: "Facility Staff",
-      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/blank-man.jpg?raw=true",
+      imageUrl: blankImage,
     },
     {
       name: "Miguel Escobedo",
       role: "Facility Staff",
-      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/blank-man.jpg?raw=true",
+      imageUrl: blankImage,
     },
     {
       name: "Egles Camey",
       role: "Facility Staff",
-      imageUrl: "https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/blank-man.jpg?raw=true",
+      imageUrl: blankImage,
     },
   ];
 
@@ -123,6 +137,12 @@ const About = () => {
 
   return (
     <div className="main">
+      <SEO 
+        title="ICSGV | About Us"
+        description="Learn about the Islamic Center of San Gabriel Valley, our history, and meet our team."
+        preloadImage={buildingImage}
+        priority="high"
+      />
       <div className="wrapper">
         <svg>
           <text x="50%" y="50%" dy=".35em" textAnchor="middle">
@@ -151,7 +171,7 @@ const About = () => {
     </div>
     <div className="image-container-1">
       <img
-        src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Colleen_photo-5.jpg?raw=true"
+        src={mosqueimage}
         alt="ICSGV Building"
       />
     </div>
@@ -160,7 +180,7 @@ const About = () => {
   <div className="history-section">
     <div className="image-container-2">
       <img
-        src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/happy-muslim-girl-and-her-father-reading-koran-at-D5K4CE2.jpg?raw=true"
+        src={fatherDaughterImage}
         alt="ICSGV Image"
       />
     </div>
@@ -179,7 +199,7 @@ const About = () => {
     </div>
     <div className="image-container-3">
       <img
-        src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/the-quran-the-central-religious-text-of-islam-PRGDY3Qa.jpg?raw=true"
+        src={quranImage}
         alt="ICSGV Quran Reading"
       />
     </div>
@@ -187,7 +207,7 @@ const About = () => {
   <div className="history-section">
     <div className="image-container-4">
       <img
-        src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Jean-Marshall-Photography-13.jpg?raw=true"
+        src={masjidImage}
         alt="ICSGV Building"
       />
     </div>

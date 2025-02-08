@@ -1,9 +1,18 @@
 import React from "react";
 import "./Funeral.css";
+import SEO from './SEO';
+import funeralFlyer from "../assets/Mortuary-Flyer-768x994-1.jpg";
+import funeralVideo from "../assets/ICSGV-Video-Without-Music.mp4";
 
 const Funeral = () => {
   return (
     <div class="main">
+      <SEO 
+        title="ICSGV | Funeral Services"
+        description="Islamic funeral and burial services provided by ICSGV Mortuary, Inc. Complete Islamic burial packages available."
+        preloadImage={funeralFlyer}
+        priority="high"
+      />
       <div class="wrapper">
         <svg>
           <text x="50%" y="50%" dy=".35em" text-anchor="middle">
@@ -18,9 +27,10 @@ const Funeral = () => {
       <div className="funeral-container">
         <div className="funeral-left">
           <img
-            src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Mortuary-Flyer-768x994-1.jpg?raw=true"
+            src={funeralFlyer}
             alt="Funeral Services Flyer"
             className="funeral-image"
+            loading="eager"
           />
         </div>
         <div className="funeral-right" style={{ textAlign: "left", color: "#000" }}>
@@ -57,9 +67,16 @@ const Funeral = () => {
             <li>Transporting the deceased to the grave site for burial</li>
           </ul>
           <div className="funeral-video">
-            <video controls autoPlay loop muted playsInline>
+            <video 
+              controls 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              preload="metadata"
+            >
               <source
-                src="https://github.com/Yahia89/icsgv/raw/refs/heads/icsgv/src/assets/ICSGV-Video-Without-Music.mp4"
+                src={funeralVideo}
                 type="video/mp4"
               />
               Your browser does not support the video tag.

@@ -6,15 +6,22 @@
     padding: 1rem;
     text-align: center;
     background-color: #f9fafb;
+    background-image: url("../assets/16-sacred-symbols-MR9YMTh.png");
+    background-size: contain;
+    background-repeat: repeat;
   }
   
   .wrapper2 {
-    max-width: 800px;
+    background-image: url("../assets/16-sacred-symbols-MR9YMTh.png");
+    background-size: contain;
+    background-repeat: repeat;
+    /* max-width: 800px; */
     width: 100%;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    margin: 1rem;
   }
   
   /* Typography */

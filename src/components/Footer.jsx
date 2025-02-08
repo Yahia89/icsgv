@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import footerLogo from "../assets/logo-icsgv.png";
 
 const Footer = () => {
   return (
@@ -8,8 +9,9 @@ const Footer = () => {
             <div class="footer-logo">
               <Link to="/">
                 <img
-                  src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/logo-icsgv.png?raw=true"
+                  src={footerLogo}
                   alt="ICSGV Logo"
+                  loading="lazy"
                 />
               </Link>
             </div>
@@ -87,6 +89,10 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+          </div>
+          <div className="footer-bottom">
+            <p>© {new Date().getFullYear()} ICSGV. All Rights Reserved.</p>
+            <p>Developed & Designed by <a href="https://techdevprime.com" target="_blank" rel="noopener noreferrer">techdevprime.com</a></p>
           </div>
         </footer>
   );

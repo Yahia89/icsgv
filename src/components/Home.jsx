@@ -2,6 +2,8 @@ import { useEffect, Suspense, lazy } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
+import SEO from './SEO';
+import masjidImage from "../assets/Colleen_photo-5.jpg";
 
 // Lazy load PrayerTimes component
 const PrayerTimes = lazy(() => import("./PrayerTimes"));
@@ -30,6 +32,12 @@ function Home() {
 
   return (
     <>
+      <SEO 
+        title="ICSGV | Home"
+        description="Welcome to the Islamic Center of San Gabriel Valley. Serving the community for over 40 years with educational and religious services."
+        preloadImage={masjidImage}
+        priority="high"
+      />
       <div class="main">
         <div class="wrapper">
           <svg>
@@ -82,10 +90,12 @@ function Home() {
           </div>
           <div class="right-column">
             <img
-              src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/Colleen_photo-5.jpg?raw=true"
-              alt="ICSGV Image"
+              src={masjidImage}
+              alt="ICSGV Building"
               width="382"
               height="510"
+              loading="eager"
+              fetchpriority="high"
             />
             <section class="info-section">
               <div class="info-heading">

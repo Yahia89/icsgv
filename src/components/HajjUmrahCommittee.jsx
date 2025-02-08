@@ -1,5 +1,6 @@
+import React from "react";
 import "./HajjUmrahCommittee.css";
-import maherImage from "/Users/yahiaalhejoj/icsgv/src/assets/CE215988-2FF6-4D85-ABDE-F07BF9EEF5AA_4_5005_c.jpeg";
+import maherPicture from "../assets/CE215988-2FF6-4D85-ABDE-F07BF9EEF5AA_4_5005_c-BNLP3kVr.jpeg"
 
 const HajjUmrahCommittee = () => {
   return (
@@ -20,7 +21,7 @@ const HajjUmrahCommittee = () => {
         <div className="member-container">
           <div className="member">
             <div className="member-image">
-              <img src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/CE215988-2FF6-4D85-ABDE-F07BF9EEF5AA_4_5005_c.jpeg?raw=true" alt="Maher Subeh" />
+              <img src={maherPicture} alt="Maher Subeh" />
             </div>
             <h3 className="member-name">Maher Subeh</h3>
             <p className="member-phone">626-224-7050</p>

@@ -12,7 +12,7 @@ body {
   /* padding: 2rem 1rem; */
   box-sizing: border-box;
   border-radius: 8px;
-  background-image: url("https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/16-sacred-symbols-MR9YMTg.png?raw=true");
+  background-image: url("../assets/16-sacred-symbols-MR9YMTg.png?raw=true");
   background-size: contain;
   background-position: bottom right; /* Dynamically position at the bottom-right corner */
   background-repeat: repeat; /* Prevent the image from repeating */

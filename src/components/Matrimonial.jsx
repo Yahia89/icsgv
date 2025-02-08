@@ -1,8 +1,16 @@
 import "./Matrimonial.css"; // Add styles for this component
+import SEO from './SEO';
+import matrimonialImage from "../assets/shutterstock_1944702031.jpg";
 
 const Matrimonial = () => {
   return (
     <div className="main">
+      <SEO 
+        title="ICSGV | Matrimonial Services"
+        description="Free matrimonial services for the Muslim community under the supervision of Imam Hafiz Ahmed Hassan."
+        preloadImage={matrimonialImage}
+        priority="high"
+      />
       <div className="wrapper">
         <svg>
           <text x="50%" y="50%" dy=".35em" textAnchor="middle">
@@ -54,8 +62,9 @@ const Matrimonial = () => {
             </div>
             <div className="matrimonial-image">
               <img
-                src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/shutterstock_1944702031.jpg?raw=true"
+                src={matrimonialImage}
                 alt="Matrimonial Service"
+                loading="eager"
               />
             </div>
           </div>

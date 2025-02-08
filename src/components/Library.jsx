@@ -1,6 +1,8 @@
 // Library.jsx
 import "./Library.css";
 import SEO from './SEO';
+import libraryImage from "../assets/shutterstock_1608535966-min.jpg"; 
+
 
 const Library = () => {
   return (
@@ -9,7 +11,7 @@ const Library = () => {
         title="ICSGV | Library" 
         description="Discover our extensive library featuring over 6000 books and media in multiple languages."
         imageType="image/webp"
-        preloadImage="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/shutterstock_1608535966-min.jpg?raw=true"
+        preloadImage={libraryImage}
         priority="high"
       />
       <div className="wrapper">
@@ -45,7 +47,7 @@ const Library = () => {
           </div>
           <div style={{ flex: 1 }}>
             <img
-              src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/shutterstock_1608535966-min.jpg?raw=true"
+              src={libraryImage}
               alt="Library"
               style={{
                 maxWidth: "100%",

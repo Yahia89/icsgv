@@ -29,7 +29,7 @@
     background-position: center;
     background-repeat: repeat;
     background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-    background-image: url("https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/16-sacred-symbols-MR9YMTh.png?raw=true");
+    background-image: url("../assets/16-sacred-symbols-MR9YMTh.png");
   }
   
   /* Left Column */
@@ -71,7 +71,7 @@
     border-radius: 8px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     transition: all 0.3s ease-in-out;
-    background-image: url("https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/16-sacred-symbols-MR9YMTg.png?raw=true");
+    background-image: url("../assets/16-sacred-symbols-MR9YMTg.png");
     background-size: contain;
   }
   
@@ -104,7 +104,7 @@
     .container {
       flex-direction: column;
       align-items: center;
-      background-image: url("https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/16-sacred-symbols-MR9YMTh.png?raw=true");
+      background-image: url("../assets/16-sacred-symbols-MR9YMTh.png");
       background-size: contain;
       background-repeat: repeat;
     }
@@ -181,7 +181,7 @@
     right: 0;
     bottom: 0;
     width: 50%;
-    background-image: url("https://static.vecteezy.com/system/resources/previews/014/002/298/original/islamic-geometric-pattern-art-illustration-free-vector.jpg");
+    background-image: url("../assets/islamic-geometric-pattern-art-illustration-free-vector.jpg");
     background-size: cover;
     background-position: center;
     clip-path: ellipse(100% 100% at 100% 50%);
@@ -194,7 +194,7 @@
     right: 0;
     width: 100px;
     height: 100px;
-    background-image: url("/Users/yahiaalhejoj/icsgv/src/assets/islamic-geometric-patterns-islamic-art-arabesque-islamic-architecture-png-favpng-xi06wiFv0egkhV3bzsT9H1e5g.png");
+    background-image: url("../assets/islamic-geometric-patterns-islamic-art-arabesque-islamic-architecture-png-favpng-xi06wiFv0egkhV3bzsT9H1e5g.png");
     background-size: 200%;
     background-repeat: no-repeat;
     opacity: 0.7;

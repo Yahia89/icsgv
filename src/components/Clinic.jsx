@@ -1,5 +1,7 @@
 import "./Clinic.css"; // Add styles for this component
 import SEO from './SEO';
+import mentalHealthImage from "../assets/7xm675131-scaled.jpg";
+import medicalClinicImage from "../assets/7xm280875-e1693202410121.jpg";
 
 const Clinic = () => {
   return (
@@ -9,7 +11,7 @@ const Clinic = () => {
         imageType="image/webp"
         priority="high"
         description="ICSGV Medical Clinic offers healthcare services every Sunday from 11 AM to 1 PM, providing care for various conditions including diabetes, blood pressure, and more."
-        preloadImage="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/7xm675131-scaled.jpg?raw=true"
+        preloadImage={mentalHealthImage}
       />
       <div className="main">
         <div className="wrapper">
@@ -42,7 +44,7 @@ const Clinic = () => {
               </div>
               <div className="clinic-image">
                 <img
-                  src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/7xm675131-scaled.jpg?raw=true"
+                  src={mentalHealthImage}
                   alt="Mental Health Seminar"
                   width="800"
                   height="450"
@@ -51,11 +53,10 @@ const Clinic = () => {
               </div>
             </div>
 
-            {/* Second Section */}
             <div className="clinic-section">
               <div className="clinic-image">
                 <img
-                  src="https://github.com/Yahia89/icsgv/blob/icsgv/src/assets/7xm280875-e1693202410121.jpg?raw=true"
+                  src={medicalClinicImage}
                   alt="Medical Clinic"
                   width="800"
                   height="450"
