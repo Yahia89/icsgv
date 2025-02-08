@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Preload Critical Assets -->
-    <link rel="preload" as="image" href="/src/assets/logo-icsgv-min.png" />
-    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" crossorigin="anonymous" />
-    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&display=swap" crossorigin="anonymous" />
-    
+
+    <!-- Preconnect to Critical Domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="dns-prefetch" href="https://github.com" />
-    
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="/assets/logo-icsgv-min.png" />
+
     <!-- Meta Description -->
     <meta name="description" content="Islamic Center of San Gabriel Valley (ICSGV) is a welcoming mosque and Islamic school offering community services, educational programs, and spiritual support." />
 
@@ -29,23 +29,19 @@
     <meta property="og:image" content="https://opengraph.b-cdn.net/production/images/32639114-d9c6-4265-af3d-38bf31d69cbe.jpg?token=wXWfdIB8_l9CtnxL4EU0WH520jg8QP2hrvPBPoqoARI&height=453&width=680&expires=33275010666">
 
     <!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="icsgv.com">
-<meta property="twitter:url" content="https://icsgv.com">
-<meta name="twitter:title" content="Islamic Center of San Gabriel Valley (ICSGV) | Mosque & Islamic School">
-<meta name="twitter:description" content="ICSGV is a welcoming mosque and Islamic school offering community services, educational programs, and spiritual support.">
-<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/32639114-d9c6-4265-af3d-38bf31d69cbe.jpg?token=wXWfdIB8_l9CtnxL4EU0WH520jg8QP2hrvPBPoqoARI&height=453&width=680&expires=33275010666">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="icsgv.com">
+    <meta property="twitter:url" content="https://icsgv.com">
+    <meta name="twitter:title" content="Islamic Center of San Gabriel Valley (ICSGV) | Mosque & Islamic School">
+    <meta name="twitter:description" content="ICSGV is a welcoming mosque and Islamic school offering community services, educational programs, and spiritual support.">
+    <meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/32639114-d9c6-4265-af3d-38bf31d69cbe.jpg?token=wXWfdIB8_l9CtnxL4EU0WH520jg8QP2hrvPBPoqoARI&height=453&width=680&expires=33275010666">
 
-    <!-- Cache Control -->
-    <meta http-equiv="Cache-Control" content="max-age=31536000, public" />
-    <meta http-equiv="Expires" content="31536000" />
-    
     <!-- Favicon -->
-    <link rel="icon" href="/src/assets/favicon-32x32-1.png" sizes="32x32" />
-    <link rel="icon" href="/src/assets/favicon-32x32-1.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/src/assets/favicon-32x32-1.png" />
-    
-    <!-- Fonts -->
+    <link rel="icon" href="/assets/favicon-32x32-1.png" sizes="32x32" />
+    <link rel="icon" href="/assets/favicon-32x32-1.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/assets/favicon-32x32-1.png" />
+
+    <!-- Fonts Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&display=swap" rel="stylesheet">
     
@@ -55,6 +51,10 @@
     <meta name="language" content="English" />
     <meta name="revisit-after" content="7 days" />
     <meta name="theme-color" content="#ffffff" />
+
+    <!-- Note: Set proper Cache-Control headers on the server for static assets -->
+    <meta http-equiv="Cache-Control" content="max-age=31536000, public" />
+    <meta http-equiv="Expires" content="31536000" />
   </head>
   <body>
     <div id="root"></div>

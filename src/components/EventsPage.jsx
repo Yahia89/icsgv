@@ -58,7 +58,7 @@ const EventsPage = () => {
                         className="elementor-heading-title elementor-size-default"
                         style={{ color: "#000" }}
                       >
-                        Upcoming Events
+                        Upcoming Events & will updated regularly inshallah 
                       </h2>
                     </div>
                   </div>
@@ -105,35 +105,17 @@ const EventsPage = () => {
                         className="event-description"
                         style={{ color: "#000" }}
                       >
-                        EMPOWERING TEENS
-
-
-Tackling Bullying and Navigating Mental Health Challenges
-
-by Sadia Raja, M.A. Ed. APCC
-
-
-Friday, January 24, 2025
-
-Strategies for Addressing Bullying
-
-
-Friday, February 7, 2025
-
-Common Mistakes in Handling Youth Issues
-
-
-Program Starts after Isha Prayer at 8 PM
+                        Upcoming Events & will updated regularly inshallah 
                       </p>
                       <h3 className="event-title" style={{ color: "#0078D4" }}>
                        
                       </h3>
-                      <img
+                      {/* <img
                         src="https://ecp.yusercontent.com/mail?url=https%3A%2F%2Ffiles.constantcontact.com%2F9514b36a901%2Ffa8e6ea7-58a3-4c06-ac76-e6bd07441a86.png&t=1738479154&ymreqid=8c3c2c0b-b2fa-a289-1cb5-5d0007012800&sig=lbiKq.M8gzH8lJ99fXFaSw--~D"
                         alt="Event Image"
                         className="event-image"
                         style={{ maxWidth: "100%", height: "auto" }}
-                      />
+                      /> */}
                     </div>
                   </div>
                 </div>

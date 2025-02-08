@@ -157,8 +157,8 @@ const About = () => {
       <div className="More-about">
   <div className="history-section">
     <div className="text-content">
-      <h3>About ICSGV</h3>
-      <h1>History</h1>
+      <h3 style={{color:"black"}} >About ICSGV</h3>
+      <h1 style={{color:"black"}} >History</h1>
       <p>
         The history of the Islamic Center of San Gabriel Valley (ICSGV) spans over four decades. The Center was established by dedicated and forward-thinking Muslims living in the larger San Gabriel Valley area – servicing cities of Walnut, Diamond Bar, Covinas, Rowland Heights, Industry and surrounding areas.
       </p>
