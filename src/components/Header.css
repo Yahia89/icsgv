@@ -75,11 +75,56 @@
 }
 
 /* Hover effect for submenu */
+/* Update the submenu hover behavior */
 .has-submenu {
   position: relative;
 }
 
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -50%;
+  background-color: rgba(31, 31, 31, 0.8);
+  list-style: none;
+  padding: 5px 0;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  min-width: 10em;
+  margin: 5px;
+  pointer-events: none; /* Add this line */
+  visibility: 0.3s ease;
+}
+
 .has-submenu:hover .submenu,
+.submenu:hover,
+.submenu:focus-within,
+.submenu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Add this line */
+}
+
+.submenu-link:focus {
+  outline: none;  /* Optional: remove focus outline */
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Add padding to create a hover buffer zone */
+.submenu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
 .submenu.show {
   display: block;
   opacity: 1;

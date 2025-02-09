@@ -1,68 +1,56 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const PrayerTimes = () => {
-  const [isIframeLoaded, setIsIframeLoaded] = useState(false);
-
   useEffect(() => {
-    // If accessed directly (not through Home), load immediately
-    if (window.location.pathname === '/prayertimes') {
-      setIsIframeLoaded(true);
-      return;
-    }
+    // Preconnect to speed up connection to the domain hosting the iframe
+    const preconnectLink = document.createElement("link");
+    preconnectLink.rel = "preconnect";
+    preconnectLink.href = "https://themasjidapp.org";
+    document.head.appendChild(preconnectLink);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsIframeLoaded(true);
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+    // Prefetch the iframe content
+    const prefetchLink = document.createElement("link");
+    prefetchLink.rel = "prefetch";
+    prefetchLink.href = "https://themasjidapp.org/296/prayers";
+    prefetchLink.as = "document";
+    document.head.appendChild(prefetchLink);
 
-    const prayerSection = document.querySelector('.prayer-times-heading');
-    if (prayerSection) {
-      observer.observe(prayerSection);
-    } else {
-      // If prayer-times-heading not found, we're on the direct route
-      setIsIframeLoaded(true);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const handleMessage = (e) => {
-    if (
-      e.data &&
-      e.data.type === "contentHeight" &&
-      e.data.page === "prayers"
-    ) {
-      const targetFrame = document.getElementById("prayers-frame");
-      if (targetFrame) {
-        targetFrame.style.height = e.data.height + "px";
+    // Add message event listener (unchanged)
+    const handleMessage = (e) => {
+      if (
+        e.data &&
+        e.data.type === "contentHeight" &&
+        e.data.page === "prayers"
+      ) {
+        const targetFrame = document.getElementById("prayers-frame");
+        if (targetFrame) {
+          targetFrame.style.height = e.data.height + "px";
+        }
       }
-    }
-  };
+    };
 
-  useEffect(() => {
     window.addEventListener("message", handleMessage);
-    return () => window.removeEventListener("message", handleMessage);
+
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener("message", handleMessage);
+      document.head.removeChild(preconnectLink);
+      document.head.removeChild(prefetchLink);
+    };
   }, []);
 
   return (
     <>
-      <div class="main">
-        <div class="wrapper">
+      <div className="main">
+        <div className="wrapper">
           <svg>
-            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+            <text x="50%" y="50%" dy=".35em" textAnchor="middle">
               مسجد قباء
             </text>
           </svg>
         </div>
-        <h5 class="Assalamualaikum">Assalamualaikum</h5>
-        <h1 class="welcome">
+        <h5 className="Assalamualaikum">Assalamualaikum</h5>
+        <h1 className="welcome">
           Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
         </h1>
         <h3
@@ -74,7 +62,7 @@ const PrayerTimes = () => {
           }}
         >
           Note: You can view or download the whole month of prayer times on this{" "}
-          <a href="https://drive.google.com/file/d/14iOVr1bvXxn5xfCkzXQ78djnhwQcxWZj/view">
+          <a href="https://drive.google.com/file/d/1ecDSZVMBwRQniPLHjYTUPDcRRSwJmzHs/view">
             link
           </a>
           . (pdf)
@@ -89,30 +77,18 @@ const PrayerTimes = () => {
           }}
         >
           <div style={{ width: "100%", maxWidth: "1200px" }}>
-            {isIframeLoaded ? (
-              <iframe
-                id="prayers-frame"
-                src="https://themasjidapp.org/296/prayers"
-                style={{
-                  width: "100%",
-                  height: "502px",
-                  boxSizing: "content-box",
-                }}
-                frameBorder="0"
-                scrolling="no"
-                loading="lazy"
-              ></iframe>
-            ) : (
-              <div style={{
+            <iframe
+              id="prayers-frame"
+              src="https://themasjidapp.org/296/prayers"
+              style={{
+                width: "100%",
                 height: "502px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#f5f5f5"
-              }}>
-                Loading Prayer Times...
-              </div>
-            )}
+                boxSizing: "content-box",
+              }}
+              frameBorder="0"
+              scrolling="no"
+              // Removed loading="lazy" to ensure immediate loading
+            ></iframe>
           </div>
         </section>
       </div>
