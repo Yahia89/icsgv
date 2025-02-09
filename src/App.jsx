@@ -18,6 +18,7 @@ import BanquetHall from "./components/BanquetHall";
 import Funeral from "./components/Funeral";
 import ScrollToTop from "./components/ScrollToTop";
 
+
 function App() {
   return (
     <HelmetProvider>
