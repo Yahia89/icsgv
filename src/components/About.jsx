@@ -28,7 +28,7 @@ const About = () => {
 
   const shoora = [
     {
-      name: "Aziz Uattar",
+      name: "Aziz Al-Attar",
       role: "President",
       imageUrl: azizImage,
     },
@@ -40,12 +40,12 @@ const About = () => {
     {
       name: "Salah Qasqas",
       role: "Treasurer",
-      imageUrl: salahImage,
+      imageUrl: mouayyedImage,
     },
     {
       name: "Mouayyed Abulshin",
       role: "Vice President",
-      imageUrl: mouayyedImage,
+      imageUrl: salahImage,
     },
     {
       name: "Amin Almuhajab",
