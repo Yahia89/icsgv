@@ -17,10 +17,12 @@ import HajjUmrahCommittee from "./components/HajjUmrahCommittee";
 import BanquetHall from "./components/BanquetHall";
 import Funeral from "./components/Funeral";
 import ScrollToTop from "./components/ScrollToTop";
+import { MantineProvider } from "@mantine/core";
 
 
 function App() {
   return (
+    <MantineProvider>
     <HelmetProvider>
       <Router>
         <ScrollToTop />
@@ -43,6 +45,7 @@ function App() {
         <Footer />
       </Router>
     </HelmetProvider>
+    </MantineProvider>
   );
 }
 

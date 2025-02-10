@@ -1,37 +1,28 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { Accordion } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks"; // Import media query hook
 import SEO from "./SEO";
 import "../components/Header.css";
 import headerLogo from "../assets/logo-icsgv.png";
+import {  IconPlus, Icon360View } from '@tabler/icons-react';
+import classes from "./header.module.css"
+
+
 
 function Header() {
-  // Using an object for submenu state for clarity
   const [menuActive, setMenuActive] = useState(false);
-  const [submenus, setSubmenus] = useState({
-    services: false,
-    education: false
-  });
   const location = useLocation();
+
+  // Determine if the screen is smaller than 768px
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const toggleMenu = () => {
     setMenuActive((prev) => !prev);
   };
 
-  const toggleSubmenu = (e, submenuName) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setSubmenus((prev) => ({
-      ...prev,
-      [submenuName]: !prev[submenuName]
-    }));
-  };
-
   const closeMenu = () => {
     setMenuActive(false);
-    setSubmenus({
-      services: false,
-      education: false
-    });
   };
 
   // Close menu when clicking outside the header
@@ -77,99 +68,171 @@ function Header() {
                 Home
               </NavLink>
             </li>
-
-            {/* Services Submenu */}
-            <li className={`nav-item has-submenu ${submenus.services ? "active" : ""}`}>
-              <a
-                href="#"
-                className="nav-link"
-                onClick={(e) => toggleSubmenu(e, "services")}
-              >
-                Services <span className="menu-indicator">◀︎</span>
-              </a>
-              <ul
-                className={`submenu ${submenus.services ? "show" : ""}`}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <li className="submenu-item">
-                  <NavLink to="/services" className="submenu-link" activeClassName="active">
-                    ICSGV Services
+            {isMobile ? (
+              // Mobile view: Render the submenus with Accordion without the arrow
+              <li className="nav-item">
+             <Accordion
+  classNames={{
+    chevron: classes.chevron,
+    control: classes.control
+  }}
+  transitionDuration={300}
+>
+  <Accordion.Item value="services">
+    <Accordion.Control>Services</Accordion.Control>
+    <Accordion.Panel>
+                      <ul className="submenu show">
+                        <li className="submenu-item">
+                          <NavLink to="/services" className="submenu-link">
+                            ICSGV Services
+                          </NavLink>
+                        </li>
+                        <li className="submenu-item">
+                          <NavLink to="/library" className="submenu-link">
+                            Library
+                          </NavLink>
+                        </li>
+                        <li className="submenu-item">
+                          <NavLink to="/clinic" className="submenu-link" activeClassName="active">
+                            Clinic
+                          </NavLink>
+                        </li>
+                        <li className="submenu-item">
+                          <NavLink to="/matrimonial" className="submenu-link" activeClassName="active">
+                            Matrimonial
+                          </NavLink>
+                        </li>
+                        <li className="submenu-item">
+                          <NavLink to="/banquet" className="submenu-link" activeClassName="active">
+                            Banquet Hall
+                          </NavLink>
+                        </li>
+                        <li className="submenu-item">
+                          <NavLink to="/funeral-services" className="submenu-link" activeClassName="active">
+                            Funeral Services
+                          </NavLink>
+                        </li>
+                        <li className="submenu-item">
+                          <NavLink to="/tripstomecca" className="submenu-link" activeClassName="active">
+                            Hajj &amp; Umrah
+                          </NavLink>
+                        </li>
+                      </ul>
+                    </Accordion.Panel>
+                  </Accordion.Item>
+                  <Accordion.Item value="education">
+                    <Accordion.Control>Education</Accordion.Control>
+                    <Accordion.Panel>
+                      <ul className="submenu show">
+                        <li className="submenu-item">
+                          <a href="https://www.qubais.org/" className="submenu-link">
+                            Quba Fulltime Islamic School
+                          </a>
+                        </li>
+                        <li className="submenu-item">
+                          <a href="https://www.littleangels.la/" className="submenu-link">
+                            Little Angels Preschool
+                          </a>
+                        </li>
+                        <li className="submenu-item">
+                          <a href="https://icsgv.com/weekend-islamic-school/" className="submenu-link">
+                            Weekend Islamic School
+                          </a>
+                        </li>
+                        <li className="submenu-item">
+                          <a href="https://icsgv.com/quran-institute/" className="submenu-link">
+                            Quran Institute
+                          </a>
+                        </li>
+                        <li className="submenu-item">
+                          <a href="https://icsgv.com/youth-group/" className="submenu-link">
+                            Youth Group
+                          </a>
+                        </li>
+                      </ul>
+                    </Accordion.Panel>
+                  </Accordion.Item>
+                </Accordion>
+              </li>
+            ) : (
+              // Desktop view: Render standard hover submenus (no accordion)
+              <>
+                <li className="nav-item has-submenu">
+                  <NavLink to="#" className="nav-link">
+                  Services <span className="menu-indicator">◀︎</span>
                   </NavLink>
+                  <ul className="submenu">
+                    <li className="submenu-item">
+                      <NavLink to="/services" className="submenu-link">
+                        ICSGV Services
+                      </NavLink>
+                    </li>
+                    <li className="submenu-item">
+                      <NavLink to="/library" className="submenu-link">
+                        Library
+                      </NavLink>
+                    </li>
+                    <li className="submenu-item">
+                      <NavLink to="/clinic" className="submenu-link" activeClassName="active">
+                        Clinic
+                      </NavLink>
+                    </li>
+                    <li className="submenu-item">
+                      <NavLink to="/matrimonial" className="submenu-link" activeClassName="active">
+                        Matrimonial
+                      </NavLink>
+                    </li>
+                    <li className="submenu-item">
+                      <NavLink to="/banquet" className="submenu-link" activeClassName="active">
+                        Banquet Hall
+                      </NavLink>
+                    </li>
+                    <li className="submenu-item">
+                      <NavLink to="/funeral-services" className="submenu-link" activeClassName="active">
+                        Funeral Services
+                      </NavLink>
+                    </li>
+                    <li className="submenu-item">
+                      <NavLink to="/tripstomecca" className="submenu-link" activeClassName="active">
+                        Hajj &amp; Umrah
+                      </NavLink>
+                    </li>
+                  </ul>
                 </li>
-                <li className="submenu-item">
-                  <NavLink to="/library" className="submenu-link" activeClassName="active">
-                    Library
+                <li className="nav-item has-submenu">
+                  <NavLink to="#" className="nav-link">
+                  Education <span className="menu-indicator">◀︎</span>
                   </NavLink>
+                  <ul className="submenu">
+                    <li className="submenu-item">
+                      <a href="https://www.qubais.org/" className="submenu-link">
+                        Quba Fulltime Islamic School
+                      </a>
+                    </li>
+                    <li className="submenu-item">
+                      <a href="https://www.littleangels.la/" className="submenu-link">
+                        Little Angels Preschool
+                      </a>
+                    </li>
+                    <li className="submenu-item">
+                      <a href="https://icsgv.com/weekend-islamic-school/" className="submenu-link">
+                        Weekend Islamic School
+                      </a>
+                    </li>
+                    <li className="submenu-item">
+                      <a href="https://icsgv.com/quran-institute/" className="submenu-link">
+                        Quran Institute
+                      </a>
+                    </li>
+                    <li className="submenu-item">
+                      <a href="https://icsgv.com/youth-group/" className="submenu-link">
+                        Youth Group
+                      </a>
+                    </li>
+                  </ul>
                 </li>
-                <li className="submenu-item">
-                  <NavLink to="/clinic" className="submenu-link" activeClassName="active">
-                    Clinic
-                  </NavLink>
-                </li>
-                <li className="submenu-item">
-                  <NavLink to="/matrimonial" className="submenu-link" activeClassName="active">
-                    Matrimonial
-                  </NavLink>
-                </li>
-                <li className="submenu-item">
-                  <NavLink to="/banquet" className="submenu-link" activeClassName="active">
-                    Banquet Hall
-                  </NavLink>
-                </li>
-                <li className="submenu-item">
-                  <NavLink to="/funeral-services" className="submenu-link" activeClassName="active">
-                    Funeral Services
-                  </NavLink>
-                </li>
-                <li className="submenu-item">
-                  <NavLink to="/tripstomecca" className="submenu-link" activeClassName="active">
-                    Hajj &amp; Umrah
-                  </NavLink>
-                </li>
-              </ul>
-            </li>
-
-            {/* Education Submenu */}
-            <li className={`nav-item has-submenu ${submenus.education ? "active" : ""}`}>
-              <a
-                href="#"
-                className="nav-link"
-                onClick={(e) => toggleSubmenu(e, "education")}
-              >
-                Education <span className="menu-indicator">◀︎</span>
-              </a>
-              <ul
-                className={`submenu ${submenus.education ? "show" : ""}`}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <li className="submenu-item">
-                  <a href="https://www.qubais.org/" className="submenu-link">
-                    Quba Fulltime Islamic School
-                  </a>
-                </li>
-                <li className="submenu-item">
-                  <a href="https://www.littleangels.la/" className="submenu-link">
-                    Little Angels Preschool
-                  </a>
-                </li>
-                <li className="submenu-item">
-                  <a href="https://icsgv.com/weekend-islamic-school/" className="submenu-link">
-                    Weekend Islamic School
-                  </a>
-                </li>
-                <li className="submenu-item">
-                  <a href="https://icsgv.com/quran-institute/" className="submenu-link">
-                    Quran Institute
-                  </a>
-                </li>
-                <li className="submenu-item">
-                  <a href="https://icsgv.com/youth-group/" className="submenu-link">
-                    Youth Group
-                  </a>
-                </li>
-              </ul>
-            </li>
-
+              </>
+            )}
             <li className="nav-item">
               <NavLink to="/events" className="nav-link" activeClassName="active">
                 Events
@@ -196,6 +259,10 @@ function Header() {
               </NavLink>
             </li>
           </ul>
+          {/* Uncomment volunteer button if needed */}
+          {/* <button className="button button-volunteer">Volunteer</button> */}
+        </nav>
+        <div className="header-controls">
           <button
             className="button button-donate"
             onClick={() =>
@@ -207,13 +274,12 @@ function Header() {
           >
             Donate
           </button>
-          <button className="button button-volunteer">Volunteer</button>
-        </nav>
-        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
-          <span className="menu-icon"></span>
-          <span className="menu-icon"></span>
-          <span className="menu-icon"></span>
-        </button>
+          <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
+            <span className="menu-icon"></span>
+            <span className="menu-icon"></span>
+            <span className="menu-icon"></span>
+          </button>
+        </div>
       </header>
     </>
   );

@@ -1,0 +1,19 @@
+.chevron {
+  width: 20px;
+  height: 20px;
+  color: white;
+  transition: transform 300ms ease;
+  /* Remove margin-left: auto to keep the icon right next to the text */
+}
+
+.control {
+  display: flex;
+  flex-direction: row-reverse !important; /* instead of row-reverse */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px 15px;
+  color: white;
+  text-align: center;
+  gap: 4px; /* optional: adjust spacing between text and chevron */
+}

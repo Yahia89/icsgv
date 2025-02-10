@@ -20,6 +20,19 @@
   margin: 5px 5px;
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+}
+
+@media (max-width: 768px) {
+  .header-controls .button-donate .button-volunteer {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
 .logo-container {
   flex: 0 0 auto;
 }
@@ -207,11 +220,7 @@
   transform: translateY(-2px);
 }
 
-/* Volunteer button styles */
-.button-volunteer {
-  background-color: #727272;
-  color: white;
-}
+
 
 .button-volunteer:hover {
   background-color: #5e6f5c;
@@ -312,21 +321,21 @@
     text-align: center;
     font-size: larger;
   }
-
+  
   .logo {
     width: 80px;
     height: 80px;
     object-fit: contain; /* Ensures logo maintains aspect ratio */
   }
-
+  
   .a {
     padding: 20px;
   }
-
+  
   .nav-item {
     padding: 0;
   }
-
+  
   .nav-link {
     width: 100%; /* Occupy full width of container */
     /* padding: 20px;  */
@@ -335,7 +344,7 @@
     transition: color 0.3s ease;
     white-space: nowrap; /* Prevents text from wrapping */
   }
-
+  
   /* Display the menu toggle button */
   .menu-toggle {
     display: block;
@@ -411,4 +420,33 @@ svg text {
 .has-submenu:hover .menu-indicator,
 .has-submenu.active .menu-indicator {
   transform: rotate(-90deg); /* Or rotate(180deg); */
+}
+.nav-item .mantine-Accordion-root {
+  background: transparent;
+}
+
+.nav-item .mantine-Accordion-item {
+  border: none;
+  background: transparent;
+}
+
+.nav-item .mantine-Accordion-control {
+  padding: 8px 15px;
+  color: white;
+  background: transparent !important;
+}
+
+.nav-item .mantine-Accordion-control:hover {
+  background: rgba(0, 0, 0, 0.2) !important;
+  color: #f39c12;
+}
+
+.nav-item .mantine-Accordion-content {
+  padding: 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.nav-item .mantine-Accordion-chevron {
+  color: white;
 }

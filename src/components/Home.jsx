@@ -147,6 +147,14 @@ function Home() {
                     </p>
                   </div>
                 </a>
+                <a href="https://htbcmedia.com/club/">
+                  <div class="service-card">
+                    <h3 class="service-card-title">Hijrah Club</h3>
+                    <p class="service-card-description">
+                      empower the Muslim youth primarily, and enable them to be more confident Muslims in facing the challenges that threaten their identity.
+                    </p>
+                  </div>
+                </a>
                 <a href="https://icsgv.com/youth-group/">
                   <div class="service-card">
                     <h3 class="service-card-title">Youth Group</h3>
@@ -170,7 +178,7 @@ function Home() {
                   <div class="service-card">
                     <h3 class="service-card-title">Qur’an Academy</h3>
                     <p class="service-card-description">
-                      An excellent program for children of all ages teaching
+                      An excellent program for of all ages teaching
                       them proper tajweed of the Qu’ran.
                     </p>
                   </div>
