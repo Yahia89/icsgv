@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import SEO from './SEO';
 import event1 from '../assets/eventsandannouncements/arabic_class.jpg';
 import event2 from '../assets/eventsandannouncements/arabic_class(en).jpg';
 import event3 from '../assets/eventsandannouncements/foodbank.png';
@@ -22,18 +23,7 @@ Modal.setAppElement('#root');
 const EventsPage = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  const modalStyles = {
-    '@keyframes modalFade': {
-      from: {
-        transform: 'translate(-50%, -48%)',
-        opacity: 0
-      },
-      to: {
-        transform: 'translate(-50%, -50%)',
-        opacity: 1
-      }
-    }
-  };
+
   
   // Add the styles to the document
   if (typeof document !== 'undefined') {
@@ -74,6 +64,10 @@ const EventsPage = () => {
 
   return (
     <>
+          <SEO 
+        title="Events & Programs | Islamic Center of San Gabriel Valley (ICSGV)"
+        description="Discover upcoming events and programs at ICSGV including Arabic classes, Islamic education, community services, and special programs."
+      />
     <div class="main">
         <div class="wrapper" style={{backgroundImage:"inherit"}}>
           <svg>

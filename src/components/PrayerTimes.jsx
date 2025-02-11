@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import SEO from './SEO';
 
 const PrayerTimes = () => {
   useEffect(() => {
@@ -41,6 +42,10 @@ const PrayerTimes = () => {
 
   return (
     <>
+      <SEO 
+        title="Prayer Times | Islamic Center of San Gabriel Valley (ICSGV)"
+        description="Daily prayer times for ICSGV mosque. View Fajr, Dhuhr, Asr, Maghrib, and Isha prayer timings updated daily for the Islamic Center of San Gabriel Valley."
+      />
       <div className="main">
         <div className="wrapper">
           <svg>
