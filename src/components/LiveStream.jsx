@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import SEO from "./SEO";
+import SEO from './SEO';
 import "./LiveStream.css";
 
 const CACHE_DURATION = 7 * 24 * 60 * 60 * 1000; // 1 week in milliseconds
@@ -37,18 +37,43 @@ const LiveStream = () => {
     }
 
     try {
-      const response = await fetch(
+      // Fetch live status
+      const liveResponse = await fetch(
         `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&eventType=live&key=${apiKey}`
       );
-      const data = await response.json();
-      const isCurrentlyLive = data.items?.length > 0;
-      const liveVideoId = isCurrentlyLive ? data.items[0].id.videoId : "";
+      const liveData = await liveResponse.json();
 
-      setIsLive(isCurrentlyLive);
-      setVideoId(liveVideoId);
-      setCachedData(cacheKey, { isLive: isCurrentlyLive, videoId: liveVideoId });
+      if (liveData.items && liveData.items.length > 0) {
+        setIsLive(true);
+        setVideoId(liveData.items[0].id.videoId);
+      } else {
+        setIsLive(false);
+      }
+
+      // Fetch recent videos
+      const recentResponse = await fetch(
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&order=date&maxResults=3&key=${apiKey}`
+      );
+      const recentData = await recentResponse.json();
+
+      if (recentData.items) {
+        // Fetch statistics for each video
+        const videosWithStats = await Promise.all(
+          recentData.items.map(async (video) => {
+            const statsResponse = await fetch(
+              `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${video.id.videoId}&key=${apiKey}`
+            );
+            const statsData = await statsResponse.json();
+            return {
+              ...video,
+              statistics: statsData.items[0].statistics
+            };
+          })
+        );
+        setRecentVideos(videosWithStats);
+      }
     } catch (error) {
-      console.error("Failed to fetch live status:", error);
+      console.error("Failed to fetch videos:", error);
     }
   }, [apiKey, channelId]);
 
@@ -61,32 +86,29 @@ const LiveStream = () => {
     }
 
     try {
-      const response = await fetch(
+      // Fetch recent videos first
+      const recentResponse = await fetch(
         `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&order=date&maxResults=3&key=${apiKey}`
       );
-      const data = await response.json();
-      if (!data.items) return;
+      const recentData = await recentResponse.json();
 
-      // Fetch video statistics
-      const videosWithStats = await Promise.all(
-        data.items.map(async (video) => {
-          try {
+      if (recentData.items) {
+        // Fetch statistics for each video
+        const videosWithStats = await Promise.all(
+          recentData.items.map(async (video) => {
             const statsResponse = await fetch(
               `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${video.id.videoId}&key=${apiKey}`
             );
             const statsData = await statsResponse.json();
             return {
               ...video,
-              statistics: statsData.items?.[0]?.statistics || {},
+              statistics: statsData.items[0].statistics
             };
-          } catch {
-            return { ...video, statistics: {} };
-          }
-        })
-      );
-
-      setRecentVideos(videosWithStats);
-      setCachedData(cacheKey, videosWithStats);
+          })
+        );
+        setRecentVideos(videosWithStats);
+        setCachedData(cacheKey, videosWithStats);
+      }
     } catch (error) {
       console.error("Failed to fetch recent videos:", error);
     }
@@ -98,14 +120,18 @@ const LiveStream = () => {
   }, [fetchLiveStatus, fetchRecentVideos]);
 
   const formatNumber = (num) => {
-    if (num >= 1_000_000) return (num / 1_000_000).toFixed(1) + "M";
-    if (num >= 1_000) return (num / 1_000).toFixed(1) + "K";
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(1) + 'M';
+    }
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1) + 'K';
+    }
     return num;
   };
 
   return (
     <>
-      <SEO
+      <SEO 
         title="Live Stream | Islamic Center of San Gabriel Valley (ICSGV)"
         description="Watch ICSGV's live streams and recent recordings of Jummah prayers, special events, and Islamic lectures. Stay connected with our mosque's activities and spiritual programs."
       />
@@ -126,7 +152,7 @@ const LiveStream = () => {
                 <p className="live-text">We are live now!</p>
                 <div className="video-container">
                   <iframe
-                    src={`https://www.youtube.com/embed/${videoId}`}
+                    src={`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&eventType=live&key=${apiKey}`}
                     title="YouTube Live Stream"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -154,10 +180,10 @@ const LiveStream = () => {
                   <h3>{video.snippet.title}</h3>
                   <div className="video-stats">
                     <span>
-                      <i className="fas fa-eye"></i> {formatNumber(video.statistics.viewCount || 0)} views
+                      <i className="fas fa-eye"></i> {formatNumber(video.statistics?.viewCount || 0)} views
                     </span>
                     <span>
-                      <i className="fas fa-thumbs-up"></i> {formatNumber(video.statistics.likeCount || 0)} likes
+                      <i className="fas fa-thumbs-up"></i> {formatNumber(video.statistics?.likeCount || 0)} likes
                     </span>
                   </div>
                   <p>{new Date(video.snippet.publishTime).toLocaleDateString()}</p>
@@ -172,3 +198,5 @@ const LiveStream = () => {
 };
 
 export default LiveStream;
+
+
