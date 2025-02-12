@@ -1,6 +1,6 @@
 import React from "react";
 import "./HajjUmrahCommittee.css";
-import maherPicture from "../assets/CE215988-2FF6-4D85-ABDE-F07BF9EEF5AA_4_5005_c-BNLP3kVr.jpeg"
+import maherPicture from "../assets/508ACA82-E80D-4D11-BCFF-0D41E3A3AA58_1_201_a.jpeg"
 
 const HajjUmrahCommittee = () => {
   return (
@@ -20,11 +20,15 @@ const HajjUmrahCommittee = () => {
         <h2 className="committee-title">Hajj & Umrah Committee</h2>
         <div className="member-container">
           <div className="member">
-            <div className="member-image">
-              <img src={maherPicture} alt="Maher Subeh" />
+            <div className="image-container">
+              <img className="member-image" src={maherPicture} alt="Maher Subeh" />
             </div>
             <h3 className="member-name">Maher Subeh</h3>
-            <p className="member-phone">626-224-7050</p>
+            <p className="member-phone">
+              <a href="tel:+16262247050">
+                <i className="fas fa-phone-alt"></i>{" "}(626) 224-7050
+              </a>
+            </p>
           </div>
         </div>
       </div>

@@ -1,10 +1,14 @@
+
 .committee-container {
   text-align: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 255); /* Matches screenshot theme */
   /* border: 2px solid #717171; */
   border-radius: 8px;
   margin: 10px 10px 10px 10px;
+  background-color: #f5f5f5;
+  background-image: url("../assets/16-sacred-symbols-MR9YMTh.png");
+  background-repeat: no-repeat;
+  background-position: center left;
 }
 
 .committee-title {
@@ -24,12 +28,32 @@
   max-width: 200px;
 }
 
+
+
+
+.image-container {
+  border: 10px solid #ffffff; /* Thicker border for better visibility */
+  /* border-radius: 100px; */
+  width: 160px;
+  height: 160px;
+}
+
+.image-container img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  object-position: right;
+  background-repeat: repeat;
+  background-color: rgba(211,203,137,255);
+}
+
 .member-image img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: fill;
+  border-radius: 10px;
   border: 3px solid #6a6a6a;
+  background-color: #e5d6a0;
 }
 
 .member-name {
@@ -42,4 +66,10 @@
 .member-phone {
   font-size: 1rem;
   color: #6db1ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.member-phone a:hover {
+  color: #3d8fe8;
 }

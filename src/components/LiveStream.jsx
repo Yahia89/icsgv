@@ -1,68 +1,136 @@
 import { useState, useEffect } from "react";
-import "./LiveStream.css"; // Import the CSS file
+import SEO from './SEO';
+import "./LiveStream.css";
 
 const LiveStream = () => {
   const [isLive, setIsLive] = useState(false);
   const [videoId, setVideoId] = useState("");
+  const [recentVideos, setRecentVideos] = useState([]);
 
   useEffect(() => {
     const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
     const channelId = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
 
-    const checkLiveStatus = async () => {
+    const fetchVideos = async () => {
       try {
-        const response = await fetch(
+        // Fetch live status
+        const liveResponse = await fetch(
           `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&eventType=live&key=${apiKey}`
         );
-        const data = await response.json();
+        const liveData = await liveResponse.json();
 
-        if (data.items && data.items.length > 0) {
+        if (liveData.items && liveData.items.length > 0) {
           setIsLive(true);
-          setVideoId(data.items[0].id.videoId); // Set the videoId of the live stream
+          setVideoId(liveData.items[0].id.videoId);
         } else {
           setIsLive(false);
         }
+
+        // Fetch recent videos
+        const recentResponse = await fetch(
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&order=date&maxResults=3&key=${apiKey}`
+        );
+        const recentData = await recentResponse.json();
+
+        if (recentData.items) {
+          // Fetch statistics for each video
+          const videosWithStats = await Promise.all(
+            recentData.items.map(async (video) => {
+              const statsResponse = await fetch(
+                `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${video.id.videoId}&key=${apiKey}`
+              );
+              const statsData = await statsResponse.json();
+              return {
+                ...video,
+                statistics: statsData.items[0].statistics
+              };
+            })
+          );
+          setRecentVideos(videosWithStats);
+        }
       } catch (error) {
-        console.error("Failed to fetch live status:", error);
+        console.error("Failed to fetch videos:", error);
       }
     };
 
-    checkLiveStatus();
+    fetchVideos();
   }, []);
 
+  const formatNumber = (num) => {
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(1) + 'M';
+    }
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1) + 'K';
+    }
+    return num;
+  };
+
   return (
-    <div className="live-stream-container">
-      <div className="wrapper">
-        <svg >
-          <text x="50%" y="50%" dy=".35em" textAnchor="middle">
-            مسجد قباء
-          </text>
-        </svg>
-        <h5 className="Assalamualaikum">Assalamualaikum</h5>
-        <h1 className="welcome">
-          Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
-        </h1>
-        <div className="live-status">
-          {isLive ? (
-            <div>
-              <p className="live-text">We are live now!</p>
-              {/* Embed the live video */}
-              <div className="video-container">
-                <iframe
-                  src={`https://www.youtube.com/embed/${videoId}`}
-                  title="YouTube Live Stream"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+    <>
+      <SEO 
+        title="Live Stream | Islamic Center of San Gabriel Valley (ICSGV)"
+        description="Watch ICSGV's live streams and recent recordings of Jummah prayers, special events, and Islamic lectures. Stay connected with our mosque's activities and spiritual programs."
+      />
+      <div className="live-stream-container">
+        <div className="wrapper">
+          <svg>
+            <text x="50%" y="50%" dy=".35em" textAnchor="middle">
+              مسجد قباء
+            </text>
+          </svg>
+          <h5 className="Assalamualaikum">Assalamualaikum</h5>
+          <h1 className="welcome">
+            Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
+          </h1>
+          <div className="live-status">
+            {isLive ? (
+              <div>
+                <p className="live-text">We are live now!</p>
+                <div className="video-container">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title="YouTube Live Stream"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
+            ) : (
+              <p className="offline-text">Currently offline</p>
+            )}
+          </div>
+
+          <div className="recent-videos">
+            <h2>Recent Streams that you might enjoy</h2>
+            <div className="videos-grid">
+              {recentVideos.map((video) => (
+                <div key={video.id.videoId} className="video-item">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video.id.videoId}`}
+                    title={video.snippet.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                  <h3>{video.snippet.title}</h3>
+                  <div className="video-stats">
+                    <span>
+                      <i className="fas fa-eye"></i> {formatNumber(video.statistics?.viewCount || 0)} views
+                    </span>
+                    <span>
+                      <i className="fas fa-thumbs-up"></i> {formatNumber(video.statistics?.likeCount || 0)} likes
+                    </span>
+                  </div>
+                  <p>{new Date(video.snippet.publishTime).toLocaleDateString()}</p>
+                </div>
+              ))}
             </div>
-          ) : (
-            <p className="offline-text">Currently offline</p>
-          )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

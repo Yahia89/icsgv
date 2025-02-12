@@ -53,6 +53,14 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Live Stream Page -->
+  <url>
+    <loc>https://icsgv.com/live-stream</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
   
   <!-- Additional pages can be added here -->
   

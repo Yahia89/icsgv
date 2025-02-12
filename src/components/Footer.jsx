@@ -72,22 +72,27 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <span class="fas fa-envelope"></span> administration@icsgv.com
+                    <a href="mailto:administration@icsgv.com">
+                      <i className="fas fa-envelope"></i>{" "}administration@icsgv.com
+                    </a>
                   </li>
                   <li>
-                    <span class="fas fa-phone-alt"></span> (626) 964-3596
+                    <a href="tel:+16264480904">
+                      <i className="fas fa-phone-alt"></i>{" "}(626) 964-3596
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://web.facebook.com/Islamic-Center-of-San-Gabriel-Valley-196092656638/"
+                      target="_blank"
+                      class="social-icon"
+                    >
+                      <i class="fab fa-facebook"></i>{" "}Facebook
+                    </a>
                   </li>
                 </ul>
               </div>
-              <div class="footer-social">
-                <a
-                  href="https://web.facebook.com/Islamic-Center-of-San-Gabriel-Valley-196092656638/"
-                  target="_blank"
-                  class="social-icon"
-                >
-                  <i class="fab fa-facebook"></i>
-                </a>
-              </div>
+              {/* Remove the separate footer-social div since we moved the Facebook link */}
             </div>
           </div>
           <div className="footer-bottom">

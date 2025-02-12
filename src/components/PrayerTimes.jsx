@@ -43,7 +43,7 @@ const PrayerTimes = () => {
   return (
     <>
       <SEO 
-        title="Prayer Times | Islamic Center of San Gabriel Valley (ICSGV)"
+        title="Islamic Center of San Gabriel Valley (ICSGV) | Prayer Times | Comprehensive Islamic Services | Live Streaming Khutba | Masjid near | Mosque near"
         description="Daily prayer times for ICSGV mosque. View Fajr, Dhuhr, Asr, Maghrib, and Isha prayer timings updated daily for the Islamic Center of San Gabriel Valley."
       />
       <div className="main">
