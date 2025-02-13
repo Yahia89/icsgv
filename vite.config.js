@@ -6,5 +6,10 @@ export default defineConfig({
   base: '/icsgv/',
   build: {
     outDir: "dist",
+    rollupOptions: {
+      input: {
+        main: '/index.html',
+      },
+    },
   },
 });

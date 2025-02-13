@@ -135,7 +135,8 @@ const LiveStream = () => {
         title="Live Stream | Islamic Center of San Gabriel Valley (ICSGV)"
         description="Watch ICSGV's live streams and recent recordings of Jummah prayers, special events, and Islamic lectures. Stay connected with our mosque's activities and spiritual programs."
       />
-      <div className="live-stream-container">
+      <div className="main">
+      <div className="main">
         <div className="wrapper">
           <svg>
             <text x="50%" y="50%" dy=".35em" textAnchor="middle">
@@ -145,6 +146,47 @@ const LiveStream = () => {
           <h5 className="Assalamualaikum">Assalamualaikum</h5>
           <h1 className="welcome">
             Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
+          </h1>
+          <h1 className="welcome">
+            Don't forget to check out our YouTube channel for live streams and recordings!
+            <div className="youtube-section" style={{
+              width: '100%',
+              maxWidth: '100%',
+              padding: '0 1rem',
+              boxSizing: 'border-box',
+              margin: '0 auto'
+            }}>
+             <p style={{
+              fontSize: 'clamp(1rem, 1.8vw, 1.2rem)',
+              color: '#666',
+              marginBottom: '20px',
+              lineHeight: '1.5'
+            }}>
+              Join us on YouTube for live streams of Jummah prayers, special events, and Islamic lectures
+            </p>
+            <a
+              href="https://www.youtube.com/@islamiccenterofsangabrielv9472/streams"
+              target="_blank"
+              className="social-icon"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                padding: '12px 24px',
+                backgroundColor: '#2f2f2f',
+                color: 'white',
+                borderRadius: '5px',
+                textDecoration: 'none',
+                fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+              onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+            >
+              <i className="fab fa-youtube" style={{ marginRight: '8px', fontSize: '1.2em' }}></i>
+              ICSGV Channel
+            </a>
+            </div>
           </h1>
           <div className="live-status">
             {isLive ? (
@@ -192,6 +234,7 @@ const LiveStream = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

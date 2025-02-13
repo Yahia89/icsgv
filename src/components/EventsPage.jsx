@@ -17,6 +17,8 @@ import event13 from '../assets/eventsandannouncements/tahfiz.png';
 import event14 from '../assets/eventsandannouncements/tajweed.png';
 import event15 from '../assets/eventsandannouncements/telecounseling.png';
 import event16 from '../assets/eventsandannouncements/weekend_school.jpg';
+import event17 from '../assets/eventsandannouncements/mail(5).jpg';
+import event18 from '../assets/eventsandannouncements/mail(6).jpg';
 
 Modal.setAppElement('#root');
 
@@ -44,28 +46,30 @@ const EventsPage = () => {
   }
 
   const events = [
-    { id: 1, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" },
-    { id: 2, image: event2, title: "Iqra School", description: "Learn Arabic" },
-    { id: 3, image: event3, title: "Food Bank", description: "Walk-in Food distribution" },
-    { id: 4, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
-    { id: 5, image: event5, title: "Girls Session1", description: "Women & Girls Session with scholars" },
-    { id: 6, image: event6, title: "Hijrah Club", description: "Hijrah Club Season 3" },
-    { id: 7, image: event7, title: "Arabic School", description: "Arabic School on the weekend" },
-    { id: 8, image: event8, title: "Land Pledge", description: "Help pay the land next door" },
-    { id: 9, image: event9, title: "Little Angels Pre-School", description: "Giving children best start in life" },
-    { id: 10, image: event10, title: "Quba Fulltime Islamic School", description: "Private Fulltime Islamic School" },
-    { id: 11, image: event11, title: "Ramadan", description: "Ramadan Sponsorship" },
-    { id: 12, image: event12, title: "Special Bayan", description: "Special Bayan" },
-    { id: 13, image: event13, title: "Tafsir", description: "Sisters Tafsir & Fiqh of Salah | Quran" },
-    { id: 14, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
-    { id: 15, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
-    { id: 16, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },
+    { id: 1, image: event11, title: "Ramadan", description: "Ramadan Sponsorship" },
+    { id: 2, image: event18, title: "2025 Ramadan sponsorship calendar", description: "2025 Iftar sponsorship calendar" },
+    { id: 3, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
+    { id: 4, image: event5, title: "Girls Session", description: "Women & Girls Session with scholars" },
+    { id: 5, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
+    { id: 6, image: event2, title: "Iqra School", description: "Learn Arabic School" },
+    { id: 7, image: event6, title: "Hijrah Club", description: "Hijrah Club Season 3" },
+    { id: 8, image: event7, title: "Arabic School", description: "Arabic School on the weekend" },
+    { id: 9, image: event8, title: "Land Pledge", description: "Help pay the land next door" },
+    { id: 10, image: event9, title: "Little Angels Pre-School", description: "Giving children best start in life" },
+    { id: 11, image: event10, title: "Quba Fulltime Islamic School", description: "Private Fulltime Islamic School" },
+    { id: 12, image: event3, title: "Food Bank", description: "Walk-in Food distribution" },
+    { id: 13, image: event12, title: "Special Bayan", description: "Special Bayan" },
+    { id: 14, image: event13, title: "Tafsir", description: "Sisters Tafsir & Fiqh of Salah | Quran" },
+    { id: 15, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
+    { id: 16, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
+    { id: 17, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },
+    { id: 18, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" },
   ];
 
   return (
     <>
           <SEO 
-        title="Events & Programs | Islamic Center of San Gabriel Valley (ICSGV)"
+        title="Events, Programs & Announcements | Islamic Center of San Gabriel Valley (ICSGV)"
         description="Discover upcoming events and programs at ICSGV including Arabic classes, Islamic education, community services, and special programs."
       />
     <div class="main">
@@ -99,6 +103,28 @@ const EventsPage = () => {
         fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
         color:"#000"
       }}>Upcoming Events</h2>
+      <h3 style={{
+        textAlign: 'center',
+        margin: '10px 0',
+        fontSize: 'clamp(1rem, 2vw, 1.5rem)',
+        color: "#666",
+        fontWeight: 'normal',
+        maxWidth: '800px',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+      }}>Here you can find up to date events, programs & announcements.</h3>
+            <p style={{
+        textAlign: 'center',
+        margin: '15px 0',
+        fontSize: 'clamp(0.8rem, 1.8vw, 1.1rem)',
+        color: "#777",
+        fontWeight: 'normal',
+        maxWidth: '800px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        fontStyle: 'italic',
+        lineHeight: '1.5'
+      }}>Note: Our events and programs cater to both the general community and our educational institutions. Feel free to reach out to the masjid or respective schools for more information about any specific event.</p>
       <div style={{ 
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -169,7 +195,8 @@ const EventsPage = () => {
             transform: 'translate(-50%, -50%)',
             opacity: 1,
             transition: 'all 0.5s ease-in-out',
-            animation: 'modalFade 0.5s ease'
+            animation: 'modalFade 0.5s ease',
+            color:"black"
           }
         }}
       >
@@ -188,6 +215,60 @@ const EventsPage = () => {
                 padding: '5px 10px',
                 color: "black"
               }}>×</button>
+            {/* Add Previous Button */}
+            <button
+              onClick={() => {
+                const currentIndex = events.findIndex(e => e.id === selectedEvent.id);
+                const prevIndex = currentIndex > 0 ? currentIndex - 1 : events.length - 1;
+                setSelectedEvent(events[prevIndex]);
+              }}
+              style={{
+                position: 'absolute',
+                left: '10px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'rgba(0,0,0,0.5)',
+                color: 'white',
+                border: 'none',
+                borderRadius: '50%',
+                width: '40px',
+                height: '40px',
+                cursor: 'pointer',
+                fontSize: '24px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '0',
+                lineHeight: '1'
+              }}
+            >←</button>
+            {/* Add Next Button */}
+            <button
+              onClick={() => {
+                const currentIndex = events.findIndex(e => e.id === selectedEvent.id);
+                const nextIndex = currentIndex < events.length - 1 ? currentIndex + 1 : 0;
+                setSelectedEvent(events[nextIndex]);
+              }}
+              style={{
+                position: 'absolute',
+                right: '10px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'rgba(0,0,0,0.5)',
+                color: 'white',
+                border: 'none',
+                borderRadius: '50%',
+                width: '40px',
+                height: '40px',
+                cursor: 'pointer',
+                fontSize: '24px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '0',
+                lineHeight: '1'
+              }}
+            >→</button>
             <img 
               src={selectedEvent.image} 
               alt={selectedEvent.title} 
