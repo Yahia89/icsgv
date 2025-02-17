@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
@@ -7,77 +7,65 @@ import masjidImage from "../assets/Colleen_photo-5.jpg";
 import PrayerTimes from "./PrayerTimes";
 
 function Home() {
-  const [showReminder, setShowReminder] = useState(false);
-
   useEffect(() => {
-    // Check if this is a first-time visitor
-    const hasVisited = localStorage.getItem('hasVisitedICSGV');
-    if (!hasVisited) {
-      setShowReminder(true);
-      localStorage.setItem('hasVisitedICSGV', 'true');
-    }
+    const serviceCards = document.querySelectorAll(".service-card");
 
-    // Auto-dismiss after 10 seconds (optional)
-    const timer = setTimeout(() => {
-      setShowReminder(false);
-    }, 10000);
+    const observerOptions = {
+      threshold: 0.2,
+    };
 
-    return () => clearTimeout(timer);
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    serviceCards.forEach((card) => {
+      observer.observe(card);
+    });
   }, []);
 
   return (
     <>
-       <SEO 
+      <SEO 
         title="ICSGV | Home"
         description="Welcome to the Islamic Center of San Gabriel Valley. Serving the community for over 40 years with educational and religious services."
         preloadImage={masjidImage}
         priority="high"
       />
       <div class="main">
-        {showReminder && (
-          <div style={{
-            padding: '15px 20px',
-            margin: '10px auto',
-            maxWidth: '800px',
-            textAlign: 'center',
-            position: 'relative',
-            borderRadius: '8px',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-            animation: 'slideIn 0.5s ease-out'
+        <div style={{
+          padding: '15px 20px',
+          margin: '10px auto',
+          maxWidth: '800px',
+          textAlign: 'center',
+        }}>
+          <p style={{
+            margin: 0,
+            color: '#2c3e50',
+            fontSize: '1.1rem',
+            fontWeight: '500',
+            lineHeight: '1.5'
           }}>
-            <button
-              onClick={() => setShowReminder(false)}
-              className="reminder-close-button"
-              aria-label="Close reminder"
+            Friendly Reminder: ICSGV Membership Renewal Time! Your continued support helps us serve our community better.
+            <a 
+              href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5" 
+              style={{
+                color: '#0078D4',
+                textDecoration: 'none',
+                marginLeft: '8px',
+                fontWeight: 'bold'
+              }}
+              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
+              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
             >
-              ×
-            </button>
-            <p style={{
-              margin: '0',
-              color: '#2c3e50',
-              fontSize: '1.1rem',
-              fontWeight: '500',
-              lineHeight: '1.5',
-            }}>
-              Friendly Reminder: ICSGV Membership Renewal Time! Your continued support helps us serve our community better.
-              <a 
-                href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5" 
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  color: '#0078D4',
-                  textDecoration: 'none',
-                  marginLeft: '8px',
-                  fontWeight: 'bold'
-                }}
-                onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-                onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-              >
-                Renew Now
-              </a>
-            </p>
-          </div>
-        )}
+              Renew Now.
+            </a>
+          </p>
+        </div>
         <div class="wrapper">
           <svg>
             <text x="50%" y="50%" dy=".35em" text-anchor="middle">

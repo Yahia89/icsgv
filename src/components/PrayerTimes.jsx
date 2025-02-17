@@ -112,28 +112,8 @@ const PrayerTimes = () => {
               }}
               frameBorder="0"
               scrolling="no"
+              // Removed loading="lazy" to ensure immediate loading
             ></iframe>
-            
-            {/* Ramadan Schedule Image */}
-            <div style={{
-              width: "100%",
-              maxWidth: "1200px",
-              margin: "20px auto",
-              padding: "0 10px",
-            }}>
-              <img 
-                src="/src/assets/eventsandannouncements/Ramadan Schedule.png"
-                alt="Ramadan Prayer Schedule"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  maxWidth: "100%",
-                  display: "block",
-                  borderRadius: "8px",
-                  boxShadow: "0 2px 4px rgba(0,0,0,0.1)"
-                }}
-              />
-            </div>
           </div>
         </section>
       </div>
