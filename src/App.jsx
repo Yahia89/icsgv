@@ -18,6 +18,7 @@ import BanquetHall from "./components/BanquetHall";
 import Funeral from "./components/Funeral";
 import ScrollToTop from "./components/ScrollToTop";
 import { MantineProvider } from "@mantine/core";
+import NotFound from './components/NotFound';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/banquet" element={<BanquetHall />} />
         <Route path="/funeral-services" element={<Funeral />} />
         <Route path="/tripstomecca" element={<HajjUmrahCommittee />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
         <Footer />
       </Router>

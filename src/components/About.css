@@ -5,6 +5,7 @@
   background-position: center left;
 }
 
+
 @media (max-width: 768px) {
   .main {
     background-repeat: repeat;
@@ -33,6 +34,10 @@
 .team-container {
   max-width: 1200px;
   margin: 0 auto;
+  background-image: url("../assets/16-sacred-symbols-MR9YMTh.png");
+  background-repeat: repeat;
+  background-position: center left;
+  background-attachment: fixed;
 }
 
 .main-title {
@@ -73,10 +78,14 @@
 }
 
 .image-container {
-  border: 10px solid #ffffff; /* Thicker border for better visibility */
-  /* border-radius: 100px; */
+  /* border: 10px solid #ffffff; */
   width: 160px;
   height: 160px;
+  /* overflow: hidden; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .image-container img {
@@ -84,6 +93,7 @@
   height: 160px;
   object-fit: cover;
   object-position: center right;
+  border: 10px solid #ffffff;
 }
 
 .member-name {

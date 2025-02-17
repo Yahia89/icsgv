@@ -20,6 +20,7 @@ import fatherDaughterImage from "../assets/happy-muslim-girl-and-her-father-read
 import quranImage from "../assets/the-quran-the-central-religious-text-of-islam-PRGDY3Qa.jpg";
 import masjidImage from "../assets/Jean-Marshall-Photography-13.jpg";
 import mosqueimage from "../assets/Colleen_photo-5.jpg";
+import jaleel from "../assets/Screenshot 2025-02-16 at 21-12-19 AI Photo Editor free Pixlr Express - free ai image editing online.png"
 
 const About = () => {
     useEffect(() => {
@@ -92,6 +93,14 @@ const About = () => {
       name: "Muhammad Asad",
       role: "Administrator",
       imageUrl: asadImage,
+    },
+  ];
+
+  const socialMedia = [
+    {
+      name: "Jaleel",
+      role: "Social Media",
+      imageUrl: jaleel,
     },
   ];
 
@@ -239,6 +248,7 @@ const About = () => {
             ))}
           </div>
         </div>
+        <TeamSection title="Social Media" members={socialMedia} />
         <TeamSection title="Facility Crew" members={facilityCrew} />
       </div>
     </div>

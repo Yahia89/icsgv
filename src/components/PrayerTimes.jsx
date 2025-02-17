@@ -66,11 +66,31 @@ const PrayerTimes = () => {
             fontStyle: "italic",
           }}
         >
-          Note: You can view or download the whole month of prayer times on this{" "}
-          <a href="https://drive.google.com/file/d/1ecDSZVMBwRQniPLHjYTUPDcRRSwJmzHs/view">
-            link
+          Ramdan Prayer Times {" "}
+          <a 
+            href="https://drive.google.com/file/d/1ClnkBw0EN19drn3qUOZ4Ltw_O8z5uk--/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            link.
           </a>
-          . (pdf)
+        </h3>
+        <h3
+          style={{
+            textAlign: "center",
+            padding: "10px",
+            color: "#000",
+            fontStyle: "italic",
+          }}
+        >
+          Note: You can view or download the whole month of prayer times on this{" "}
+          <a 
+            href="https://drive.google.com/file/d/1ecDSZVMBwRQniPLHjYTUPDcRRSwJmzHs/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            link.
+          </a>
         </h3>
         <section
           style={{
@@ -92,8 +112,28 @@ const PrayerTimes = () => {
               }}
               frameBorder="0"
               scrolling="no"
-              // Removed loading="lazy" to ensure immediate loading
             ></iframe>
+            
+            {/* Ramadan Schedule Image */}
+            <div style={{
+              width: "100%",
+              maxWidth: "1200px",
+              margin: "20px auto",
+              padding: "0 10px",
+            }}>
+              <img 
+                src="/src/assets/eventsandannouncements/Ramadan Schedule.png"
+                alt="Ramadan Prayer Schedule"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxWidth: "100%",
+                  display: "block",
+                  borderRadius: "8px",
+                  boxShadow: "0 2px 4px rgba(0,0,0,0.1)"
+                }}
+              />
+            </div>
           </div>
         </section>
       </div>

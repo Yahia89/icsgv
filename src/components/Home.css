@@ -299,7 +299,7 @@ p {
   }
 
   .services-card-content {
-    width: 90%;
+    width: 100%;
     z-index: 2;
     flex-direction: column;
   }
@@ -394,4 +394,40 @@ p {
 
 .prayer-times-heading {
   color: #333;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.reminder-close-button {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .reminder-close-button {
+    right: 5px;
+    padding: 5px;
+    font-size: 18px;
+  }
 }

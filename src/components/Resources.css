@@ -25,7 +25,7 @@
   padding: 16px;
   background-image: url("../assets/16-sacred-symbols-MR9YMTg.png?raw=true");
   background-size: contain;
-  background-position: right bottom; /* Dynamically position at the bottom-right corner */
+  background-position: center; /* Dynamically position at the bottom-right corner */
   background-repeat: no-repeat; /* Prevent the image from repeating */
 }
 
@@ -67,7 +67,7 @@
 
   .card {
     flex: none;
-    width: 90%; /* Make the cards take up the full width */
+    width: 100%; /* Make the cards take up the full width */
   }
 }
 

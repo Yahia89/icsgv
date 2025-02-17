@@ -5,7 +5,6 @@ import { useMediaQuery } from "@mantine/hooks"; // Import media query hook
 import SEO from "./SEO";
 import "../components/Header.css";
 import headerLogo from "../assets/logo-icsgv.png";
-import {  IconPlus, Icon360View } from '@tabler/icons-react';
 import classes from "./header.module.css"
 
 
@@ -134,12 +133,17 @@ function Header() {
                             Little Angels Preschool
                           </a>
                         </li>
-                        <li className="submenu-item">
-                          <a href="https://icsgv.com/weekend-islamic-school/" className="submenu-link">
-                            Weekend Islamic School
-                          </a>
-                        </li>
-                        <li className="submenu-item">
+                                <li className="submenu-item">
+                                  <a href="https://icsgv.com/wis/wis_main.php" className="submenu-link" target="_blank" rel="noopener noreferrer">
+                                    Weekend Islamic School
+                                  </a>
+                                </li>
+                                <li className="submenu-item">
+                      <a href="https://htbcmedia.com/club/" className="submenu-link">
+                      Hijrah Club
+                      </a>
+                    </li>
+                        {/* <li className="submenu-item">
                           <a href="https://icsgv.com/quran-institute/" className="submenu-link">
                             Quran Institute
                           </a>
@@ -148,7 +152,7 @@ function Header() {
                           <a href="https://icsgv.com/youth-group/" className="submenu-link">
                             Youth Group
                           </a>
-                        </li>
+                        </li> */}
                       </ul>
                     </Accordion.Panel>
                   </Accordion.Item>
@@ -215,20 +219,25 @@ function Header() {
                       </a>
                     </li>
                     <li className="submenu-item">
-                      <a href="https://icsgv.com/weekend-islamic-school/" className="submenu-link">
+                      <a href="https://icsgv.com/wis/wis_main.php" className="submenu-link">
                         Weekend Islamic School
                       </a>
                     </li>
                     <li className="submenu-item">
+                      <a href="https://htbcmedia.com/club/" className="submenu-link">
+                      Hijrah Club
+                      </a>
+                    </li>
+                    {/* <li className="submenu-item">
                       <a href="https://icsgv.com/quran-institute/" className="submenu-link">
                         Quran Institute
                       </a>
-                    </li>
-                    <li className="submenu-item">
+                    </li> */}
+                    {/* <li className="submenu-item">
                       <a href="https://icsgv.com/youth-group/" className="submenu-link">
                         Youth Group
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
               </>

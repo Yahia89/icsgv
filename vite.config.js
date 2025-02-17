@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/icsgv/',
   build: {
     outDir: "dist",
     rollupOptions: {
@@ -11,5 +10,8 @@ export default defineConfig({
         main: '/index.html',
       },
     },
+  },
+  server: {
+    historyApiFallback: true,
   },
 });

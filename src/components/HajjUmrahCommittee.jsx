@@ -16,15 +16,15 @@ const HajjUmrahCommittee = () => {
       <h1 class="welcome">
         Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
       </h1>
-      <div className="committee-container">
-        <h2 className="committee-title">Hajj & Umrah Committee</h2>
-        <div className="member-container">
-          <div className="member">
-            <div className="image-container">
-              <img className="member-image" src={maherPicture} alt="Maher Subeh" />
+      <div className="committee-container-hajj">
+        <h2 className="committee-title-hajj">Hajj & Umrah Committee</h2>
+        <div className="member-container-hajj">
+          <div className="member-hajj">
+            <div className="image-container-hajj">
+              <img className="member-image-hajj" src={maherPicture} alt="Maher Subeh" />
             </div>
-            <h3 className="member-name">Maher Subeh</h3>
-            <p className="member-phone">
+            <h3 className="member-name-hajj">Maher Subeh</h3>
+            <p className="member-phone-hajj">
               <a href="tel:+16262247050">
                 <i className="fas fa-phone-alt"></i>{" "}(626) 224-7050
               </a>

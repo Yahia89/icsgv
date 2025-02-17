@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
@@ -7,36 +7,77 @@ import masjidImage from "../assets/Colleen_photo-5.jpg";
 import PrayerTimes from "./PrayerTimes";
 
 function Home() {
+  const [showReminder, setShowReminder] = useState(false);
+
   useEffect(() => {
-    const serviceCards = document.querySelectorAll(".service-card");
+    // Check if this is a first-time visitor
+    const hasVisited = localStorage.getItem('hasVisitedICSGV');
+    if (!hasVisited) {
+      setShowReminder(true);
+      localStorage.setItem('hasVisitedICSGV', 'true');
+    }
 
-    const observerOptions = {
-      threshold: 0.2,
-    };
+    // Auto-dismiss after 10 seconds (optional)
+    const timer = setTimeout(() => {
+      setShowReminder(false);
+    }, 10000);
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    serviceCards.forEach((card) => {
-      observer.observe(card);
-    });
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
-      <SEO 
+       <SEO 
         title="ICSGV | Home"
         description="Welcome to the Islamic Center of San Gabriel Valley. Serving the community for over 40 years with educational and religious services."
         preloadImage={masjidImage}
         priority="high"
       />
       <div class="main">
+        {showReminder && (
+          <div style={{
+            padding: '15px 20px',
+            margin: '10px auto',
+            maxWidth: '800px',
+            textAlign: 'center',
+            position: 'relative',
+            borderRadius: '8px',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            animation: 'slideIn 0.5s ease-out'
+          }}>
+            <button
+              onClick={() => setShowReminder(false)}
+              className="reminder-close-button"
+              aria-label="Close reminder"
+            >
+              ×
+            </button>
+            <p style={{
+              margin: '0',
+              color: '#2c3e50',
+              fontSize: '1.1rem',
+              fontWeight: '500',
+              lineHeight: '1.5',
+            }}>
+              Friendly Reminder: ICSGV Membership Renewal Time! Your continued support helps us serve our community better.
+              <a 
+                href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5" 
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: '#0078D4',
+                  textDecoration: 'none',
+                  marginLeft: '8px',
+                  fontWeight: 'bold'
+                }}
+                onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
+                onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+              >
+                Renew Now
+              </a>
+            </p>
+          </div>
+        )}
         <div class="wrapper">
           <svg>
             <text x="50%" y="50%" dy=".35em" text-anchor="middle">
@@ -155,7 +196,7 @@ function Home() {
                     </p>
                   </div>
                 </a>
-                <a href="https://icsgv.com/youth-group/">
+                {/* <a href="https://icsgv.com/youth-group/">
                   <div class="service-card">
                     <h3 class="service-card-title">Youth Group</h3>
                     <p class="service-card-description">
@@ -164,8 +205,8 @@ function Home() {
                       through 12).
                     </p>
                   </div>
-                </a>
-                <a href="https://icsgv.com/weekend-islamic-school/">
+                </a> */}
+                <a href="https://icsgv.com/wis/wis_main.php">
                   <div class="service-card">
                     <h3 class="service-card-title">Weekend Islamic School</h3>
                     <p class="service-card-description">
@@ -174,7 +215,7 @@ function Home() {
                     </p>
                   </div>
                 </a>
-                <a href="https://icsgv.com/quran-institute/">
+                {/* <a href="https://icsgv.com/quran-institute/">
                   <div class="service-card">
                     <h3 class="service-card-title">Qur’an Academy</h3>
                     <p class="service-card-description">
@@ -182,7 +223,7 @@ function Home() {
                       them proper tajweed of the Qu’ran.
                     </p>
                   </div>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
