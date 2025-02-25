@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from './SEO';
+import masjidImage from '../assets/Colleen_photo-5.jpg';
 
 const NotFound = () => {
   return (
@@ -32,8 +33,8 @@ const NotFound = () => {
       textAlign: 'center',
       padding: '20px'
     }}>
-      <h1 style={{ fontSize: '4rem', marginBottom: '20px' }}>404</h1>
-      <h2 style={{ marginBottom: '20px' }}>Page Not Found</h2>
+      <h1 style={{ fontSize: '4rem', marginBottom: '20px', color:'black' }}>404</h1>
+      <h2 style={{ marginBottom: '20px', color:'black' }}>Page Not Found</h2>
       <p style={{ marginBottom: '30px' }}>
         The page you are looking for doesn't exist or has been moved.
       </p>

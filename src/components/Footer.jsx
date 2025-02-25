@@ -29,9 +29,6 @@ const Footer = () => {
           <Link to="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5">Donate</Link>
                   </li>
                   <li>
-                    <Link to="/contacts">Contact Us</Link>
-                  </li>
-                  <li>
                     <Link to="/resources">Resources</Link>
                   </li>
                 </ul>
