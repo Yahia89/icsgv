@@ -68,7 +68,7 @@ const PrayerTimes = () => {
         >
           Ramdan Prayer Times {" "}
           <a 
-            href="https://drive.google.com/file/d/1ClnkBw0EN19drn3qUOZ4Ltw_O8z5uk--/view"
+            href="https://drive.google.com/file/d/16ygSw9eH5vVI23qTFCJYjuJOiiofaE_5/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
           >
