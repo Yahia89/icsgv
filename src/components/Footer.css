@@ -154,3 +154,66 @@
 .footer-bottom a:hover {
   color: #f39c12;
 }
+/* Add these specific styles for YouTube icon */
+.fab.fa-youtube {
+  color: #FF0000; /* YouTube Red */
+  font-size: 20px; /* Minimum height requirement */
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover .fa-youtube {
+  color: #FF0000; /* Maintain YouTube red on hover */
+}
+
+/* Update the general social icon styles but keep YouTube-specific ones separate */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #FFFFFF;
+}
+/* Add these specific styles for social and contact icons */
+.fas.fa-map-marker-alt {
+  color: #EA4335; /* Google Maps red */
+  font-size: 20px; /* Minimum height requirement */
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+.fas.fa-envelope {
+  color: #79bdf9; /* Gmail red */
+  font-size: 20px; /* Minimum height requirement */
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+.fas.fa-phone-alt {
+  color: #00C300; /* Phone green */
+  font-size: 20px; /* Minimum height requirement */
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+.fab.fa-facebook {
+  color: #1877F2; /* Facebook blue */
+  font-size: 20px; /* Minimum height requirement */
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+/* Keep the existing YouTube styling */
+.fab.fa-youtube {
+  color: #FF0000; /* YouTube red */
+}
+
+/* Ensure text remains white on hover */
+.footer-links-column a:hover i {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}

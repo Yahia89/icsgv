@@ -105,6 +105,8 @@
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    min-width: 200px;  /* YouTube minimum requirement */
+    min-height: 200px; /* YouTube minimum requirement */
   }
   
   .video-container iframe {
@@ -114,6 +116,8 @@
     width: 100%;
     height: 100%;
     border-radius: 8px;
+    min-width: 200px;  /* YouTube minimum requirement */
+    min-height: 200px; /* YouTube minimum requirement */
   }
   
   /* SVG Styling */

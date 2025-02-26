@@ -137,7 +137,7 @@ const LiveStream = () => {
             Welcome to ICSGV! Check out our YouTube channel for live streams and recordings!
           </h1>
           <a
-            href="https://www.youtube.com/@islamiccenterofsangabrielv9472/streams"
+            href="https://www.youtube.com/@ICSGV-Quba/streams"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon"
@@ -164,13 +164,15 @@ const LiveStream = () => {
             {isLive ? (
               <div>
                 <p className="live-text">We are live now!</p>
-                <iframe
-                  src={`https://www.youtube.com/embed/${videoId}`}
-                  title="YouTube Live Stream"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <div className="video-container">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${videoId}?autoplay=0`}
+                    title="YouTube Live Stream"
+                    frameBorder="0"
+                    allow="accelerometer; encrypted-media; gyroscope;"
+                    allowFullScreen
+                  ></iframe>
+                </div>
               </div>
             ) : (
               <p className="offline-text">Currently offline</p>
@@ -182,13 +184,15 @@ const LiveStream = () => {
             <div className="videos-grid">
               {recentVideos.map(video => (
                 <div key={video.id.videoId} className="video-item">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                    title={video.snippet.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                  <div className="video-container">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=0`}
+                      title={video.snippet.title}
+                      frameBorder="0"
+                      allow="accelerometer; encrypted-media; gyroscope;"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
                   <h3>{video.snippet.title}</h3>
                   <div className="video-stats">
                     <span><i className="fas fa-eye"></i> {formatNumber(video.statistics?.viewCount)} views</span>
@@ -201,6 +205,26 @@ const LiveStream = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer with legal disclosures */}
+      <footer className="footer" style={{ padding: "1rem", textAlign: "center", fontSize: "0.9rem", background: "#f8f8f8", marginTop: "2rem" }}>
+        <p>
+          By using this website, you agree to be bound by the&nbsp;
+          <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">
+            YouTube Terms of Service
+          </a>.
+        </p>
+        <p>
+          Our&nbsp;
+          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
+            Privacy Policy
+          </a>&nbsp;
+          explains how we collect, use, and share your data. This site uses YouTube API Services, and data may be collected from your device as described in our Privacy Policy. For additional details, please see&nbsp;
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            Google’s Privacy Policy
+          </a>.
+        </p>
+      </footer>
     </>
   );
 };
