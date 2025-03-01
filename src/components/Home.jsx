@@ -194,7 +194,7 @@ function Home() {
                     </p>
                   </div>
                 </a> */}
-                <a href="https://icsgv.com/wis/wis_main.php">
+                <Link to="/weekendislamicschool">
                   <div class="service-card">
                     <h3 class="service-card-title">Weekend Islamic School</h3>
                     <p class="service-card-description">
@@ -202,7 +202,7 @@ function Home() {
                       our next generation of Muslims (Pre-K through 8th grades).
                     </p>
                   </div>
-                </a>
+                </Link>
                 {/* <a href="https://icsgv.com/quran-institute/">
                   <div class="service-card">
                     <h3 class="service-card-title">Qur’an Academy</h3>

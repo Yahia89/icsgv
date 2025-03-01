@@ -1,0 +1,247 @@
+.weekend-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.weekend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #000;
+  text-align: left;
+}
+
+.weekend-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  min-height: 400px; /* Reserve space for content */
+}
+.weekend-section-text {
+ text-align: left;
+}
+
+.weekend-text {
+  flex: 1;
+  max-width: 600px;
+  height: 100%;
+}
+
+.weekend-image {
+  flex: 1;
+  aspect-ratio: 16/9; /* Fixed aspect ratio */
+  min-width: 300px;
+  position: relative;
+}
+
+
+.rashed-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.weekend-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.image-collage {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  min-height: 500px;
+  gap: 20px;
+}
+
+.image-top,
+.image-middle,
+.image-bottom {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 1%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+  border-radius: 8px;
+}
+
+.image-top img,
+.image-middle img,
+.image-bottom img {
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.image-top:hover,
+.image-middle:hover,
+.image-bottom:hover {
+  flex: 1 1 50%;
+}
+
+.image-top:hover img,
+.image-middle:hover img,
+.image-bottom:hover img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .image-collage {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .image-top,
+  .image-middle,
+  .image-bottom {
+    height: 300px;
+    margin: 10px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .weekend-section {
+      flex-direction: column;
+      min-height: auto;
+  }
+  
+  .weekend-image {
+      width: 100%;
+      margin: 0 auto;
+  }
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.weekend-button {
+  background-color: #a99c38;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  min-width: fit-content; /* Changed from fixed width */
+  max-width: max-content; /* Added to prevent excessive width */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center; /* Align buttons to the start */
+}
+
+@media (max-width: 768px) {
+  .weekend-button {
+    width: auto; /* Allow buttons to size based on content */
+    max-width: 100%; /* Prevent overflow on mobile */
+  }
+}
+
+.weekend-button:hover {
+  background-color: #5e6f5c;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .weekend-button {
+    width: 100%;
+    margin: 0;
+  }
+}
+.button-container a {
+  text-decoration: none;
+  display: inline-block;
+}
+.admin-section {
+  background-color: #f5f5f5;
+  background-image: url("../assets/16-sacred-symbols-MR9YMTh.png");
+  background-repeat: no-repeat;
+  background-position:  bottom ;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.admin-members {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-title, .admin-subtitle {
+  position: relative;
+  z-index: 2;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .admin-section {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.admin-member {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.admin-member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.admin-member h4 {
+  color: #000;
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.admin-member p {
+  color: #a99c38;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .admin-members {
+    gap: 20px;
+  }
+  
+  .admin-member {
+    min-width: 150px;
+  }
+  
+  .admin-member img {
+    width: 150px;
+    height: 150px;
+  }
+}

@@ -34,7 +34,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div class="footer-links-column">
-                <h5>Our Services</h5>
+                <h5>Services</h5>
                 <ul>
                   <li>
                     <Link to="/services">All services</Link>
@@ -53,6 +53,23 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link to="/banquet">Banquet Hall</Link>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-links-column">
+                <h5>Educational Services</h5>
+                <ul>
+                  <li>
+                    <Link to="https://www.qubais.org/">Quba Fulltime Islamic School</Link>
+                  </li>
+                  <li>
+                    <Link to="https://www.littleangels.la/">Little Angels Preschool</Link>
+                  </li>
+                  <li>
+                    <Link to="/weekendislamicschool">Weekend Islamic School</Link>
+                  </li>
+                  <li>
+                    <Link to="https://htbcmedia.com/club/">Hijrah Club</Link>
                   </li>
                 </ul>
               </div>

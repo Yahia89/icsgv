@@ -134,9 +134,9 @@ function Header() {
                           </a>
                         </li>
                                 <li className="submenu-item">
-                                  <a href="https://icsgv.com/wis/wis_main.php" className="submenu-link" target="_blank" rel="noopener noreferrer">
-                                    Weekend Islamic School
-                                  </a>
+                                <NavLink to="/weekendislamicschool" className="submenu-link" activeClassName="active">
+                        Weekend Islamic School
+                      </NavLink>
                                 </li>
                                 <li className="submenu-item">
                       <a href="https://htbcmedia.com/club/" className="submenu-link">
@@ -219,9 +219,9 @@ function Header() {
                       </a>
                     </li>
                     <li className="submenu-item">
-                      <a href="https://icsgv.com/wis/wis_main.php" className="submenu-link">
+                    <NavLink to="/weekendislamicschool" className="submenu-link" activeClassName="active">
                         Weekend Islamic School
-                      </a>
+                      </NavLink>
                     </li>
                     <li className="submenu-item">
                       <a href="https://htbcmedia.com/club/" className="submenu-link">
