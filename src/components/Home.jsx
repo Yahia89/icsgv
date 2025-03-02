@@ -52,7 +52,7 @@ function Home() {
           }}>
             Friendly Reminder: ICSGV Membership Renewal Time! Your continued support helps us serve our community better.
             <a 
-              href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5" 
+              href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation" 
               style={{
                 color: '#0078D4',
                 textDecoration: 'none',

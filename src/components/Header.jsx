@@ -272,17 +272,11 @@ function Header() {
           {/* <button className="button button-volunteer">Volunteer</button> */}
         </nav>
         <div className="header-controls">
-          <button
-            className="button button-donate"
-            onClick={() =>
-              window.open(
-                "https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5",
-                "_blank"
-              )
-            }
-          >
-            Donate
-          </button>
+          <NavLink to="/donate">
+              <button className="button button-donate">
+                Donate
+              </button>
+            </NavLink>
           <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle Menu">
             <span className="menu-icon"></span>
             <span className="menu-icon"></span>
