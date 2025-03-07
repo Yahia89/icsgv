@@ -16,6 +16,13 @@ import {
 
 
 const Donate = () => {
+  <svg width="0" height="0">
+  <defs>
+    <clipPath id="domeClip" clipPathUnits="objectBoundingBox">
+      <path d="M0,1 V0.6 C0.3,0.2, 0.5,0, 0.7,0.2 0.9,0.4, 1,0.6, 1,1 Z" />
+    </clipPath>
+  </defs>
+</svg>
   return (
     <>
       <SEO 
@@ -68,19 +75,9 @@ const Donate = () => {
                 <li>Fitra Fund</li>
                 <li>And More...</li>
               </ul>
-              <div style={{ marginTop: "30px" }}>
-                <a
-                  href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="donate-button"
-                >
-                  Donate Now
-                </a>
-              </div>
             </div>
           </div>
-          <div className="donation-categories">
+          <div  className="donation-categories">
             <div className="donation-grid">
               <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/15" 
                 className="donation-card"
