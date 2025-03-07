@@ -101,4 +101,127 @@
     margin-bottom: 20px;
   }
 
+
+.donation-categories {
+  margin: 60px 0;
+}
+
+.donation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
+
+.donation-card {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(169, 156, 56, 0.9) 0%,
+    rgb(255, 98, 98) 100%
+  );
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  overflow: hidden;
+  height: 280px;
+}
+
+.donation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.donation-card:hover::before {
+  opacity: 1;
+}
+
+.donation-card svg {
+  color: white;
+  margin-bottom: 8px;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.donation-card:hover svg {
+  transform: scale(1.1);
+}
+
+.donation-card h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.donation-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 3px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.donation-card:hover h3::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.donation-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.5;
+  z-index: 1;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.donation-card:hover p {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .donation-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .donation-card {
+    padding: 24px;
+    height: 250px;
+  }
+}
+
   

@@ -51,8 +51,8 @@ function Home() {
             lineHeight: '1.5'
           }}>
             Friendly Reminder: ICSGV Membership Renewal Time! Your continued support helps us serve our community better.
-            <a 
-              href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation" 
+            <Link 
+              to="/donate"
               style={{
                 color: '#0078D4',
                 textDecoration: 'none',
@@ -63,7 +63,7 @@ function Home() {
               onMouseOut={(e) => e.target.style.textDecoration = 'none'}
             >
               Renew Now.
-            </a>
+            </Link>
           </p>
         </div>
         <div class="wrapper">

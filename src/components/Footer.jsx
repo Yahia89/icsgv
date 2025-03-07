@@ -26,7 +26,7 @@ const Footer = () => {
                     <Link to="/events">Events</Link>
                   </li>
                   <li>
-          <Link to="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5">Donate</Link>
+          <Link to="/donate">Donate</Link>
                   </li>
                   <li>
                     <Link to="/resources">Resources</Link>
