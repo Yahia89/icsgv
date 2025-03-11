@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import SEO from './SEO';
 import "./LiveStream.css";
+import { NavLink } from "react-router-dom";
 
 // Cache durations: recent videos (1 hour) and live status (1 minute)
 const CACHE_DURATION = 60 * 60 * 1000; // 1 hour for recent videos
@@ -210,19 +211,19 @@ const LiveStream = () => {
       <footer className="footer" style={{ padding: "1rem", textAlign: "center", fontSize: "0.9rem", background: "#f8f8f8", marginTop: "2rem" }}>
         <p>
           By using this website, you agree to be bound by the&nbsp;
-          <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">
+          <NavLink to="/termsofuse">
             YouTube Terms of Service
-          </a>.
+          </NavLink>.
         </p>
         <p>
           Our&nbsp;
-          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
+          <NavLink to="/termsofuse" >
             Privacy Policy
-          </a>&nbsp;
+          </NavLink>&nbsp;
           explains how we collect, use, and share your data. This site uses YouTube API Services, and data may be collected from your device as described in our Privacy Policy. For additional details, please see&nbsp;
-          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+          <NavLink to="/termsofuse" >
             Google’s Privacy Policy
-          </a>.
+          </NavLink>.
         </p>
       </footer>
     </>

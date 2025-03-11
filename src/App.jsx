@@ -21,6 +21,7 @@ import { MantineProvider } from "@mantine/core";
 import NotFound from './components/NotFound';
 import WeekendSchool from "./components/WeekendSchool";
 import Donate from "./components/Donate";
+import TermsOfUse from "./components/TermsOfUse";
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/tripstomecca" element={<HajjUmrahCommittee />} />
         <Route path="/weekendislamicschool" element={<WeekendSchool />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/termsofuse" element={<TermsOfUse />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
         <Footer />

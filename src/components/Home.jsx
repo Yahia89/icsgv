@@ -42,9 +42,24 @@ function Home() {
           margin: '10px auto',
           maxWidth: '800px',
           textAlign: 'center',
+          backgroundColor: '#fff9e6',
+          borderRadius: '8px',
+          border: '1px solid #ffe58f',
+          position: 'relative',
         }}>
+          <i 
+            className="fas fa-exclamation-circle" 
+            style={{
+              position: 'absolute',
+              left: '15px',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              color: '#faad14',
+              fontSize: '24px',
+            }}
+          />
           <p style={{
-            margin: 0,
+            margin: '0 0 15px 0',
             color: '#2c3e50',
             fontSize: '1.1rem',
             fontWeight: '500',
@@ -64,6 +79,55 @@ function Home() {
             >
               Renew Now.
             </Link>
+          </p>
+          <p style={{
+            margin: '0 0 15px 0',
+            color: '#2c3e50',
+            fontSize: '1.1rem',
+            fontWeight: '500',
+            lineHeight: '1.5',
+            padding: '0 25px'
+          }}>
+            Join us for our blessed Qiyyam nights! Experience spiritual tranquility and community connection.
+            <a 
+              href="https://drive.google.com/file/d/1OIYneJADCsOEq3RjllcZ4LhuG6bL3UNS/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: '#0078D4',
+                textDecoration: 'none',
+                marginLeft: '8px',
+                fontWeight: 'bold'
+              }}
+              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
+              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+            >
+              Learn More
+            </a>
+          </p>
+          <p style={{
+            margin: 0,
+            color: '#2c3e50',
+            fontSize: '1.1rem',
+            fontWeight: '500',
+            lineHeight: '1.5'
+          }}>
+            ICSGV ANNUAL QUR'AN COMPETITION - Sunday, March 23, 2025, at 1:30 PM
+            <a 
+              href="https://bit.ly/3cZriC9"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: '#0078D4',
+                textDecoration: 'none',
+                marginLeft: '8px',
+                fontWeight: 'bold'
+              }}
+              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
+              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
+            >
+              Sign Up Now
+            </a>
           </p>
         </div>
         <div class="wrapper">

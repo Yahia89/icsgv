@@ -23,8 +23,8 @@
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  gap: 40px;
+  padding: 10px;
+  /* gap: 40px; */
 }
 
 .donate-text {
@@ -36,18 +36,11 @@
   flex: 1;
   order: 2;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .donate-image img {
   max-width: 100%;
   height: auto;
-}
-
-.donate-list {
-  list-style: none;
-  padding: 0;
 }
 
 .donate-button {
@@ -146,8 +139,8 @@
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.3) 100%
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 100%
   );
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -155,7 +148,7 @@
 
 .donation-card:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.2);
 }
 
 .donation-card:hover::before {
@@ -163,7 +156,7 @@
 }
 
 .donation-card svg {
-  color: white;
+  color: rgb(0, 0, 0);
   margin-bottom: 8px;
   transform: scale(1);
   transition: transform 0.5s ease;
@@ -176,7 +169,7 @@
 
 .donation-card h3 {
   margin: 0;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 1.5rem;
   font-weight: 700;
   position: relative;
@@ -201,11 +194,11 @@
 
 .donation-card p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(0, 0, 0);
   font-size: 1rem;
   line-height: 1.5;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 1;
   transition: opacity 0.3s ease;
 }
 

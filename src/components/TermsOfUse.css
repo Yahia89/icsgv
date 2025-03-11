@@ -1,0 +1,62 @@
+.clinic-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #000000;
+}
+
+.clinic-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.clinic-text {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.clinic-text h2 {
+    margin: 40px 0 20px;
+    color: #000;
+    text-align: left;
+}
+
+.clinic-text p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.privacy-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.privacy-list li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.privacy-list li strong {
+    color: #13547a;
+}
+
+@media screen and (max-width: 768px) {
+    .clinic-text {
+        padding: 0 15px;
+    }
+    
+    .clinic-text h2 {
+        margin: 30px 0 15px;
+    }
+}
+  

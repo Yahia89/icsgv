@@ -108,9 +108,10 @@ const Footer = () => {
                     <a
                       href="https://www.youtube.com/@islamiccenterofsangabrielv9472/streams"
                       target="_blank"
-                      class="social-icon"
+                      rel="noopener noreferrer"
+                      className="social-icon youtube-link"
                     >
-                      <i class="fab fa-youtube"></i>{" "}ICSGV - YouTube
+                      <i className="fab fa-youtube"></i>{" "}ICSGV - YouTube
                     </a>
                   </li>
                 </ul>

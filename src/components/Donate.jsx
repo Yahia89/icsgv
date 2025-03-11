@@ -11,7 +11,8 @@ import {
   IconBook, 
   IconCash, 
   IconBread,
-  IconMoonStars
+  IconMoonStars,
+  IconTipJar
 } from '@tabler/icons-react';
 
 
@@ -50,8 +51,8 @@ const Donate = () => {
               <img
                 src={Logo}
                 alt="ICSGV Logo"
-                width="400"
-                height="400"
+                width="150"
+                height="200"
                 loading="eager"
               />
             </div>
@@ -62,19 +63,6 @@ const Donate = () => {
               <p style={{ marginBottom: "20px" }}>
                 Your generous donations help us maintain and expand our services to the community. All donations to ICSGV are tax-deductible.
               </p>
-              <h3 style={{ color: "#a99c38", marginBottom: "15px" }}>
-                Ways to Donate
-              </h3>
-              <ul className="donate-list" style={{ color: "#000" }}>
-                <li>General Donation</li>
-                <li>Masjid Expansion</li>
-                <li>Zakat</li>
-                <li>Sadaqah</li>
-                <li>Education Programs</li>
-                <li>Community Services</li>
-                <li>Fitra Fund</li>
-                <li>And More...</li>
-              </ul>
             </div>
           </div>
           <div  className="donation-categories">
@@ -120,7 +108,7 @@ const Donate = () => {
               </a>
 
               <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/3" className="donation-card">
-                <IconPray size={48} stroke={1.5} />
+                <IconTipJar size={48} stroke={1.5} />
                 <h3>Sadaqah</h3>
                 <p>Give voluntary charity for the sake of Allah</p>
               </a>
