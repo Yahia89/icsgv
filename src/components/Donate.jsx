@@ -7,12 +7,25 @@ import {
   IconBuildingMosque, 
   IconUsers, 
   IconHeartHandshake, 
-  IconPray, 
   IconBook, 
   IconCash, 
   IconBread,
   IconMoonStars,
-  IconTipJar
+  IconTipJar,
+  IconBuildingCommunity,
+  IconCertificate,
+  IconHome,
+  IconHearts,
+  IconSchoolBell,
+  IconBook2,
+  IconFriends,
+  IconBellSchool,
+  IconSofa,
+  IconWheat,
+  IconPray,
+  IconGrill,
+  IconMeat,
+  IconSparkles
 } from '@tabler/icons-react';
 
 
@@ -72,73 +85,161 @@ const Donate = () => {
                 target="_blank"
                 rel="noopener noreferrer">
                 <IconSchool size={48} stroke={1.5} />
-                <h3>Education</h3>
-                <p>Support our educational programs and initiatives</p>
+                <h3>Quba Islamic School</h3>
+                <p>Support our full-time Islamic school's educational excellence</p>
               </a>
 
-              {/* Apply the same attributes to all other links */}
-              <a className="donation-card"
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/6" 
+                className="donation-card"
                 target="_blank"
-                rel="noopener noreferrer"
-               href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5">
-                <IconBuilding size={48} stroke={1.5} />
-                <h3>Land Purchase</h3>
-                <p>Help expand our facilities for the community</p>
+                rel="noopener noreferrer">
+                <IconSchoolBell size={48} stroke={1.5} />
+                <h3>Sunday School - WIS</h3>
+                <p>Support our Weekend Islamic School program</p>
               </a>
 
-              <a target="_blank"
-                rel="noopener noreferrer" href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/1" className="donation-card">
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/1" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
                 <IconBuildingMosque size={48} stroke={1.5} />
-                <h3>Masjid Expenses</h3>
-                <p>Support daily operations and maintenance</p>
+                <h3>General</h3>
+                <p>Support our masjid's general operations and maintenance</p>
               </a>
 
-              <a target="_blank"
-                rel="noopener noreferrer" href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/8" className="donation-card">
-                <IconUsers size={48} stroke={1.5} />
-                <h3>Membership</h3>
-                <p>Become a member of our community</p>
-              </a>
-
-              <a target="_blank"
-                rel="noopener noreferrer" href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/4" className="donation-card">
-                <IconHeartHandshake size={48} stroke={1.5} />
-                <h3>Mortuary Fund</h3>
-                <p>Support funeral and burial services</p>
-              </a>
-
-              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/3" className="donation-card">
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/3" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
                 <IconTipJar size={48} stroke={1.5} />
                 <h3>Sadaqah</h3>
                 <p>Give voluntary charity for the sake of Allah</p>
               </a>
 
-              <a target="_blank"
-                rel="noopener noreferrer" href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/17" className="donation-card">
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/9" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconBook size={48} stroke={1.5} />
+                <h3>Quran Institute Fee</h3>
+                <p>Support our Quran education programs</p>
+              </a>
+
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/18" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconBook2 size={48} stroke={1.5} />
+                <h3>IQRA Saturday School</h3>
+                <p>Support our Saturday Islamic education program</p>
+              </a>
+
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/11" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconBellSchool size={48} stroke={1.5} />
+                <h3>Little Angels Pre-School</h3>
+                <p>Support our early childhood education program</p>
+              </a>
+
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/8" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconUsers size={48} stroke={1.5} />
+                <h3>Membership - New/Renew</h3>
+                <p>Join or renew your ICSGV membership</p>
+              </a>
+
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/5" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconBuilding size={48} stroke={1.5} />
+                <h3>Land Purchase</h3>
+                <p>Help expand our facilities for the community</p>
+              </a>
+
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/2" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconCash size={48} stroke={1.5} />
+                <h3>Zakat - General</h3>
+                <p>Support zakat distribution to those in need</p>
+              </a>
+
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/17" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
                 <IconBook size={48} stroke={1.5} />
                 <h3>Zakat - Education</h3>
                 <p>Support educational initiatives through Zakat</p>
               </a>
 
-              <a target="_blank"
-                rel="noopener noreferrer" href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/2" className="donation-card">
-                <IconCash size={48} stroke={1.5} />
-                <h3>Zakat - General</h3>
-                <p>General Zakat distribution</p>
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/10" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconSofa size={48} stroke={1.5} />
+                <h3>Banquet Hall</h3>
+                <p>Support our community gathering space</p>
               </a>
 
-              <a  target="_blank"
-                rel="noopener noreferrer" href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/14" className="donation-card">
-                <IconBread size={48} stroke={1.5} />
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/16" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconWheat size={48} stroke={1.5} />
+                <h3>Burial Fund</h3>
+                <p>Support burial services for our community</p>
+              </a>
+
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/4" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconHeartHandshake size={48} stroke={1.5} />
+                <h3>Mortuary Fund</h3>
+                <p>Support funeral and burial services</p>
+              </a>
+
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/12" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconMoonStars size={48} stroke={1.5} />
+                <h3>Ramadan Iftar Donation</h3>
+                <p>Support our community iftar programs</p>
+              </a>
+
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/13" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconGrill size={48} stroke={1.5} />
+                <h3>Fitra Fund</h3>
+                <p>Zakat al-Fitr for Ramadan</p>
+              </a>
+
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/14" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconMeat size={48} stroke={1.5} />
                 <h3>Fidya Fund</h3>
                 <p>Support those who cannot fast during Ramadan</p>
               </a>
 
-              <a target="_blank"
-                rel="noopener noreferrer" href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/13" className="donation-card">
-                <IconMoonStars size={48} stroke={1.5} />
-                <h3>Fitra Fund</h3>
-                <p>Zakat al-Fitr for Ramadan</p>
+              <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/7" 
+                className="donation-card"
+                target="_blank"
+                rel="noopener noreferrer">
+                <IconSparkles size={48} stroke={1.5} />
+                <h3>Check-o-Matic</h3>
+                <p>Set up automatic recurring donations</p>
               </a>
             </div>
           </div>

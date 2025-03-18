@@ -45,11 +45,18 @@ const WeekendSchool = () => {
                       New Students
                     </button>
                   </a>
+                  <a href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/index/6" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <button className="weekend-button">
+                       WIS Program Donate Link
+                    </button>
+                  </a>
                 </h5>
                 <p style={{ color: "#a99c38" }}>Class Schedule</p>
                 <p>The Weekend Islamic School program seeks to provide quality Islamic education by qualified, well resourced teachers for students in a safe, enjoyable, Islamic environment through continuously striving to improve the effectiveness of the Islamic educational program to build Islamic personalities by collaborating with parents, teachers, and students.</p>
                 <h2 style={{ color: "#000" }}>
-                10:00 AM - 1:30 PM Sundays
+                10:30 AM - 1:30 PM Sundays
                 </h2>
                 <p>
                 Our Weekend Islamic School instills core-Islamic values in our next generation of Muslims (Pre-K through 8th grade) and Youth Group (gth - 12th grades). Three and a half hours curriculum consist of basic concepts of Tawheed. Quran, Islamic History, etiquettes.

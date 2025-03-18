@@ -133,8 +133,22 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
-  min-width: fit-content; /* Changed from fixed width */
-  max-width: max-content; /* Added to prevent excessive width */
+  min-width: fit-content;
+  max-width: max-content;
+  font-size: 1rem;
+}
+
+.weekend-button:hover {
+  background-color: #5e6f5c;
+  transform: translateY(-2px);
+}
+
+/* Remove these as they're now redundant */
+.donate-button,
+.donate-button:hover {
+  background-color: inherit;
+  color: inherit;
+  box-shadow: none;
 }
 
 .button-container {
@@ -244,4 +258,15 @@
     width: 150px;
     height: 150px;
   }
+}
+.donate-button {
+  background-color: #a99c38;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.donate-button:hover {
+  background-color: #8a7f2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
