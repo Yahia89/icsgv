@@ -146,13 +146,14 @@ const LiveStream = () => {
               display: 'inline-flex',
               alignItems: 'center',
               padding: '12px 24px',
-              backgroundColor: '#2f2f2f',
+              backgroundColor: '#fff',
               color: 'red',
               borderRadius: '5px',
               textDecoration: 'none',
               fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)',
               transition: 'all 0.3s ease',
               boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+              fontStyle: 'italic',
             }}
             onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
             onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
@@ -211,9 +212,14 @@ const LiveStream = () => {
       <footer className="footer" style={{ padding: "1rem", textAlign: "center", fontSize: "0.9rem", background: "#f8f8f8", marginTop: "2rem" }}>
         <p>
           By using this website, you agree to be bound by the&nbsp;
-          <NavLink to="/termsofuse">
-            YouTube Terms of Service
-          </NavLink>.
+            <a 
+                href="https://www.youtube.com/t/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YouTube Terms of Service
+              </a>.
+
         </p>
         <p>
           Our&nbsp;
@@ -221,9 +227,13 @@ const LiveStream = () => {
             Privacy Policy
           </NavLink>&nbsp;
           explains how we collect, use, and share your data. This site uses YouTube API Services, and data may be collected from your device as described in our Privacy Policy. For additional details, please see&nbsp;
-          <NavLink to="/termsofuse" >
-            Google’s Privacy Policy
-          </NavLink>.
+          <a 
+            href="https://policies.google.com/privacy?hl=en-US"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google's Privacy Policy
+          </a>.
         </p>
       </footer>
     </>
