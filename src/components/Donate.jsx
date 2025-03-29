@@ -76,6 +76,34 @@ const Donate = () => {
               <p style={{ marginBottom: "20px" }}>
                 Your generous donations help us maintain and expand our services to the community. All donations to ICSGV are tax-deductible.
               </p>
+              <a
+                href="https://us.mohid.co/ca/losangeles/icsgv/masjid/online/donation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  padding: '12px 24px',
+                  backgroundColor: '#a99c38',
+                  color: 'white',
+                  textDecoration: 'none',
+                  borderRadius: '6px',
+                  fontWeight: '500',
+                  fontSize: '1rem',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                  marginTop: '10px'
+                }}
+                onMouseOver={(e) => {
+                  e.target.style.backgroundColor = '#8a7f2e';
+                  e.target.style.transform = 'translateY(-2px)';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.backgroundColor = '#a99c38';
+                  e.target.style.transform = 'translateY(0)';
+                }}
+              >
+                View All Donation Categories
+              </a>
             </div>
           </div>
           <div  className="donation-categories">

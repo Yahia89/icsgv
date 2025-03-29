@@ -37,98 +37,81 @@ function Home() {
         priority="high"
       />
       <div class="main">
-        <div style={{
-          padding: '15px 20px',
-          margin: '10px auto',
+      <div style={{
+          padding: '20px 25px',
+          margin: '15px auto',
           maxWidth: '800px',
           textAlign: 'center',
-          backgroundColor: '#fff9e6',
-          borderRadius: '8px',
-          border: '1px solid #ffe58f',
+          background: 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)',
+          borderRadius: '12px',
+          boxShadow: '0 4px 15px rgba(253, 160, 133, 0.2)',
           position: 'relative',
+          color: '#fff',
         }}>
           <i 
-            className="fas fa-exclamation-circle" 
+            className="fas fa-star" 
             style={{
               position: 'absolute',
-              left: '15px',
-              top: '50%',
+              left: '20px',
+              top: '70%',
               transform: 'translateY(-50%)',
-              color: '#faad14',
-              fontSize: '24px',
+              color: '#fff',
+              fontSize: '28px',
+              animation: 'pulse 2s infinite',
             }}
           />
           <p style={{
-            margin: '0 0 15px 0',
-            color: '#2c3e50',
-            fontSize: '1.1rem',
-            fontWeight: '500',
-            lineHeight: '1.5'
+            margin: '0 0 20px 0',
+            fontSize: '1.2rem',
+            fontWeight: '600',
+            lineHeight: '1.6',
+            textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
           }}>
-            Friendly Reminder: ICSGV Membership Renewal Time! Your continued support helps us serve our community better.
-            <Link 
-              to="/donate"
-              style={{
-                color: '#0078D4',
-                textDecoration: 'none',
-                marginLeft: '8px',
-                fontWeight: 'bold'
-              }}
-              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-            >
-              Renew Now.
-            </Link>
+            🎉 Eid Celebration! 🎉
+            <br />
+            <span style={{ fontSize: '1.1rem', fontWeight: '500' }}>
+              ICSGV invites you to our joyous Eid gathering. Let's come together to strengthen our bonds and create beautiful memories.
+            </span>
           </p>
-          <p style={{
-            margin: '0 0 15px 0',
-            color: '#2c3e50',
-            fontSize: '1.1rem',
-            fontWeight: '500',
-            lineHeight: '1.5',
-            padding: '0 25px'
-          }}>
-            Join us for our blessed Qiyyam nights! Experience spiritual tranquility and community connection.
-            <a 
-              href="https://drive.google.com/file/d/1OIYneJADCsOEq3RjllcZ4LhuG6bL3UNS/view"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: '#0078D4',
-                textDecoration: 'none',
-                marginLeft: '8px',
-                fontWeight: 'bold'
-              }}
-              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-            >
-              Learn More
-            </a>
-          </p>
-          <p style={{
-            margin: 0,
-            color: '#2c3e50',
-            fontSize: '1.1rem',
-            fontWeight: '500',
-            lineHeight: '1.5'
-          }}>
-            ICSGV ANNUAL QUR'AN COMPETITION - Sunday, March 23, 2025, at 1:30 PM
-            <a 
-              href="https://bit.ly/3cZriC9"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                color: '#0078D4',
-                textDecoration: 'none',
-                marginLeft: '8px',
-                fontWeight: 'bold'
-              }}
-              onMouseOver={(e) => e.target.style.textDecoration = 'underline'}
-              onMouseOut={(e) => e.target.style.textDecoration = 'none'}
-            >
-              Sign Up Now
-            </a>
-          </p>
+          <a 
+            href="https://drive.google.com/file/d/1c5MRBsDsKSjcuchoylfyH-DlpOOXWVDp/view?usp=drivesdk"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              padding: '12px 24px',
+              backgroundColor: '#fff',
+              color: '#fd8d6f',
+              textDecoration: 'none',
+              borderRadius: '25px',
+              fontWeight: 'bold',
+              fontSize: '1.1rem',
+              transition: 'all 0.3s ease',
+              boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+            }}
+            onMouseOver={(e) => {
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 6px 15px rgba(0,0,0,0.15)';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+            }}
+          >
+            See the celebration flyer
+          </a>
+          <i 
+            className="fas fa-star" 
+            style={{
+              position: 'absolute',
+              right: '20px',
+              top: '70%',
+              transform: 'translateY(-50%)',
+              color: '#fff',
+              fontSize: '28px',
+              animation: 'pulse 2s infinite',
+            }}
+          />
         </div>
         <div class="wrapper">
           <svg>
