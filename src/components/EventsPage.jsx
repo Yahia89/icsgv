@@ -1,3 +1,4 @@
+// Remove unused imports
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import SEO from './SEO';
@@ -5,20 +6,17 @@ import event1 from '../assets/eventsandannouncements/arabic_class.jpg';
 import event2 from '../assets/eventsandannouncements/arabic_class(en).jpg';
 import event3 from '../assets/eventsandannouncements/foodbank.png';
 import event4 from '../assets/eventsandannouncements/funeral_flyer_2.png';
-import event5 from '../assets/eventsandannouncements/girls_session.jpg';
 import event6 from '../assets/eventsandannouncements/hijrah.jpg';
 import event7 from '../assets/eventsandannouncements/iqra_school.jpg';
 import event8 from '../assets/eventsandannouncements/land_pledge.jpg';
 import event9 from '../assets/eventsandannouncements/littleangels.jpg';
 import event10 from '../assets/eventsandannouncements/quba_school_flyer.jpg';
-import event11 from '../assets/eventsandannouncements/ramadan.jpg';
 import event12 from '../assets/eventsandannouncements/special_bayan.jpg';
 import event13 from '../assets/eventsandannouncements/tahfiz.png';
 import event14 from '../assets/eventsandannouncements/tajweed.png';
 import event15 from '../assets/eventsandannouncements/telecounseling.png';
 import event16 from '../assets/eventsandannouncements/weekend_school.jpg';
 import event17 from '../assets/eventsandannouncements/mail(5).jpg';
-import event18 from '../assets/eventsandannouncements/mail(6).jpg';
 
 Modal.setAppElement('#root');
 
@@ -46,24 +44,21 @@ const EventsPage = () => {
   }
 
   const events = [
-    { id: 1, image: event11, title: "Ramadan", description: "Ramadan Sponsorship" },
-    { id: 2, image: event18, title: "2025 Ramadan sponsorship calendar", description: "2025 Iftar sponsorship calendar" },
-    { id: 3, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
-    { id: 4, image: event5, title: "Girls Session", description: "Women & Girls Session with scholars" },
-    { id: 5, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
-    { id: 6, image: event2, title: "Iqra School", description: "Learn Arabic School" },
-    { id: 7, image: event6, title: "Hijrah Club", description: "Hijrah Club Season 3" },
-    { id: 8, image: event7, title: "Arabic School", description: "Arabic School on the weekend" },
-    { id: 9, image: event8, title: "Land Pledge", description: "Help pay the land next door" },
-    { id: 10, image: event9, title: "Little Angels Pre-School", description: "Giving children best start in life" },
-    { id: 11, image: event10, title: "Quba Fulltime Islamic School", description: "Private Fulltime Islamic School" },
-    { id: 12, image: event3, title: "Food Bank", description: "Walk-in Food distribution" },
-    { id: 13, image: event12, title: "Special Bayan", description: "Special Bayan" },
-    { id: 14, image: event13, title: "Tafsir", description: "Sisters Tafsir & Fiqh of Salah | Quran" },
-    { id: 15, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
-    { id: 16, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
-    { id: 17, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },
-    { id: 18, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" },
+    { id: 1, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
+    { id: 2, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
+    { id: 3, image: event2, title: "Iqra School", description: "Learn Arabic School" },
+    { id: 4, image: event6, title: "Hijrah Club", description: "Hijrah Club Season 3" },
+    { id: 5, image: event7, title: "Arabic School", description: "Arabic School on the weekend" },
+    { id: 6, image: event8, title: "Land Pledge", description: "Help pay the land next door" },
+    { id: 7, image: event9, title: "Little Angels Pre-School", description: "Giving children best start in life" },
+    { id: 8, image: event10, title: "Quba Fulltime Islamic School", description: "Private Fulltime Islamic School" },
+    { id: 9, image: event3, title: "Food Bank", description: "Walk-in Food distribution" },
+    { id: 10, image: event12, title: "Special Bayan", description: "Special Bayan" },
+    { id: 11, image: event13, title: "Tafsir", description: "Sisters Tafsir & Fiqh of Salah | Quran" },
+    { id: 12, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
+    { id: 13, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
+    { id: 14, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },
+    { id: 15, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" }
   ];
 
   return (
