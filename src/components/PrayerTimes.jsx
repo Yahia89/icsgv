@@ -58,23 +58,7 @@ const PrayerTimes = () => {
         <h1 className="welcome">
           Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
         </h1>
-        <h3
-          style={{
-            textAlign: "center",
-            padding: "10px",
-            color: "#000",
-            fontStyle: "italic",
-          }}
-        >
-          Ramadan Prayer Times {" "}
-          <a 
-            href="https://drive.google.com/file/d/16ygSw9eH5vVI23qTFCJYjuJOiiofaE_5/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            link.
-          </a>
-        </h3>
+        
         <h3
           style={{
             textAlign: "center",
@@ -85,7 +69,7 @@ const PrayerTimes = () => {
         >
           Note: You can view or download the whole month of prayer times on this{" "}
           <a 
-            href="https://drive.google.com/file/d/16ygSw9eH5vVI23qTFCJYjuJOiiofaE_5/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1tOQ5NuBuDd3wvC_-2dOIYMU7o-WwWMbw/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
           >
