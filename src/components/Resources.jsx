@@ -110,7 +110,7 @@ const Resources = () => {
               <ul>
                 <li>
                   <a
-                    href="https://icsgv.com/wp-content/uploads/2023/08/Shoora-Proposed-bylaws.pdf"
+                    href="https://icsgv.com/wp-content/uploads/2023/08/ICSGV-Bylaws-March-2023.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
