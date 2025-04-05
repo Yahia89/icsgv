@@ -69,7 +69,7 @@ const PrayerTimes = () => {
         >
           Note: You can view or download the whole month of prayer times on this{" "}
           <a 
-            href="https://drive.google.com/file/d/1tOQ5NuBuDd3wvC_-2dOIYMU7o-WwWMbw/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1mXWDsi-SbN_icwQ0XgAK5ILUrq7c0DpH/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
           >
