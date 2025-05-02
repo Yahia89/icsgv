@@ -53,14 +53,13 @@ const WeekendSchool = () => {
                     </button>
                   </a>
                 </h5>
+                <p style={{ color: "#a99c38" }}>Mission Statement</p>
+                <p>The Weekend Islamic School (WIS) program seeks to provide quality Islamic education by qualified, well-resourced teachers for students in a safe, enjoyable, and Islamic environment.  WIS augments the Islamic Education component to their existing public-school curriculum to make the students well-rounded as strong and effective leaders of tomorrow. With strong collaboration of the parents and the community we draw our success.</p>
                 <p style={{ color: "#a99c38" }}>Class Schedule</p>
-                <p>The Weekend Islamic School program seeks to provide quality Islamic education by qualified, well resourced teachers for students in a safe, enjoyable, Islamic environment through continuously striving to improve the effectiveness of the Islamic educational program to build Islamic personalities by collaborating with parents, teachers, and students.</p>
+                <p>Our Weekend Islamic School instills core-Islamic values in our next generation of Muslims (Pre-K through 8th grade) and Youth Group (gth - 12th grades). Three and a half hours curriculum consists of basic concepts of Tawheed. Quran, Islamic History, etiquettes.</p>
                 <h2 style={{ color: "#000" }}>
-                10:30 AM - 1:30 PM Sundays
+                10:00 AM - 1:30 PM Sundays
                 </h2>
-                <p>
-                Our Weekend Islamic School instills core-Islamic values in our next generation of Muslims (Pre-K through 8th grade) and Youth Group (gth - 12th grades). Three and a half hours curriculum consist of basic concepts of Tawheed. Quran, Islamic History, etiquettes.
-                </p>
               </div>
               <div className="rashed-image">
                 <img
