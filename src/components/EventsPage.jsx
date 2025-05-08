@@ -17,6 +17,7 @@ import event14 from '../assets/eventsandannouncements/tajweed.png';
 import event15 from '../assets/eventsandannouncements/telecounseling.png';
 import event16 from '../assets/eventsandannouncements/weekend_school.jpg';
 import event17 from '../assets/eventsandannouncements/mail(5).jpg';
+import jummahJam from '../assets/eventsandannouncements/jummah_jam.jpg';
 
 Modal.setAppElement('#root');
 
@@ -44,7 +45,13 @@ const EventsPage = () => {
   }
 
   const events = [
-    { id: 1, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
+    { 
+      id: 1, 
+      image: jummahJam, 
+      title: "Jummah Jam", 
+      description: "Join us on Friday, June 13th at 5:30 PM for an evening of fun, games, and community vibes! Watch NBA Finals LIVE and enjoy Table Tennis, Basketball, Carrom Board, Ludo, Checkers & More! Food and fellowship for all ages. For Info: (949) 616-9438 Ahmed" 
+    },
+    { id: 2, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
     { id: 2, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
     { id: 3, image: event2, title: "Iqra School", description: "Learn Arabic School" },
     { id: 4, image: event6, title: "Hijrah Club", description: "Hijrah Club Season 3" },
@@ -58,7 +65,11 @@ const EventsPage = () => {
     { id: 12, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
     { id: 13, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
     { id: 14, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },
-    { id: 15, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" }
+    { id: 15, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" },
+    { id: 1, 
+      image: jummahJam, 
+      title: "Jummah Jam", 
+      description: "Join us on Friday, June 13th at 5:30 PM for an evening of fun, games, and community vibes! Watch NBA Finals LIVE and enjoy Table Tennis, Basketball, Carrom Board, Ludo, Checkers & More! Food and fellowship for all ages. For Info: (949) 616-9438 Ahmed"  }
   ];
 
   return (

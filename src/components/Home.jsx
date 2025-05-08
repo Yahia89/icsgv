@@ -37,6 +37,88 @@ function Home() {
         priority="high"
       />
       <div class="main">
+      <div className="wrapper announcement">
+          <div className="announcement-grid">
+            <div className="announcement-item">
+              <h2>Summer Camp 2025 Registration Now Open!</h2>
+              <p>Join us for an exciting Snapology Summer Camp experience at ICSGV!</p>
+              <a 
+                href="https://icsgv.com/wp-content/uploads/2025/05/2025%20Snapology%20Summer%20Camp%20at%20ICSGV.pdf"
+                className="camp-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Click here to learn more and register →
+              </a>
+            </div>
+            <div className="announcement-item">
+              <h2>Jummah Jam</h2>
+              <p>Join us on Friday, June 13th at 5:30 PM for an evening of fun, games, and community vibes! Watch NBA Finals LIVE and enjoy Table Tennis, Basketball, Carrom Board, Ludo, Checkers & More!</p>
+              <Link to="/events" className="contact-info" style={{ textDecoration: 'none' }}>For Info: Click here to see flyer</Link>
+            </div>
+          </div>
+          <style jsx>{`
+            .announcement {
+              background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+              padding: 2rem;
+              border-radius: 10px;
+              text-align: center;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              margin: 2rem 0;
+            }
+            .announcement-grid {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 2rem;
+              align-items: start;
+            }
+            .announcement-item {
+              padding: 1.5rem;
+              background: rgba(255, 255, 255, 0.7);
+              border-radius: 8px;
+              transition: transform 0.3s ease;
+            }
+            .announcement-item:hover {
+              transform: translateY(-5px);
+            }
+            h2 {
+              color: #2c3e50;
+              margin-bottom: 1rem;
+              font-size: 1.5rem;
+            }
+            p {
+              color: #34495e;
+              margin-bottom: 1.5rem;
+              font-size: 1rem;
+            }
+            .contact-info {
+              color: #3498db;
+              font-weight: bold;
+              margin-top: 1rem;
+            }
+            .camp-link {
+              display: inline-block;
+              background: #3498db;
+              color: white;
+              padding: 0.8rem 1.5rem;
+              border-radius: 5px;
+              text-decoration: none;
+              transition: background 0.3s ease;
+            }
+            .camp-link:hover {
+              background: #2980b9;
+            }
+            @media (max-width: 768px) {
+              .announcement-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+              }
+              .announcement-item {
+                padding: 1rem;
+              }
+            }
+          `}</style>
+        </div>
         <div class="wrapper">
           <svg>
             <text x="50%" y="50%" dy=".35em" text-anchor="middle">
@@ -243,6 +325,7 @@ function Home() {
             </div>
           </div>
         </section>
+       
       </div>
     </>
   );
