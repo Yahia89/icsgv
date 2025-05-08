@@ -11,7 +11,6 @@ import event7 from '../assets/eventsandannouncements/iqra_school.jpg';
 import event8 from '../assets/eventsandannouncements/land_pledge.jpg';
 import event9 from '../assets/eventsandannouncements/littleangels.jpg';
 import event10 from '../assets/eventsandannouncements/quba_school_flyer.jpg';
-import event12 from '../assets/eventsandannouncements/special_bayan.jpg';
 import event13 from '../assets/eventsandannouncements/tahfiz.png';
 import event14 from '../assets/eventsandannouncements/tajweed.png';
 import event15 from '../assets/eventsandannouncements/telecounseling.png';
@@ -48,31 +47,31 @@ const EventsPage = () => {
   const events = [
     { 
       id: 1, 
+      image: snapologyimage,
+      title: "Snapology STEAM Summer Camps 2025",
+      description: "Join our exciting STEAM summer camps at ICSGV!",
+      link: "https://pages.e2ma.net/pages/1969699/53085"
+    },
+    { 
+      id: 2, 
       image: jummahJam, 
       title: "Jummah Jam", 
       description: "Join us on Friday, June 13th at 5:30 PM for an evening of fun, games, and community vibes! Watch NBA Finals LIVE and enjoy Table Tennis, Basketball, Carrom Board, Ludo, Checkers & More! Food and fellowship for all ages. For Info: (949) 616-9438 Ahmed" 
     },
-    { id: 2, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
-    { id: 3, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
-    { id: 4, image: event2, title: "Iqra School", description: "Learn Arabic School" },
-    { id: 5, image: event6, title: "Hijrah Club", description: "Hijrah Club Season 3" },
-    { id: 6, image: event7, title: "Arabic School", description: "Arabic School on the weekend" },
-    { id: 7, image: event8, title: "Land Pledge", description: "Help pay the land next door" },
-    { id: 8, image: event9, title: "Little Angels Pre-School", description: "Giving children best start in life" },
-    { id: 9, image: event10, title: "Quba Fulltime Islamic School", description: "Private Fulltime Islamic School" },
-    { id: 10, image: event3, title: "Food Bank", description: "Walk-in Food distribution" },
-    { id: 11, image: event12, title: "Special Bayan", description: "Special Bayan" },
-    { id: 12, image: event13, title: "Tafsir", description: "Sisters Tafsir & Fiqh of Salah | Quran" },
-    { id: 13, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
-    { id: 14, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
-    { id: 15, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },
-    { id: 16, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" },
-    { 
-      id: 17, 
-      image: snapologyimage, // You'll need to import this image
-      title: "Snapology STEAM Summer Camps",
-      description: "Join our exciting STEAM summer camps! Half Day 9:00am - 12:00pm, Mon. - Thurs. Ages 5-12, $175/Week. Register for 4 weeks upfront and receive a 25% discount (savings of $175). Programs include Foundational Engineering, Grump Birds, Real World Robotics, Combat Robots, and more! Contact: chinohills@snapology.com (909) 858-2867"
-    }
+    { id: 3, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
+    { id: 4, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
+    { id: 5, image: event2, title: "Iqra School", description: "Learn Arabic School" },
+    { id: 6, image: event6, title: "Hijrah Club", description: "Hijrah Club Season 3" },
+    { id: 7, image: event7, title: "Arabic School", description: "Arabic School on the weekend" },
+    { id: 8, image: event8, title: "Land Pledge", description: "Help pay the land next door" },
+    { id: 9, image: event9, title: "Little Angels Pre-School", description: "Giving children best start in life" },
+    { id: 10, image: event10, title: "Quba Fulltime Islamic School", description: "Private Fulltime Islamic School" },
+    { id: 11, image: event3, title: "Food Bank", description: "Walk-in Food distribution" },
+    { id: 13, image: event13, title: "Tafsir", description: "Sisters Tafsir & Fiqh of Salah | Quran" },
+    { id: 14, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
+    { id: 15, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
+    { id: 16, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },
+    { id: 17, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" }
 ];
 
   return (
@@ -295,6 +294,25 @@ const EventsPage = () => {
             <p style={{ 
               fontSize: 'clamp(0.9rem, 2.5vw, 1rem)'
             }}>{selectedEvent.description}</p>
+            {selectedEvent.link && (
+              <a 
+                href={selectedEvent.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  marginTop: '15px',
+                  padding: '10px 20px',
+                  backgroundColor: '#0078D4',
+                  color: 'white',
+                  borderRadius: '5px',
+                  textDecoration: 'none',
+                  fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                }}
+              >
+                Register Now →
+              </a>
+            )}
           </>
         )}
       </Modal>

@@ -15,13 +15,13 @@ export default function SplashVivus({ onAnimationEnd }) {
 
   return (
     <div className="splash-container">
-      <div className="logo-container">
+      <div className="splash-logo-container">
         <img 
           src={logo} 
           alt="ICSGV Logo" 
-          className="logo-image" 
-          width="300"
-          height="300"
+          className="splash-logo-image" 
+          width="600"
+          height="600"
         />
       </div>
     </div>
