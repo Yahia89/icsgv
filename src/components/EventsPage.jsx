@@ -18,6 +18,7 @@ import event15 from '../assets/eventsandannouncements/telecounseling.png';
 import event16 from '../assets/eventsandannouncements/weekend_school.jpg';
 import event17 from '../assets/eventsandannouncements/mail(5).jpg';
 import jummahJam from '../assets/eventsandannouncements/jummah_jam.jpg';
+import snapologyimage from '../assets/eventsandannouncements/snapology-image.jpg';
 
 Modal.setAppElement('#root');
 
@@ -52,25 +53,27 @@ const EventsPage = () => {
       description: "Join us on Friday, June 13th at 5:30 PM for an evening of fun, games, and community vibes! Watch NBA Finals LIVE and enjoy Table Tennis, Basketball, Carrom Board, Ludo, Checkers & More! Food and fellowship for all ages. For Info: (949) 616-9438 Ahmed" 
     },
     { id: 2, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
-    { id: 2, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
-    { id: 3, image: event2, title: "Iqra School", description: "Learn Arabic School" },
-    { id: 4, image: event6, title: "Hijrah Club", description: "Hijrah Club Season 3" },
-    { id: 5, image: event7, title: "Arabic School", description: "Arabic School on the weekend" },
-    { id: 6, image: event8, title: "Land Pledge", description: "Help pay the land next door" },
-    { id: 7, image: event9, title: "Little Angels Pre-School", description: "Giving children best start in life" },
-    { id: 8, image: event10, title: "Quba Fulltime Islamic School", description: "Private Fulltime Islamic School" },
-    { id: 9, image: event3, title: "Food Bank", description: "Walk-in Food distribution" },
-    { id: 10, image: event12, title: "Special Bayan", description: "Special Bayan" },
-    { id: 11, image: event13, title: "Tafsir", description: "Sisters Tafsir & Fiqh of Salah | Quran" },
-    { id: 12, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
-    { id: 13, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
-    { id: 14, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },
-    { id: 15, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" },
-    { id: 1, 
-      image: jummahJam, 
-      title: "Jummah Jam", 
-      description: "Join us on Friday, June 13th at 5:30 PM for an evening of fun, games, and community vibes! Watch NBA Finals LIVE and enjoy Table Tennis, Basketball, Carrom Board, Ludo, Checkers & More! Food and fellowship for all ages. For Info: (949) 616-9438 Ahmed"  }
-  ];
+    { id: 3, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
+    { id: 4, image: event2, title: "Iqra School", description: "Learn Arabic School" },
+    { id: 5, image: event6, title: "Hijrah Club", description: "Hijrah Club Season 3" },
+    { id: 6, image: event7, title: "Arabic School", description: "Arabic School on the weekend" },
+    { id: 7, image: event8, title: "Land Pledge", description: "Help pay the land next door" },
+    { id: 8, image: event9, title: "Little Angels Pre-School", description: "Giving children best start in life" },
+    { id: 9, image: event10, title: "Quba Fulltime Islamic School", description: "Private Fulltime Islamic School" },
+    { id: 10, image: event3, title: "Food Bank", description: "Walk-in Food distribution" },
+    { id: 11, image: event12, title: "Special Bayan", description: "Special Bayan" },
+    { id: 12, image: event13, title: "Tafsir", description: "Sisters Tafsir & Fiqh of Salah | Quran" },
+    { id: 13, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
+    { id: 14, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
+    { id: 15, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },
+    { id: 16, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" },
+    { 
+      id: 17, 
+      image: snapologyimage, // You'll need to import this image
+      title: "Snapology STEAM Summer Camps",
+      description: "Join our exciting STEAM summer camps! Half Day 9:00am - 12:00pm, Mon. - Thurs. Ages 5-12, $175/Week. Register for 4 weeks upfront and receive a 25% discount (savings of $175). Programs include Foundational Engineering, Grump Birds, Real World Robotics, Combat Robots, and more! Contact: chinohills@snapology.com (909) 858-2867"
+    }
+];
 
   return (
     <>
