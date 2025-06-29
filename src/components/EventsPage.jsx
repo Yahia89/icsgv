@@ -52,12 +52,6 @@ const EventsPage = () => {
       description: "Join our exciting STEAM summer camps at ICSGV!",
       link: "https://pages.e2ma.net/pages/1969699/53085"
     },
-    { 
-      id: 2, 
-      image: jummahJam, 
-      title: "Jummah Jam", 
-      description: "Join us on Friday, June 13th at 5:30 PM for an evening of fun, games, and community vibes! Watch NBA Finals LIVE and enjoy Table Tennis, Basketball, Carrom Board, Ludo, Checkers & More! Food and fellowship for all ages. For Info: (949) 616-9438 Ahmed" 
-    },
     { id: 3, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
     { id: 4, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
     { id: 5, image: event2, title: "Iqra School", description: "Learn Arabic School" },
@@ -67,7 +61,6 @@ const EventsPage = () => {
     { id: 9, image: event9, title: "Little Angels Pre-School", description: "Giving children best start in life" },
     { id: 10, image: event10, title: "Quba Fulltime Islamic School", description: "Private Fulltime Islamic School" },
     { id: 11, image: event3, title: "Food Bank", description: "Walk-in Food distribution" },
-    { id: 13, image: event13, title: "Tafsir", description: "Sisters Tafsir & Fiqh of Salah | Quran" },
     { id: 14, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
     { id: 15, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
     { id: 16, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },

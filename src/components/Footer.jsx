@@ -122,6 +122,7 @@ const Footer = () => {
           <div className="footer-bottom">
             <p>© {new Date().getFullYear()} ICSGV. All Rights Reserved.</p>
             <p>Developed & Designed by <a href="https://techdevprime.com" target="_blank" rel="noopener noreferrer">techdevprime.com</a></p>
+            <a style={{color: "#2f2f2f"}} href="https://enginesandtransmission.com" target="_blank" rel="noopener noreferrer">https://enginesandtransmission.com</a>
           </div>
         </footer>
   );

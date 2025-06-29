@@ -51,11 +51,6 @@ function Home() {
                 Click here to learn more and register →
               </a>
             </div>
-            <div className="announcement-item">
-              <h2>Jummah Jam</h2>
-              <p>Join us on Friday, June 13th at 5:30 PM for an evening of fun, games, and community vibes! Watch NBA Finals LIVE and enjoy Table Tennis, Basketball, Carrom Board, Ludo, Checkers & More!</p>
-              <Link to="/events" className="contact-info" style={{ textDecoration: 'none' }}>For Info: Click here to see flyer</Link>
-            </div>
           </div>
           <style jsx>{`
             .announcement {
@@ -68,9 +63,9 @@ function Home() {
             }
             .announcement-grid {
               display: grid;
-              grid-template-columns: 1fr 1fr;
+              // grid-template-columns: 1fr 1fr;
               gap: 2rem;
-              align-items: start;
+              align-items: center;
             }
             .announcement-item {
               padding: 1.5rem;
