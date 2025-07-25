@@ -61,12 +61,24 @@ const LiveStream = () => {
       setRecentVideos(cachedRecentVideos);
     }
 
+    // Validate environment variables
+    if (!apiKey || !channelId) {
+      console.error("Missing YouTube API credentials");
+      return;
+    }
+
     try {
       // Fetch live stream status
-      const liveResponse = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&eventType=live&key=${apiKey}`
-      );
+      const liveUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&eventType=live&key=${apiKey}`;
+      console.log("Fetching live status from:", liveUrl);
+
+      const liveResponse = await fetch(liveUrl);
       const liveData = await liveResponse.json();
+
+      if (liveData.error) {
+        console.error("Live stream API error:", liveData.error);
+        return;
+      }
 
       if (liveData.items && liveData.items.length > 0) {
         setIsLive(true);
@@ -79,17 +91,35 @@ const LiveStream = () => {
       }
 
       // Fetch recent videos
-      const recentResponse = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&order=date&maxResults=3&key=${apiKey}`
-      );
+      const recentUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&order=date&maxResults=3&key=${apiKey}`;
+      console.log("Fetching recent videos from:", recentUrl);
+
+      const recentResponse = await fetch(recentUrl);
       const recentData = await recentResponse.json();
 
-      if (recentData.items) {
+      if (recentData.error) {
+        console.error("Recent videos API error:", recentData.error);
+        return;
+      }
+
+      if (recentData.items && recentData.items.length > 0) {
         const videoIds = recentData.items.map(video => video.id.videoId).join(",");
-        const statsResponse = await fetch(
-          `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${videoIds}&key=${apiKey}`
-        );
+        const statsUrl = `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${videoIds}&key=${apiKey}`;
+        console.log("Fetching video stats from:", statsUrl);
+
+        const statsResponse = await fetch(statsUrl);
         const statsData = await statsResponse.json();
+
+        if (statsData.error) {
+          console.error("Video stats API error:", statsData.error);
+          // Still show videos without stats
+          setRecentVideos(recentData.items.map(video => ({
+            ...video,
+            statistics: {}
+          })));
+          setCachedData("recentVideos", recentData.items);
+          return;
+        }
 
         const videosWithStats = recentData.items.map((video, index) => ({
           ...video,
@@ -116,13 +146,13 @@ const LiveStream = () => {
     return num >= 1_000_000
       ? (num / 1_000_000).toFixed(1) + 'M'
       : num >= 1_000
-      ? (num / 1_000).toFixed(1) + 'K'
-      : num.toString();
+        ? (num / 1_000).toFixed(1) + 'K'
+        : num.toString();
   };
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Live Stream | Islamic Center of San Gabriel Valley (ICSGV)"
         description="Watch ICSGV's live streams and recent recordings of Jummah prayers, special events, and Islamic lectures."
       />
@@ -212,13 +242,13 @@ const LiveStream = () => {
       <footer className="footer" style={{ padding: "1rem", textAlign: "center", fontSize: "0.9rem", background: "#f8f8f8", marginTop: "2rem" }}>
         <p>
           By using this website, you agree to be bound by the&nbsp;
-            <a 
-                href="https://www.youtube.com/t/terms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                YouTube Terms of Service
-              </a>.
+          <a
+            href="https://www.youtube.com/t/terms"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube Terms of Service
+          </a>.
 
         </p>
         <p>
@@ -227,7 +257,7 @@ const LiveStream = () => {
             Privacy Policy
           </NavLink>&nbsp;
           explains how we collect, use, and share your data. This site uses YouTube API Services, and data may be collected from your device as described in our Privacy Policy. For additional details, please see&nbsp;
-          <a 
+          <a
             href="https://policies.google.com/privacy?hl=en-US"
             target="_blank"
             rel="noopener noreferrer"

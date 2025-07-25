@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
@@ -7,6 +7,8 @@ import masjidImage from "../assets/Colleen_photo-5.jpg";
 import PrayerTimes from "./PrayerTimes";
 
 function Home() {
+  const [isAnnouncementsOpen, setIsAnnouncementsOpen] = useState(false);
+
   useEffect(() => {
     const serviceCards = document.querySelectorAll(".service-card");
 
@@ -30,28 +32,84 @@ function Home() {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="ICSGV | Home"
         description="Welcome to the Islamic Center of San Gabriel Valley. Serving the community for over 40 years with educational and religious services."
         preloadImage={masjidImage}
         priority="high"
       />
       <div class="main">
-      <div className="wrapper announcement">
-          <div className="announcement-grid">
-            <div className="announcement-item">
-              <h2>Summer Camp 2025 Registration Now Open!</h2>
-              <p>Join us for an exciting Snapology Summer Camp experience at ICSGV!</p>
-              <a 
-                href="https://icsgv.com/wp-content/uploads/2025/05/2025%20Snapology%20Summer%20Camp%20at%20ICSGV.pdf"
-                className="camp-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click here to learn more and register →
-              </a>
-            </div>
+        <div className="wrapper announcement">
+          <div
+            className="announcement-header"
+            onClick={() => setIsAnnouncementsOpen(!isAnnouncementsOpen)}
+          >
+            <h2>📢 Current Announcements (3)</h2>
+            <span className={`arrow ${isAnnouncementsOpen ? 'open' : ''}`}>▼</span>
           </div>
+
+          {isAnnouncementsOpen && (
+            <div className="announcement-grid">
+              <div className="announcement-item">
+                <h2>ICSGV Presents: Jummah Jam</h2>
+                <p>Bring your family for a night of Fun, Games, Movie, Food and Socialization</p>
+                <div className="event-details">
+                  <p><strong>Friday, August 1 at 7 PM</strong></p>
+                  <p>Family friendly movie with Complimentary food</p>
+                  <p>Popcorn, Hot Dogs and Filled Nachos</p>
+                </div>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeFo_9kTzLnHZ_vZTL6w39h9zMKyXp1fjzeKPdCDo8T4KPIWg/viewform"
+                  className="camp-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register Here →
+                </a>
+              </div>
+              <div className="announcement-item">
+                <h2>Quba Islamic School - Now Open for Registration</h2>
+                <p>Year 2025/2026 - Grades K-12</p>
+                <div className="event-details">
+                  <p><strong>$600 Monthly</strong></p>
+                  <p>Private Islamic school focusing on academic and character development</p>
+                  <p>Islamic Studies • Extra Curricular • High School • Online Registration</p>
+                </div>
+                <a
+                  href="https://qubais.org"
+                  className="camp-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register Now →
+                </a>
+                <div className="contact-info">
+                  Call Us: (909) 620 5297
+                </div>
+              </div>
+              <div className="announcement-item">
+                <h2>Little Angels Preschool - Now Enrolling</h2>
+                <p>Year Round Program 2025-2026</p>
+                <div className="event-details">
+                  <p><strong>Ages 3-5 Years Old</strong></p>
+                  <p>Mon-Thu 8AM-3PM, Fri 8AM-12PM</p>
+                  <p>$550/Month - Financial Assistance Available</p>
+                  <p>Afterschool Program 3PM-6PM</p>
+                </div>
+                <a
+                  href="https://littleangels.la"
+                  className="camp-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Register Now →
+                </a>
+                <div className="contact-info">
+                  Contact Shabana Syed: (909) 297 6280
+                </div>
+              </div>
+            </div>
+          )}
           <style jsx>{`
             .announcement {
               background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -320,7 +378,7 @@ function Home() {
             </div>
           </div>
         </section>
-       
+
       </div>
     </>
   );

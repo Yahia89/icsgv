@@ -9,15 +9,14 @@ import event4 from '../assets/eventsandannouncements/funeral_flyer_2.png';
 import event6 from '../assets/eventsandannouncements/hijrah.jpg';
 import event7 from '../assets/eventsandannouncements/iqra_school.jpg';
 import event8 from '../assets/eventsandannouncements/land_pledge.jpg';
-import event9 from '../assets/eventsandannouncements/littleangels.jpg';
-import event10 from '../assets/eventsandannouncements/quba_school_flyer.jpg';
-import event13 from '../assets/eventsandannouncements/tahfiz.png';
+import event9 from '../assets/eventsandannouncements/littleangels.png';
+import event10 from '../assets/eventsandannouncements/quba_school_flyer.png';
 import event14 from '../assets/eventsandannouncements/tajweed.png';
 import event15 from '../assets/eventsandannouncements/telecounseling.png';
 import event16 from '../assets/eventsandannouncements/weekend_school.jpg';
 import event17 from '../assets/eventsandannouncements/mail(5).jpg';
 import jummahJam from '../assets/eventsandannouncements/jummah_jam.jpg';
-import snapologyimage from '../assets/eventsandannouncements/snapology-image.jpg';
+
 
 Modal.setAppElement('#root');
 
@@ -25,7 +24,7 @@ const EventsPage = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
 
-  
+
   // Add the styles to the document
   if (typeof document !== 'undefined') {
     const styleSheet = document.createElement('style');
@@ -45,12 +44,12 @@ const EventsPage = () => {
   }
 
   const events = [
-    { 
-      id: 1, 
-      image: snapologyimage,
-      title: "Snapology STEAM Summer Camps 2025",
-      description: "Join our exciting STEAM summer camps at ICSGV!",
-      link: "https://pages.e2ma.net/pages/1969699/53085"
+    {
+      id: 1,
+      image: jummahJam,
+      title: "ICSGV Presents: Jummah Jam",
+      description: "Bring your family for a night of Fun, Games, Movie, Food and Socialization - Friday, August 1 at 7 PM",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSeFo_9kTzLnHZ_vZTL6w39h9zMKyXp1fjzeKPdCDo8T4KPIWg/viewform"
     },
     { id: 3, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
     { id: 4, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
@@ -58,23 +57,35 @@ const EventsPage = () => {
     { id: 6, image: event6, title: "Hijrah Club", description: "Hijrah Club Season 3" },
     { id: 7, image: event7, title: "Arabic School", description: "Arabic School on the weekend" },
     { id: 8, image: event8, title: "Land Pledge", description: "Help pay the land next door" },
-    { id: 9, image: event9, title: "Little Angels Pre-School", description: "Giving children best start in life" },
-    { id: 10, image: event10, title: "Quba Fulltime Islamic School", description: "Private Fulltime Islamic School" },
+    {
+      id: 9,
+      image: event9,
+      title: "Little Angels Preschool - Now Enrolling 2025-2026",
+      description: "Year Round Program - Ages 3-5, Mon-Thu 8AM-3PM, Fri 8AM-12PM - $550/Month",
+      link: "https://littleangels.la"
+    },
+    {
+      id: 10,
+      image: event10,
+      title: "Quba Islamic School - Now Open for Registration 2025/2026",
+      description: "Grades K-12 Private Islamic School - $600 Monthly - Call (909) 620 5297",
+      link: "https://qubais.org"
+    },
     { id: 11, image: event3, title: "Food Bank", description: "Walk-in Food distribution" },
     { id: 14, image: event14, title: "Quran Program", description: "Quran | Tajweed | Hifdh" },
     { id: 15, image: event15, title: "Telecounseling", description: "Free Telecounseling for All ICSGV members" },
     { id: 16, image: event16, title: "Weekend Islamic School", description: "Quality weekend Islamic school" },
     { id: 17, image: event1, title: "مدرسة إقرأ", description: "تعلم العربية" }
-];
+  ];
 
   return (
     <>
-          <SEO 
+      <SEO
         title="Events, Programs & Announcements | Islamic Center of San Gabriel Valley (ICSGV)"
         description="Discover upcoming events and programs at ICSGV including Arabic classes, Islamic education, community services, and special programs."
       />
-    <div class="main">
-        <div class="wrapper" style={{backgroundImage:"inherit"}}>
+      <div class="main">
+        <div class="wrapper" style={{ backgroundImage: "inherit" }}>
           <svg>
             <text x="50%" y="50%" dy=".35em" text-anchor="middle">
               مسجد قباء
@@ -85,232 +96,232 @@ const EventsPage = () => {
         <h1 class="welcome">
           Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
         </h1>
-    <div style={{ 
-      padding: '20px',
-      maxWidth: '1400px',
-      margin: '0 auto',
-      position: 'relative',
-      backgroundImage: 'inherit',
-      backgroundAttachment: 'fixed',
-      backgroundSize: '600px',
-      backgroundRepeat: 'repeat',
-      backdropFilter: 'blur(5px)',
-      borderRadius: '15px',
-      zIndex: 1
-    }}>
-      <h2 style={{
-        textAlign: 'center',
-        margin: '20px 0',
-        fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
-        color:"#000"
-      }}>Upcoming Events</h2>
-      <h3 style={{
-        textAlign: 'center',
-        margin: '10px 0',
-        fontSize: 'clamp(1rem, 2vw, 1.5rem)',
-        color: "#666",
-        fontWeight: 'normal',
-        maxWidth: '800px',
-        marginLeft: 'auto',
-        marginRight: 'auto'
-      }}>Here you can find up to date events, programs & announcements.</h3>
-            <p style={{
-        textAlign: 'center',
-        margin: '15px 0',
-        fontSize: 'clamp(0.8rem, 1.8vw, 1.1rem)',
-        color: "#777",
-        fontWeight: 'normal',
-        maxWidth: '800px',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        fontStyle: 'italic',
-        lineHeight: '1.5'
-      }}>Note: Our events and programs cater to both the general community and our educational institutions. Feel free to reach out to the masjid or respective schools for more information about any specific event.</p>
-      <div style={{ 
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-        gap: 'clamp(20px, 3vw, 30px)',  // Increased gap between cards
-        padding: 'clamp(20px, 3vw, 40px)',  // Increased padding around grid
-        margin: '0 auto',
-      }}>
-        {events.map((event) => (
-          <div
-            key={event.id}
-            style={{ 
-              cursor: 'pointer',
-              backgroundColor: '#fff',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-              // padding: 'clamp(10px, 2vw, 15px)',
-              display: 'flex',
-              flexDirection: 'column',
-              height: '100%',
-            }}
-            onClick={() => setSelectedEvent(event)}
-          >
-            <img 
-              src={event.image} 
-              alt={event.title} 
-              style={{ 
-                width: '100%',
-                height: 'clamp(150px, 30vw, 200px)',
-                objectFit: 'cover',
-                borderRadius: '8px'
-              }} 
-            />
-            <h3 style={{ 
-              color: '#0078D4',
-              marginTop: '10px',
-              fontSize: 'clamp(1rem, 2.5vw, 1.2rem)'
-            }}>{event.title}</h3>
-            <p style={{ 
-              color: '#666',
-              fontSize: 'clamp(0.875rem, 2vw, 1rem)',
-              marginTop: 'auto'
-            }}>{event.description}</p>
-          </div>
-        ))}
-      </div>
-
-      <Modal
-        isOpen={!!selectedEvent}
-        onRequestClose={() => setSelectedEvent(null)}
-        style={{
-          overlay: { 
-            backgroundColor: 'rgba(0, 0, 0, 0.75)',
-            zIndex: 1000
-          },
-          content: { 
-            maxWidth: '90vw',
-            width: '500px',
-            margin: 'auto',
-            padding: 'clamp(15px, 3vw, 20px)',
-            borderRadius: '10px',
+        <div style={{
+          padding: '20px',
+          maxWidth: '1400px',
+          margin: '0 auto',
+          position: 'relative',
+          backgroundImage: 'inherit',
+          backgroundAttachment: 'fixed',
+          backgroundSize: '600px',
+          backgroundRepeat: 'repeat',
+          backdropFilter: 'blur(5px)',
+          borderRadius: '15px',
+          zIndex: 1
+        }}>
+          <h2 style={{
             textAlign: 'center',
-            height: 'fit-content',
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            transform: 'translate(-50%, -50%)',
-            opacity: 1,
-            transition: 'all 0.5s ease-in-out',
-            animation: 'modalFade 0.5s ease',
-            color:"black"
-          }
-        }}
-      >
-        {selectedEvent && (
-          <>
-            <button 
-              onClick={() => setSelectedEvent(null)} 
-              style={{ 
-                position: 'absolute',
-                right: '10px',
-                top: '10px',
-                border: 'none',
-                background: 'none',
-                fontSize: 'clamp(20px, 4vw, 24px)',
-                cursor: 'pointer',
-                padding: '5px 10px',
-                color: "black"
-              }}>×</button>
-            {/* Add Previous Button */}
-            <button
-              onClick={() => {
-                const currentIndex = events.findIndex(e => e.id === selectedEvent.id);
-                const prevIndex = currentIndex > 0 ? currentIndex - 1 : events.length - 1;
-                setSelectedEvent(events[prevIndex]);
-              }}
-              style={{
-                position: 'absolute',
-                left: '10px',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                background: 'rgba(0,0,0,0.5)',
-                color: 'white',
-                border: 'none',
-                borderRadius: '50%',
-                width: '40px',
-                height: '40px',
-                cursor: 'pointer',
-                fontSize: '24px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '0',
-                lineHeight: '1'
-              }}
-            >←</button>
-            {/* Add Next Button */}
-            <button
-              onClick={() => {
-                const currentIndex = events.findIndex(e => e.id === selectedEvent.id);
-                const nextIndex = currentIndex < events.length - 1 ? currentIndex + 1 : 0;
-                setSelectedEvent(events[nextIndex]);
-              }}
-              style={{
-                position: 'absolute',
-                right: '10px',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                background: 'rgba(0,0,0,0.5)',
-                color: 'white',
-                border: 'none',
-                borderRadius: '50%',
-                width: '40px',
-                height: '40px',
-                cursor: 'pointer',
-                fontSize: '24px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '0',
-                lineHeight: '1'
-              }}
-            >→</button>
-            <img 
-              src={selectedEvent.image} 
-              alt={selectedEvent.title} 
-              style={{ 
-                width: '100%',
-                maxHeight: '70vh',
-                objectFit: 'contain',
-                borderRadius: '8px'
-              }} 
-            />
-            <h2 style={{ 
-              fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
-              margin: '15px 0'
-            }}>{selectedEvent.title}</h2>
-            <p style={{ 
-              fontSize: 'clamp(0.9rem, 2.5vw, 1rem)'
-            }}>{selectedEvent.description}</p>
-            {selectedEvent.link && (
-              <a 
-                href={selectedEvent.link}
-                target="_blank"
-                rel="noopener noreferrer"
+            margin: '20px 0',
+            fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+            color: "#000"
+          }}>Upcoming Events</h2>
+          <h3 style={{
+            textAlign: 'center',
+            margin: '10px 0',
+            fontSize: 'clamp(1rem, 2vw, 1.5rem)',
+            color: "#666",
+            fontWeight: 'normal',
+            maxWidth: '800px',
+            marginLeft: 'auto',
+            marginRight: 'auto'
+          }}>Here you can find up to date events, programs & announcements.</h3>
+          <p style={{
+            textAlign: 'center',
+            margin: '15px 0',
+            fontSize: 'clamp(0.8rem, 1.8vw, 1.1rem)',
+            color: "#777",
+            fontWeight: 'normal',
+            maxWidth: '800px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            fontStyle: 'italic',
+            lineHeight: '1.5'
+          }}>Note: Our events and programs cater to both the general community and our educational institutions. Feel free to reach out to the masjid or respective schools for more information about any specific event.</p>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: 'clamp(20px, 3vw, 30px)',  // Increased gap between cards
+            padding: 'clamp(20px, 3vw, 40px)',  // Increased padding around grid
+            margin: '0 auto',
+          }}>
+            {events.map((event) => (
+              <div
+                key={event.id}
                 style={{
-                  display: 'inline-block',
-                  marginTop: '15px',
-                  padding: '10px 20px',
-                  backgroundColor: '#0078D4',
-                  color: 'white',
-                  borderRadius: '5px',
-                  textDecoration: 'none',
-                  fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                  cursor: 'pointer',
+                  backgroundColor: '#fff',
+                  borderRadius: '12px',
+                  overflow: 'hidden',
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                  // padding: 'clamp(10px, 2vw, 15px)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
                 }}
+                onClick={() => setSelectedEvent(event)}
               >
-                Register Now →
-              </a>
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  style={{
+                    width: '100%',
+                    height: 'clamp(150px, 30vw, 200px)',
+                    objectFit: 'cover',
+                    borderRadius: '8px'
+                  }}
+                />
+                <h3 style={{
+                  color: '#0078D4',
+                  marginTop: '10px',
+                  fontSize: 'clamp(1rem, 2.5vw, 1.2rem)'
+                }}>{event.title}</h3>
+                <p style={{
+                  color: '#666',
+                  fontSize: 'clamp(0.875rem, 2vw, 1rem)',
+                  marginTop: 'auto'
+                }}>{event.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <Modal
+            isOpen={!!selectedEvent}
+            onRequestClose={() => setSelectedEvent(null)}
+            style={{
+              overlay: {
+                backgroundColor: 'rgba(0, 0, 0, 0.75)',
+                zIndex: 1000
+              },
+              content: {
+                maxWidth: '90vw',
+                width: '500px',
+                margin: 'auto',
+                padding: 'clamp(15px, 3vw, 20px)',
+                borderRadius: '10px',
+                textAlign: 'center',
+                height: 'fit-content',
+                top: '50%',
+                left: '50%',
+                right: 'auto',
+                bottom: 'auto',
+                transform: 'translate(-50%, -50%)',
+                opacity: 1,
+                transition: 'all 0.5s ease-in-out',
+                animation: 'modalFade 0.5s ease',
+                color: "black"
+              }
+            }}
+          >
+            {selectedEvent && (
+              <>
+                <button
+                  onClick={() => setSelectedEvent(null)}
+                  style={{
+                    position: 'absolute',
+                    right: '10px',
+                    top: '10px',
+                    border: 'none',
+                    background: 'none',
+                    fontSize: 'clamp(20px, 4vw, 24px)',
+                    cursor: 'pointer',
+                    padding: '5px 10px',
+                    color: "black"
+                  }}>×</button>
+                {/* Add Previous Button */}
+                <button
+                  onClick={() => {
+                    const currentIndex = events.findIndex(e => e.id === selectedEvent.id);
+                    const prevIndex = currentIndex > 0 ? currentIndex - 1 : events.length - 1;
+                    setSelectedEvent(events[prevIndex]);
+                  }}
+                  style={{
+                    position: 'absolute',
+                    left: '10px',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    background: 'rgba(0,0,0,0.5)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '50%',
+                    width: '40px',
+                    height: '40px',
+                    cursor: 'pointer',
+                    fontSize: '24px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '0',
+                    lineHeight: '1'
+                  }}
+                >←</button>
+                {/* Add Next Button */}
+                <button
+                  onClick={() => {
+                    const currentIndex = events.findIndex(e => e.id === selectedEvent.id);
+                    const nextIndex = currentIndex < events.length - 1 ? currentIndex + 1 : 0;
+                    setSelectedEvent(events[nextIndex]);
+                  }}
+                  style={{
+                    position: 'absolute',
+                    right: '10px',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    background: 'rgba(0,0,0,0.5)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '50%',
+                    width: '40px',
+                    height: '40px',
+                    cursor: 'pointer',
+                    fontSize: '24px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '0',
+                    lineHeight: '1'
+                  }}
+                >→</button>
+                <img
+                  src={selectedEvent.image}
+                  alt={selectedEvent.title}
+                  style={{
+                    width: '100%',
+                    maxHeight: '70vh',
+                    objectFit: 'contain',
+                    borderRadius: '8px'
+                  }}
+                />
+                <h2 style={{
+                  fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                  margin: '15px 0'
+                }}>{selectedEvent.title}</h2>
+                <p style={{
+                  fontSize: 'clamp(0.9rem, 2.5vw, 1rem)'
+                }}>{selectedEvent.description}</p>
+                {selectedEvent.link && (
+                  <a
+                    href={selectedEvent.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'inline-block',
+                      marginTop: '15px',
+                      padding: '10px 20px',
+                      backgroundColor: '#0078D4',
+                      color: 'white',
+                      borderRadius: '5px',
+                      textDecoration: 'none',
+                      fontSize: 'clamp(0.9rem, 2vw, 1rem)'
+                    }}
+                  >
+                    Register Now →
+                  </a>
+                )}
+              </>
             )}
-          </>
-        )}
-      </Modal>
+          </Modal>
+        </div>
       </div>
-    </div>
     </>
   );
 };
