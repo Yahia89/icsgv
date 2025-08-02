@@ -44,13 +44,7 @@ const EventsPage = () => {
   }
 
   const events = [
-    {
-      id: 1,
-      image: jummahJam,
-      title: "ICSGV Presents: Jummah Jam",
-      description: "Bring your family for a night of Fun, Games, Movie, Food and Socialization - Friday, August 1 at 7 PM",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSeFo_9kTzLnHZ_vZTL6w39h9zMKyXp1fjzeKPdCDo8T4KPIWg/viewform"
-    },
+    
     { id: 3, image: event17, title: "Burial Plots", description: "Burial Plots Available" },
     { id: 4, image: event4, title: "Funeral Services", description: "Mortuary | Funeral | Burial | Transport" },
     { id: 5, image: event2, title: "Iqra School", description: "Learn Arabic School" },
