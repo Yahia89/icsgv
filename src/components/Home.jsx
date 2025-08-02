@@ -44,29 +44,12 @@ function Home() {
             className="announcement-header"
             onClick={() => setIsAnnouncementsOpen(!isAnnouncementsOpen)}
           >
-            <h2>📢 Current Announcements (3)</h2>
+            <h2> Announcements </h2>
             <span className={`arrow ${isAnnouncementsOpen ? 'open' : ''}`}>▼</span>
           </div>
 
           {isAnnouncementsOpen && (
             <div className="announcement-grid">
-              <div className="announcement-item">
-                <h2>ICSGV Presents: Jummah Jam</h2>
-                <p>Bring your family for a night of Fun, Games, Movie, Food and Socialization</p>
-                <div className="event-details">
-                  <p><strong>Friday, August 1 at 7 PM</strong></p>
-                  <p>Family friendly movie with Complimentary food</p>
-                  <p>Popcorn, Hot Dogs and Filled Nachos</p>
-                </div>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeFo_9kTzLnHZ_vZTL6w39h9zMKyXp1fjzeKPdCDo8T4KPIWg/viewform"
-                  className="camp-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Register Here →
-                </a>
-              </div>
               <div className="announcement-item">
                 <h2>Quba Islamic School - Now Open for Registration</h2>
                 <p>Year 2025/2026 - Grades K-12</p>
