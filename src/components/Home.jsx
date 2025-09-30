@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./Home.css";
-import SEO from './SEO';
+import SEO from "./SEO";
 import masjidImage from "../assets/Colleen_photo-5.jpg";
 import PrayerTimes from "./PrayerTimes";
 
@@ -45,7 +45,9 @@ function Home() {
             onClick={() => setIsAnnouncementsOpen(!isAnnouncementsOpen)}
           >
             <h2> Announcements </h2>
-            <span className={`arrow ${isAnnouncementsOpen ? 'open' : ''}`}>▼</span>
+            <span className={`arrow ${isAnnouncementsOpen ? "open" : ""}`}>
+              ▼
+            </span>
           </div>
 
           {isAnnouncementsOpen && (
@@ -54,9 +56,17 @@ function Home() {
                 <h2>Quba Islamic School - Now Open for Registration</h2>
                 <p>Year 2025/2026 - Grades K-12</p>
                 <div className="event-details">
-                  <p><strong>$600 Monthly</strong></p>
-                  <p>Private Islamic school focusing on academic and character development</p>
-                  <p>Islamic Studies • Extra Curricular • High School • Online Registration</p>
+                  <p>
+                    <strong>$600 Monthly</strong>
+                  </p>
+                  <p>
+                    Private Islamic school focusing on academic and character
+                    development
+                  </p>
+                  <p>
+                    Islamic Studies • Extra Curricular • High School • Online
+                    Registration
+                  </p>
                 </div>
                 <a
                   href="https://qubais.org"
@@ -66,15 +76,15 @@ function Home() {
                 >
                   Register Now →
                 </a>
-                <div className="contact-info">
-                  Call Us: (909) 620 5297
-                </div>
+                <div className="contact-info">Call Us: (909) 620 5297</div>
               </div>
               <div className="announcement-item">
                 <h2>Little Angels Preschool - Now Enrolling</h2>
                 <p>Year Round Program 2025-2026</p>
                 <div className="event-details">
-                  <p><strong>Ages 3-5 Years Old</strong></p>
+                  <p>
+                    <strong>Ages 3-5 Years Old</strong>
+                  </p>
                   <p>Mon-Thu 8AM-3PM, Fri 8AM-12PM</p>
                   <p>$550/Month - Financial Assistance Available</p>
                   <p>Afterschool Program 3PM-6PM</p>
@@ -194,11 +204,11 @@ function Home() {
             </div>
           </div>
           <div class="right-column">
-                    <p>
-          The history of the Islamic Center of San Gabriel Valley spans over
-          forty years. The Center was established in 1983 by dedicated and
-          forward thinking Muslims living in the San Gabriel Valley area.
-        </p>
+            <p>
+              The history of the Islamic Center of San Gabriel Valley spans over
+              forty years. The Center was established in 1983 by dedicated and
+              forward thinking Muslims living in the San Gabriel Valley area.
+            </p>
             <img
               src={masjidImage}
               alt="ICSGV Building"
@@ -231,9 +241,6 @@ function Home() {
         <Link to="/about" style={{ textDecoration: "none" }}>
           <button>Know More About Us</button>
         </Link>
-        <h1 class="prayer-times-heading">Prayer Times</h1>
-        <PrayerTimes />
-
         <section class="services-card">
           <div class="services-card-background">
             <div class="services-card-content">
@@ -263,7 +270,9 @@ function Home() {
                   <div class="service-card">
                     <h3 class="service-card-title">Hijrah Club</h3>
                     <p class="service-card-description">
-                      empower the Muslim youth primarily, and enable them to be more confident Muslims in facing the challenges that threaten their identity.
+                      empower the Muslim youth primarily, and enable them to be
+                      more confident Muslims in facing the challenges that
+                      threaten their identity.
                     </p>
                   </div>
                 </a>
@@ -355,7 +364,6 @@ function Home() {
             </div>
           </div>
         </section>
-
       </div>
     </>
   );
