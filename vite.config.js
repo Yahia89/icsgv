@@ -7,11 +7,12 @@ export default defineConfig({
     outDir: "dist",
     rollupOptions: {
       input: {
-        main: '/index.html',
+        main: './index.html',  // Remove leading slash
       },
     },
   },
   server: {
     historyApiFallback: true,
   },
+  base: './', // Ensure relative paths in production
 });
