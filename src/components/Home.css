@@ -118,12 +118,14 @@
 }
 
 .welcome {
-  font-family: "Berkshire Swash", cursive;
+  font-family: "Alan Sans", sans-serif;
+  font-optical-sizing: auto;
   color: #000;
 }
 
 .Assalamualaikum {
-  font-family: "Berkshire Swash", cursive;
+  font-family: "Alan Sans", sans-serif;
+  font-optical-sizing: auto;
   color: #000;
 }
 p {

@@ -47,17 +47,7 @@ const PrayerTimes = () => {
         description="Daily prayer times for ICSGV mosque. View Fajr, Dhuhr, Asr, Maghrib, and Isha prayer timings updated daily for the Islamic Center of San Gabriel Valley."
       />
       <div className="main">
-        <div className="wrapper">
-          <svg>
-            <text x="50%" y="50%" dy=".35em" textAnchor="middle">
-              مسجد قباء
-            </text>
-          </svg>
-        </div>
-        <h5 className="Assalamualaikum">Assalamualaikum</h5>
-        <h1 className="welcome">
-          Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
-        </h1>
+        
         
         <h3
           style={{
@@ -69,7 +59,7 @@ const PrayerTimes = () => {
         >
           Note: You can view or download the whole month of prayer times on this{" "}
           <a 
-            href="https://drive.google.com/file/d/1qFIqSS5RBJ2BWCYGPnIstrHMUkE0XyDm/view"
+            href="https://drive.google.com/file/d/1K7xA54qtCOBbCqx4ygDUqRE1Mj44kIx_/view"
             target="_blank"
             rel="noopener noreferrer"
           >

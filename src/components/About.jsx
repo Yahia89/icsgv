@@ -152,13 +152,7 @@ const About = () => {
         preloadImage={buildingImage}
         priority="high"
       />
-      <div className="wrapper">
-        <svg>
-          <text x="50%" y="50%" dy=".35em" textAnchor="middle">
-            مسجد قباء
-          </text>
-        </svg>
-      </div>
+      
       <h5 className="assalamualaikum">Assalamualaikum</h5>
       <h1 className="welcome">
         Welcome to the Islamic Center of San Gabriel Valley (ICSGV)

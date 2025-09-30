@@ -79,14 +79,7 @@ const EventsPage = () => {
         description="Discover upcoming events and programs at ICSGV including Arabic classes, Islamic education, community services, and special programs."
       />
       <div class="main">
-        <div class="wrapper" style={{ backgroundImage: "inherit" }}>
-          <svg>
-            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-              مسجد قباء
-            </text>
-          </svg>
-        </div>
-        <h5 class="Assalamualaikum">Assalamualaikum</h5>
+        <h5 class="assalamualaikum">Assalamualaikum</h5>
         <h1 class="welcome">
           Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
         </h1>

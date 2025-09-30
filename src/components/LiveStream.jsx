@@ -11,6 +11,8 @@ const LiveStream = () => {
   const [isLive, setIsLive] = useState(false);
   const [videoId, setVideoId] = useState("");
   const [recentVideos, setRecentVideos] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [usingRssFallback, setUsingRssFallback] = useState(false);
 
   const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
   const channelId = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
@@ -67,19 +69,33 @@ const LiveStream = () => {
       return;
     }
 
+    // Common fetch options with referrer
+    const fetchOptions = {
+      method: 'GET',
+      headers: {
+        'Referer': window.location.origin,
+        'Origin': window.location.origin
+      },
+      referrerPolicy: 'origin'
+    };
+
     try {
       // Fetch live stream status
       const liveUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&eventType=live&key=${apiKey}`;
       console.log("Fetching live status from:", liveUrl);
-
-      const liveResponse = await fetch(liveUrl);
+  
+      const liveResponse = await fetch(liveUrl, fetchOptions);
       const liveData = await liveResponse.json();
-
+  
       if (liveData.error) {
         console.error("Live stream API error:", liveData.error);
-        return;
+        setErrorMessage(liveData.error.message || 'Live stream API error');
+        // don't return here; continue to attempt fetching recent videos or RSS fallback
+      } else {
+        // Clear error message on successful API call
+        setErrorMessage("");
       }
-
+  
       if (liveData.items && liveData.items.length > 0) {
         setIsLive(true);
         setVideoId(liveData.items[0].id.videoId);
@@ -89,27 +105,35 @@ const LiveStream = () => {
         setVideoId("");
         setCachedLiveStatus(false, "");
       }
-
+  
       // Fetch recent videos
       const recentUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&type=video&order=date&maxResults=3&key=${apiKey}`;
       console.log("Fetching recent videos from:", recentUrl);
-
-      const recentResponse = await fetch(recentUrl);
+  
+      const recentResponse = await fetch(recentUrl, fetchOptions);
       const recentData = await recentResponse.json();
-
+  
       if (recentData.error) {
         console.error("Recent videos API error:", recentData.error);
+        setErrorMessage(recentData.error.message || 'Recent videos API error');
+        // Try RSS fallback for recent videos when API is blocked or fails
+        const rss = await fetchRssFallback();
+        if (rss && rss.length > 0) {
+          setRecentVideos(rss);
+          setCachedData("recentVideos", rss);
+          setUsingRssFallback(true);
+        }
         return;
       }
-
+  
       if (recentData.items && recentData.items.length > 0) {
         const videoIds = recentData.items.map(video => video.id.videoId).join(",");
         const statsUrl = `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${videoIds}&key=${apiKey}`;
         console.log("Fetching video stats from:", statsUrl);
-
-        const statsResponse = await fetch(statsUrl);
+  
+        const statsResponse = await fetch(statsUrl, fetchOptions);
         const statsData = await statsResponse.json();
-
+  
         if (statsData.error) {
           console.error("Video stats API error:", statsData.error);
           // Still show videos without stats
@@ -120,19 +144,65 @@ const LiveStream = () => {
           setCachedData("recentVideos", recentData.items);
           return;
         }
-
+  
         const videosWithStats = recentData.items.map((video, index) => ({
           ...video,
           statistics: statsData.items[index]?.statistics || {}
         }));
-
+  
         setRecentVideos(videosWithStats);
         setCachedData("recentVideos", videosWithStats);
+        setUsingRssFallback(false);
       }
     } catch (error) {
       console.error("Failed to fetch videos:", error);
+      setErrorMessage(error.message || 'Failed to fetch videos');
+      // Attempt RSS fallback when fetch or JSON parsing fails
+      try {
+        const rss = await fetchRssFallback();
+        if (rss && rss.length > 0) {
+          setRecentVideos(rss);
+          setCachedData("recentVideos", rss);
+          setUsingRssFallback(true);
+        }
+      } catch (rssErr) {
+        console.error('RSS fallback failed', rssErr);
+      }
     }
   }, [apiKey, channelId]);
+
+  // RSS fallback: fetch channel feed (no API key required) and parse basic items
+  const fetchRssFallback = async () => {
+    if (!channelId) return [];
+    try {
+      const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+      const res = await fetch(feedUrl);
+      if (!res.ok) return [];
+      const text = await res.text();
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(text, 'application/xml');
+      const entries = Array.from(xml.querySelectorAll('entry')).slice(0, 3);
+      const items = entries.map(entry => {
+        const videoId = entry.querySelector('yt\\:videoId')?.textContent || '';
+        const title = entry.querySelector('title')?.textContent || '';
+        const published = entry.querySelector('published')?.textContent || '';
+        const thumbnail = entry.querySelector('media\\:thumbnail, thumbnail')?.getAttribute('url') || '';
+        return {
+          id: { videoId },
+          snippet: {
+            title,
+            publishTime: published,
+            thumbnails: { default: { url: thumbnail } }
+          },
+          statistics: {}
+        };
+      });
+      return items;
+    } catch (err) {
+      console.error('RSS fetch error', err);
+      return [];
+    }
+  };
 
   useEffect(() => {
     fetchData();
@@ -158,12 +228,7 @@ const LiveStream = () => {
       />
       <div className="main">
         <div className="wrapper">
-          <svg>
-            <text x="50%" y="50%" dy=".35em" textAnchor="middle">
-              مسجد قباء
-            </text>
-          </svg>
-          <h5 className="Assalamualaikum">Assalamualaikum</h5>
+          <h5 className="assalamualaikum">Assalamualaikum</h5>
           <h1 className="welcome">
             Welcome to ICSGV! Check out our YouTube channel for live streams and recordings!
           </h1>

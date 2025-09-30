@@ -36,9 +36,10 @@
 }
 
 .committee-title-hajj {
-  font-family: "Georgia", serif;
+  font-family: "Alan Sans", sans-serif;
+  font-optical-sizing: auto;
   font-size: 2rem;
-  color: #e5d6a0;
+  color: #f6cb2f;
   margin-bottom: 30px;
 }
 
@@ -73,7 +74,7 @@
 
 .member-name-hajj {
   font-size: 1.2rem;
-  color: #e5d6a0;
+  color: #796418;
   margin-top: 15px;
   font-weight: bold;
 }

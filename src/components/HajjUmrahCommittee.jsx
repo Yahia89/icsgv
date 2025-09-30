@@ -5,14 +5,7 @@ import maherPicture from "../assets/508ACA82-E80D-4D11-BCFF-0D41E3A3AA58_1_201_a
 const HajjUmrahCommittee = () => {
   return (
     <div class="main">
-      <div class="wrapper">
-        <svg>
-          <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-            مسجد قباء
-          </text>
-        </svg>
-      </div>
-      <h5 class="Assalamualaikum">Assalamualaikum</h5>
+      <h5 class="assalamualaikum">Assalamualaikum</h5>
       <h1 class="welcome">
         Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
       </h1>

@@ -6,14 +6,7 @@ const Services = () => {
     <>
       <div className="services-container">
       <div class="main" style={{ position: "sticky" }}>
-        <div class="wrapper">
-          <svg>
-            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-              مسجد قباء
-            </text>
-          </svg>
-        </div>
-        <h5 class="Assalamualaikum">Assalamualaikum</h5>
+        <h5 class="assalamualaikum">Assalamualaikum</h5>
         <h1 class="welcome">
           Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
         </h1>

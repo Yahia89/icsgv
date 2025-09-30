@@ -12,12 +12,7 @@ const Matrimonial = () => {
         priority="high"
       />
       <div className="wrapper">
-        <svg>
-          <text x="50%" y="50%" dy=".35em" textAnchor="middle">
-            مسجد قباء
-          </text>
-        </svg>
-        <h5 className="Assalamualaikum">Assalamualaikum</h5>
+        <h5 className="assalamualaikum">Assalamualaikum</h5>
         <h1 className="welcome">
           Welcome to the Islamic Center of San Gabriel Valley (ICSGV)
         </h1>
