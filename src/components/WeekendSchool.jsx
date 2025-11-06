@@ -35,7 +35,7 @@ const WeekendSchool = () => {
                       Current / Returning Student Login
                     </button>
                   </a>
-                  <a href="https://icsgv.com/wis/wis_main.php" target="_blank" rel="noopener noreferrer">
+                  <a href="https://icsgv.com/wis/wiser.php?form=login" target="_blank" rel="noopener noreferrer">
                     <button className="weekend-button">
                       New Students
                     </button>

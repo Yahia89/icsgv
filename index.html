@@ -7,12 +7,15 @@
     <!-- Preconnect to Critical Domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://themasjidapp.org" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-    <!-- DNS Prefetch -->
-    <link rel="dns-prefetch" href="https://github.com" />
-
+    <!-- DNS Prefetch for Secondary Resources -->
+    <link rel="dns-prefetch" href="https://themasjidapp.org" />
+    
     <!-- Preload Critical Assets -->
-    <link rel="preload" as="image" href="/assets/logo-icsgv-min.png" />
+    <link rel="preload" as="image" href="https://icsgv.com/assets/logo-icsgv-min.png" />
+    <link rel="preload" as="fetch" href="https://themasjidapp.org/296/prayers" crossorigin />
 
     <!-- Meta Description -->
     <meta
@@ -62,10 +65,8 @@
       content="https://opengraph.b-cdn.net/production/images/32639114-d9c6-4265-af3d-38bf31d69cbe.jpg?token=wXWfdIB8_l9CtnxL4EU0WH520jg8QP2hrvPBPoqoARI&height=453&width=680&expires=33275010666"
     />
 
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/favicon-32x32-1.png" sizes="32x32" />
-    <link rel="icon" href="/assets/favicon-32x32-1.png" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/assets/favicon-32x32-1.png" />
+    <!-- Favicon with absolute URL -->
+    <link rel="icon" href="https://icsgv.com/assets/favicon-32x32-1.png" type="image/png" />
 
     <!-- Fonts Stylesheets -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

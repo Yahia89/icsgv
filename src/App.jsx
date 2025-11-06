@@ -24,6 +24,7 @@ import NotFound from './components/NotFound';
 import WeekendSchool from "./components/WeekendSchool";
 import Donate from "./components/Donate";
 import TermsOfUse from "./components/TermsOfUse";
+import { PrayerTimesProvider } from './context/PrayerTimesContext';
 
 
 function App() {
@@ -34,40 +35,42 @@ function App() {
   };
 
   return (
-    <>
-      {showSplash ? (
-        <SplashVivus onAnimationEnd={handleSplashEnd} />
-      ) : (
-        <Router>
-          <MantineProvider>
-            <HelmetProvider>
-              <ScrollToTop />
-              <Header />
-              <Routes>
-                <Route path="/" element={<Home />} />
-              <Route path="/events" element={<EventsPage />} />
-              <Route path="/prayertimes" element={<PrayerTimes />} />
-              <Route path="/resources" element={<Resources />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/stream" element={<LiveStream />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/library" element={<Library />} />
-              <Route path="/clinic" element={<Clinic />} />
-              <Route path="/matrimonial" element={<Matrimonial />} />
-              <Route path="/banquet" element={<BanquetHall />} />
-              <Route path="/funeral-services" element={<Funeral />} />
-              <Route path="/tripstomecca" element={<HajjUmrahCommittee />} />
-              <Route path="/weekendislamicschool" element={<WeekendSchool />} />
-              <Route path="/donate" element={<Donate />} />
-              <Route path="/termsofuse" element={<TermsOfUse />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-              <Footer />
-            </HelmetProvider>
-          </MantineProvider>
-        </Router>
-      )}
-    </>
+    <PrayerTimesProvider>
+      <>
+        {showSplash ? (
+          <SplashVivus onAnimationEnd={handleSplashEnd} />
+        ) : (
+          <Router>
+            <MantineProvider>
+              <HelmetProvider>
+                <ScrollToTop />
+                <Header />
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/events" element={<EventsPage />} />
+                  <Route path="/prayertimes" element={<PrayerTimes />} />
+                  <Route path="/resources" element={<Resources />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/stream" element={<LiveStream />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/library" element={<Library />} />
+                  <Route path="/clinic" element={<Clinic />} />
+                  <Route path="/matrimonial" element={<Matrimonial />} />
+                  <Route path="/banquet" element={<BanquetHall />} />
+                  <Route path="/funeral-services" element={<Funeral />} />
+                  <Route path="/tripstomecca" element={<HajjUmrahCommittee />} />
+                  <Route path="/weekendislamicschool" element={<WeekendSchool />} />
+                  <Route path="/donate" element={<Donate />} />
+                  <Route path="/termsofuse" element={<TermsOfUse />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+                <Footer />
+              </HelmetProvider>
+            </MantineProvider>
+          </Router>
+        )}
+      </>
+    </PrayerTimesProvider>
   );
 }
 
