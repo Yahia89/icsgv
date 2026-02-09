@@ -38,14 +38,38 @@ const PrayerTimes = () => {
             fontStyle: "italic",
           }}
         >
-          Note: You can view or download the whole month of prayer times on this{" "}
+          <p>Welcome Ramadan Event{" "}
           <a 
-            href="https://drive.google.com/file/d/1XpHPZ-zFkLmFZjDbhQa69-KDAJjGXc3p/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1VQ_pCcw6Dz0FIAUPxw08AJxqXD8ZxcFK/view"
             target="_blank"
             rel="noopener noreferrer"
           >
-            link.
+            link (Friday, February 13 - After Isha at 7:30pm).
+          </a></p>
+          Note: You can view or download the whole month of prayer times on this{" "}
+          <a 
+            href="https://drive.google.com/file/d/10g0Ka3-bfzINYnecDsD4AcoUDupkYckV/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            link (February).
           </a>
+          <p>view or download the whole month of prayer times on this{" "}
+          <a 
+            href="https://drive.google.com/file/d/15cuvhhE5R0LHfALMN8jCpvM1Ijtr1o6t/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            link (March).
+          </a></p>
+          <p>view or download the whole month of prayer times on this{" "}
+          <a 
+            href="https://drive.google.com/file/d/1L-Pq8JnAouxPac6Rz3-ftDrdBdKq6JpX/view?pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            link (Ramadan).
+          </a></p>
         </h3>
         <section
           style={{
