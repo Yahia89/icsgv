@@ -42,6 +42,7 @@ const HajjUmrahCommittee = () => {
                  <i className="fas fa-file-alt"></i>{" "}2026 Umrah Packages Postcard (zoom in to view the details).
                </a>
                <p style={{ color: "gray" }}>click on the link to open the pdf in a new tab</p>
+               <p style={{ color: "tomato", fontWeight: "bold" }}>Deadline May 13, 2026</p>
             </p>
 
             {/* Flyer preview - clickable to zoom, separate from PDF link */}
