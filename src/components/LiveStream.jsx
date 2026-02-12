@@ -69,14 +69,11 @@ const LiveStream = () => {
       return;
     }
 
-    // Common fetch options with referrer
+    // Fetch options - let browser handle headers naturally
     const fetchOptions = {
       method: 'GET',
-      headers: {
-        'Referer': window.location.origin,
-        'Origin': window.location.origin
-      },
-      referrerPolicy: 'origin'
+      mode: 'cors',
+      credentials: 'omit'
     };
 
     try {
@@ -258,6 +255,16 @@ const LiveStream = () => {
           </a>
 
           <div className="live-status">
+            {errorMessage && (
+              <div style={{ padding: '12px', backgroundColor: '#fee', color: '#c33', borderRadius: '4px', marginBottom: '12px' }}>
+                <strong>⚠ Error:</strong> {errorMessage}
+              </div>
+            )}
+            {usingRssFallback && (
+              <div style={{ padding: '12px', backgroundColor: '#ffd', color: '#663', borderRadius: '4px', marginBottom: '12px' }}>
+                <strong>ℹ Using RSS fallback</strong> — API blocked or failed. Showing recent videos from RSS feed.
+              </div>
+            )}
             {isLive ? (
               <div>
                 <p className="live-text">We are live now!</p>

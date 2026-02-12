@@ -35,11 +35,11 @@ const HajjUmrahCommittee = () => {
             </p>
             <p className="member-phone-hajj">
                <a
-                 href="https://icsgv.com/wp-content/uploads/2026/02/UmrahPackagePostcard.pdf"
+                 href="https://icsgv.com/wp-content/uploads/2026/02/HajjPackagepostcard.pdf"  
                  target="_blank"
                  rel="noopener noreferrer"
                >
-                 <i className="fas fa-file-alt"></i>{" "}2026 Umrah Packages Postcard (zoom in to view the details).
+                 <i className="fas fa-file-alt"></i>{" "}2026 Hajj Packages Postcard (zoom in to view the details).
                </a>
                <p style={{ color: "gray" }}>click on the link to open the pdf in a new tab</p>
                <p style={{ color: "tomato", fontWeight: "bold" }}>Deadline May 13, 2026</p>
