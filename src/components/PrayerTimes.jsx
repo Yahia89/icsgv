@@ -38,22 +38,14 @@ const PrayerTimes = () => {
             fontStyle: "italic",
           }}
         >
-          <p>Welcome Ramadan Event{" "}
+          <p>27th of Ramadan Qiyam{" "}
           <a 
-            href="https://drive.google.com/file/d/1VQ_pCcw6Dz0FIAUPxw08AJxqXD8ZxcFK/view"
+            href="https://drive.google.com/file/d/1t9cC_mdu6lpt8GKpr4iDuwhQ_IbUOs89/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
-            link (Friday, February 13 - After Isha at 7:30pm).
+            link (Sun, Mar 15, 2026 - 8:45 P.M.)
           </a></p>
-          Note: You can view or download the whole month of prayer times on this{" "}
-          <a 
-            href="https://drive.google.com/file/d/10g0Ka3-bfzINYnecDsD4AcoUDupkYckV/view"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            link (February).
-          </a>
           <p>view or download the whole month of prayer times on this{" "}
           <a 
             href="https://drive.google.com/file/d/15cuvhhE5R0LHfALMN8jCpvM1Ijtr1o6t/view"
