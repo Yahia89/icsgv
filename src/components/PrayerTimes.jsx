@@ -38,13 +38,13 @@ const PrayerTimes = () => {
             fontStyle: "italic",
           }}
         >
-          <p>27th of Ramadan Qiyam{" "}
+          <p>Join our Eid Celebration{" "}
           <a 
-            href="https://drive.google.com/file/d/1t9cC_mdu6lpt8GKpr4iDuwhQ_IbUOs89/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Kv9TKgNuTrXPO8FRdsLYar5kwNiN_mro/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
-            link (Sun, Mar 15, 2026 - 8:45 P.M.)
+            link (Friday Mar, 20th.)
           </a></p>
           <p>view or download the whole month of prayer times on this{" "}
           <a 
@@ -53,14 +53,6 @@ const PrayerTimes = () => {
             rel="noopener noreferrer"
           >
             link (March).
-          </a></p>
-          <p>view or download the whole month of prayer times on this{" "}
-          <a 
-            href="https://drive.google.com/file/d/1L-Pq8JnAouxPac6Rz3-ftDrdBdKq6JpX/view?pli=1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            link (Ramadan).
           </a></p>
         </h3>
         <section
