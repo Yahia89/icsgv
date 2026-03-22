@@ -38,14 +38,6 @@ const PrayerTimes = () => {
             fontStyle: "italic",
           }}
         >
-          <p>Join our Eid Celebration{" "}
-          <a 
-            href="https://drive.google.com/file/d/1Kv9TKgNuTrXPO8FRdsLYar5kwNiN_mro/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            link (Friday Mar, 20th.)
-          </a></p>
           <p>view or download the whole month of prayer times on this{" "}
           <a 
             href="https://drive.google.com/file/d/15cuvhhE5R0LHfALMN8jCpvM1Ijtr1o6t/view"
