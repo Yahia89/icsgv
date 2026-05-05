@@ -40,11 +40,11 @@ const PrayerTimes = () => {
         >
           <p>view or download the whole month of prayer times on this{" "}
           <a 
-            href="https://drive.google.com/file/d/1hILU6CqwbiCoYPvxwGxdklqZwwWL_BbW/view?usp=share_link"
+            href="https://drive.google.com/file/d/1COd7s5xcuMrudCqvT0DX6DHTzZobjUny/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            link (April).
+            link (May).
           </a></p>
         </h3>
         <section
